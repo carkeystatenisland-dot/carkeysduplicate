@@ -1,62 +1,115 @@
 import Link from 'next/link'
 import CTABanner from '@/components/ui/CTABanner'
 import TrustBadges from '@/components/ui/TrustBadges'
+import { CheckCircle2, Cpu, Wrench, ShieldCheck, MapPin } from 'lucide-react'
 
 export const metadata = {
-  title: 'Push-to-Start Key Duplication in NYC | Mobile, All Makes & Models',
-  description: 'Professional push-to-start key duplication across all NYC boroughs. We come to you.'
+  title: 'Push-to-Start Key Duplication NYC | Mobile, On-Site Programming',
+  description: 'Expert push-to-start key duplication across all NYC boroughs. We come to your location with OEM-grade diagnostic tools to program your vehicle securely.'
 }
 
 export default function ServicePage() {
   return (
     <div className="pb-16 bg-white">
-      <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-heading font-extrabold mb-4">Push-to-Start Key Duplication in NYC — Mobile, On-Site Service</h1>
-        <p className="text-xl max-w-2xl mx-auto text-gray-300">Expert on-site programming and cutting.</p>
-        <div className="mt-8"><TrustBadges /></div>
+      {/* Hero Section */}
+      <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center border-b-4 border-brand-accent">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">
+            Push-to-Start Key Duplication in NYC
+          </h1>
+          <p className="text-xl text-gray-300 font-medium mb-8">
+            Precision cutting and OEM-grade electronic programming. 100% Mobile Service.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Link href="/request-a-quote" className="w-full sm:w-auto bg-white/10 text-white border border-white/20 font-bold px-8 py-4 rounded-lg hover:bg-white/20 transition-colors shadow-lg text-lg">
+              Get a Free Quote
+            </Link>
+            <Link href="/book-now" className="w-full sm:w-auto bg-brand-accent text-brand-primary font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition-colors shadow-lg text-lg">
+              Book Service
+            </Link>
+          </div>
+          <div className="mt-12 pt-8 border-t border-white/10"><TrustBadges /></div>
+        </div>
       </div>
       
-      <div className="max-w-4xl mx-auto px-4 mt-12">
-        <div className="prose prose-lg max-w-none text-gray-700">
-          <h2>What is Push-to-Start Key Duplication?</h2>
-          <p>Often confused with smart keys, push-to-start fobs communicate directly with a push-button ignition module. Because this involves deeper integration with the vehicle's starting mechanism, programming is highly complex and requires specialized diagnostic tools. The vehicle must be present during the service. If you only have one push-to-start fob left, we highly recommend getting a spare before an emergency replacement is needed.</p>
-
-          <h2>How It Works</h2>
-          <ol>
-            <li><strong>You Call or Book:</strong> Provide your vehicle details and location in NYC.</li>
-            <li><strong>We Dispatch:</strong> A fully equipped mobile technician arrives at your vehicle.</li>
-            <li><strong>On-Site Programming:</strong> We cut the blade and connect our diagnostic tools to your OBD-II port to program the chip.</li>
-          </ol>
-          
-          <h2>Available In All NYC Boroughs</h2>
-          <p>We provide push-to-start key duplication in <Link href="/brooklyn">Brooklyn</Link>, <Link href="/queens">Queens</Link>, <Link href="/manhattan">Manhattan</Link>, <Link href="/bronx">The Bronx</Link>, and <Link href="/staten-island">Staten Island</Link>.</p>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+        
+        {/* E-E-A-T Technical Explanation */}
+        <div className="mb-16">
+          <div className="flex items-center gap-3 mb-6">
+            <Cpu className="w-8 h-8 text-brand-accent" />
+            <h2 className="text-3xl font-heading text-brand-primary font-bold m-0">The Technology Behind It</h2>
+          </div>
+          <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm">
+            <p className="text-lg text-gray-700 leading-relaxed m-0">
+              Push-to-start ignition systems eliminate the mechanical ignition cylinder entirely. The vehicle relies 100% on the electronic handshake between the key fob and the push-button module (often integrated into the steering column lock or body control module).
+            </p>
+          </div>
         </div>
-        
-        
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <h2 className="text-2xl font-bold mb-6">Available in All NYC Boroughs</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Link href="/brooklyn" className="text-brand-accent hover:underline">Push-to-Start Key Duplication in Brooklyn</Link>\n              <Link href="/queens" className="text-brand-accent hover:underline">Push-to-Start Key Duplication in Queens</Link>\n              <Link href="/manhattan" className="text-brand-accent hover:underline">Push-to-Start Key Duplication in Manhattan</Link>\n              <Link href="/bronx" className="text-brand-accent hover:underline">Push-to-Start Key Duplication in The Bronx</Link>\n              <Link href="/staten-island" className="text-brand-accent hover:underline">Push-to-Start Key Duplication in Staten Island</Link>
-            </div>
 
-            <h3 className="text-xl font-bold mt-8 mb-4">Supported Vehicle Brands for Push-to-Start Key Duplication</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <Link href="/toyota-key-duplication" className="text-brand-accent hover:underline">Toyota Key Duplication</Link>\n              <Link href="/honda-key-duplication" className="text-brand-accent hover:underline">Honda Key Duplication</Link>\n              <Link href="/ford-key-duplication" className="text-brand-accent hover:underline">Ford Key Duplication</Link>\n              <Link href="/bmw-key-duplication" className="text-brand-accent hover:underline">BMW Key Duplication</Link>
-            </div>
+        <div className="mb-16">
+          <div className="flex items-center gap-3 mb-6">
+            <Wrench className="w-8 h-8 text-brand-accent" />
+            <h2 className="text-3xl font-heading text-brand-primary font-bold m-0">Our Professional Solution</h2>
+          </div>
+          <div className="bg-brand-light p-8 rounded-2xl border border-gray-200 shadow-sm">
+            <p className="text-lg text-gray-700 leading-relaxed m-0">
+              Because there is no mechanical backup, precision programming is critical. We use specialized diagnostic software to securely pair your new push-to-start fob. We also demonstrate how to use the emergency backup start method (usually holding the fob against the start button) before we leave your location.
+            </p>
+          </div>
+        </div>
 
-            <div className="mt-8 flex gap-4">
-              <Link href="/request-a-quote" className="btn-primary">Get a Free Quote</Link>
-              <Link href="/book-now" className="btn-secondary">Book Mobile Service</Link>
+        {/* Process Steps */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-heading text-brand-primary font-bold mb-8 text-center">How Our Mobile Service Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center relative">
+              <div className="w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold text-xl absolute -top-5 left-1/2 -translate-x-1/2 border-4 border-white">1</div>
+              <h3 className="font-bold text-lg mt-4 mb-2">Request Service</h3>
+              <p className="text-gray-600 text-sm">Provide your vehicle's Year, Make, and Model for an accurate, upfront quote.</p>
             </div>
-
-            <div className="mt-8 pt-6 border-t border-gray-100 text-sm text-gray-500">
-              <p>Related Services:</p>
-              <div className="flex flex-wrap gap-4 mt-2">
-                <Link href="/transponder-key-duplication" className="hover:text-brand-accent">Transponder Key Duplication</Link>\n                <Link href="/key-fob-duplication" className="hover:text-brand-accent">Key Fob Duplication</Link>
-              </div>
+            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center relative">
+              <div className="w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold text-xl absolute -top-5 left-1/2 -translate-x-1/2 border-4 border-white">2</div>
+              <h3 className="font-bold text-lg mt-4 mb-2">We Dispatch</h3>
+              <p className="text-gray-600 text-sm">Our fully equipped mobile unit arrives directly at your location anywhere in NYC.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center relative">
+              <div className="w-10 h-10 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold text-xl absolute -top-5 left-1/2 -translate-x-1/2 border-4 border-white">3</div>
+              <h3 className="font-bold text-lg mt-4 mb-2">On-Site Programming</h3>
+              <p className="text-gray-600 text-sm">We cut the blade and connect our diagnostic tools to your OBD-II port to sync the chip.</p>
             </div>
           </div>
-  
+        </div>
+
+        {/* Internal Linking Phase 6 block */}
+        <div className="mt-12 pt-12 border-t border-gray-200">
+          <h2 className="text-2xl font-bold text-brand-primary mb-6">Available in All NYC Boroughs</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Link href="/brooklyn" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key Duplication in Brooklyn</Link>
+            <Link href="/queens" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key Duplication in Queens</Link>
+            <Link href="/manhattan" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key Duplication in Manhattan</Link>
+            <Link href="/bronx" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key Duplication in The Bronx</Link>
+            <Link href="/staten-island" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key Duplication in Staten Island</Link>
+          </div>
+
+          <h3 className="text-xl font-bold text-brand-primary mt-10 mb-4">Supported Vehicle Brands</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Link href="/toyota-key-duplication" className="text-gray-600 hover:text-brand-accent underline text-sm">Toyota Key Duplication</Link>
+            <Link href="/honda-key-duplication" className="text-gray-600 hover:text-brand-accent underline text-sm">Honda Key Duplication</Link>
+            <Link href="/ford-key-duplication" className="text-gray-600 hover:text-brand-accent underline text-sm">Ford Key Duplication</Link>
+            <Link href="/bmw-key-duplication" className="text-gray-600 hover:text-brand-accent underline text-sm">BMW Key Duplication</Link>
+          </div>
+
+          <div className="mt-10 pt-8 border-t border-gray-100 text-sm text-gray-500">
+            <p className="font-semibold mb-3">Related Services:</p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/transponder-key-duplication" className="bg-gray-100 px-3 py-1 rounded-full hover:bg-brand-accent hover:text-brand-primary transition-colors text-xs">Transponder Key Duplication</Link>
+              <Link href="/key-fob-duplication" className="bg-gray-100 px-3 py-1 rounded-full hover:bg-brand-accent hover:text-brand-primary transition-colors text-xs">Key Fob Duplication</Link>
+              <Link href="/smart-key-duplication" className="bg-gray-100 px-3 py-1 rounded-full hover:bg-brand-accent hover:text-brand-primary transition-colors text-xs">Smart Key Duplication</Link>
+            </div>
+          </div>
+        </div>
+
         <CTABanner />
       </div>
     </div>
