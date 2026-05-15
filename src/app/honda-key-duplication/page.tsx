@@ -35,6 +35,19 @@ export default function MakePage() {
           </div>
         </div>
         
+        
+          <div className="mt-12 pt-8 border-t border-gray-200">
+            <h2 className="text-2xl font-bold mb-6">Honda Key Duplication Available In:</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <Link href="/brooklyn" className="text-brand-accent hover:underline">Honda key duplication in Brooklyn</Link>\n              <Link href="/queens" className="text-brand-accent hover:underline">Honda key duplication in Queens</Link>\n              <Link href="/manhattan" className="text-brand-accent hover:underline">Honda key duplication in Manhattan</Link>\n              <Link href="/bronx" className="text-brand-accent hover:underline">Honda key duplication in The Bronx</Link>\n              <Link href="/staten-island" className="text-brand-accent hover:underline">Honda key duplication in Staten Island</Link>
+            </div>
+
+            <div className="mt-8 flex gap-4">
+              <Link href="/request-a-quote" className="btn-primary">Get a Free Quote</Link>
+              <Link href="/transponder-key-duplication" className="btn-secondary">View Transponder Key Services</Link>
+            </div>
+          </div>
+  
         <CTABanner />
       </div>
     </div>

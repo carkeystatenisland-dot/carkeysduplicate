@@ -32,6 +32,31 @@ export default function ServicePage() {
           <p>We provide key fob duplication in <Link href="/brooklyn">Brooklyn</Link>, <Link href="/queens">Queens</Link>, <Link href="/manhattan">Manhattan</Link>, <Link href="/bronx">The Bronx</Link>, and <Link href="/staten-island">Staten Island</Link>.</p>
         </div>
         
+        
+          <div className="mt-12 pt-8 border-t border-gray-200">
+            <h2 className="text-2xl font-bold mb-6">Available in All NYC Boroughs</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <Link href="/brooklyn" className="text-brand-accent hover:underline">Key Fob Duplication in Brooklyn</Link>\n              <Link href="/queens" className="text-brand-accent hover:underline">Key Fob Duplication in Queens</Link>\n              <Link href="/manhattan" className="text-brand-accent hover:underline">Key Fob Duplication in Manhattan</Link>\n              <Link href="/bronx" className="text-brand-accent hover:underline">Key Fob Duplication in The Bronx</Link>\n              <Link href="/staten-island" className="text-brand-accent hover:underline">Key Fob Duplication in Staten Island</Link>
+            </div>
+
+            <h3 className="text-xl font-bold mt-8 mb-4">Supported Vehicle Brands for Key Fob Duplication</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <Link href="/toyota-key-duplication" className="text-brand-accent hover:underline">Toyota Key Duplication</Link>\n              <Link href="/honda-key-duplication" className="text-brand-accent hover:underline">Honda Key Duplication</Link>\n              <Link href="/ford-key-duplication" className="text-brand-accent hover:underline">Ford Key Duplication</Link>\n              <Link href="/bmw-key-duplication" className="text-brand-accent hover:underline">BMW Key Duplication</Link>
+            </div>
+
+            <div className="mt-8 flex gap-4">
+              <Link href="/request-a-quote" className="btn-primary">Get a Free Quote</Link>
+              <Link href="/book-now" className="btn-secondary">Book Mobile Service</Link>
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-gray-100 text-sm text-gray-500">
+              <p>Related Services:</p>
+              <div className="flex flex-wrap gap-4 mt-2">
+                <Link href="/transponder-key-duplication" className="hover:text-brand-accent">Transponder Key Duplication</Link>\n                <Link href="/smart-key-duplication" className="hover:text-brand-accent">Smart Key Duplication</Link>
+              </div>
+            </div>
+          </div>
+  
         <CTABanner />
       </div>
     </div>
