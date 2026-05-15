@@ -1,20 +1,30 @@
-const TELEGRAM_API = `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}`
-
 export async function sendTelegramMessage(message: string): Promise<boolean> {
+  const token = process.env.TELEGRAM_BOT_TOKEN
+  const chatId = process.env.TELEGRAM_CHAT_ID
+
+  if (!token || !chatId) {
+    console.warn('Telegram notification skipped: Missing BOT_TOKEN or CHAT_ID')
+    return true // Return true so the user doesn't see a 500 error
+  }
+
   try {
-    const response = await fetch(`${TELEGRAM_API}/sendMessage`, {
+    const api = `https://api.telegram.org/bot${token}`
+    const response = await fetch(`${api}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        chat_id: process.env.TELEGRAM_CHAT_ID,
+        chat_id: chatId,
         text: message,
         parse_mode: 'HTML',
       }),
     })
     const data = await response.json()
+    if (!data.ok) {
+      console.error('Telegram API error:', data)
+    }
     return data.ok
   } catch (error) {
-    console.error('Telegram send error:', error)
+    console.error('Telegram fetch error:', error)
     return false
   }
 }
@@ -34,7 +44,7 @@ export function formatBookingMessage(data: BookingData, source: string): string 
 📅 <b>Preferred Time:</b> ${data.preferredTime}
 💬 <b>Notes:</b> ${data.notes || 'None'}
 ━━━━━━━━━━━━━━━━━━━
-⏰ Submitted: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })} ET
+⏰ Submitted: ${new Date().toISOString()} (UTC)
   `.trim()
 }
 
@@ -53,7 +63,7 @@ export function formatQuoteMessage(data: QuoteData, source: string): string {
 ❓ <b>Have Original Key:</b> ${data.hasOriginal}
 💬 <b>Additional Info:</b> ${data.additionalInfo || 'None'}
 ━━━━━━━━━━━━━━━━━━━
-⏰ Submitted: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })} ET
+⏰ Submitted: ${new Date().toISOString()} (UTC)
   `.trim()
 }
 
