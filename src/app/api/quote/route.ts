@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { sendTelegramMessage, formatQuoteMessage, QuoteData } from '@/lib/telegram'
 
+export const runtime = 'edge';
+
 export async function POST(request: NextRequest) {
   try {
     const data: QuoteData = await request.json()
