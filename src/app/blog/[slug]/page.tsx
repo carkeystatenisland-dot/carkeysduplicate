@@ -6,7 +6,7 @@ import { SERVICE_TYPES, BOROUGHS } from '@/lib/constants'
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const title = params.slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
   return {
-    title: \`\${title} | NYC Keys Blog\`,
+    title: `${title} | NYC Keys Blog`,
     description: 'Expert automotive locksmith guide from NYC Keys.'
   }
 }
@@ -67,7 +67,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 <h4 className="font-bold text-brand-primary mb-3">Our Services</h4>
                 <ul className="space-y-2 text-sm">
                   {SERVICE_TYPES.map(s => (
-                    <li key={s.slug}><Link href={\`/\${s.slug}\`} className="text-gray-600 hover:text-brand-accent">{s.name}</Link></li>
+                    <li key={s.slug}><Link href={`/${s.slug}`} className="text-gray-600 hover:text-brand-accent">{s.name}</Link></li>
                   ))}
                 </ul>
               </div>
@@ -76,7 +76,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 <h4 className="font-bold text-brand-primary mb-3">Service Areas</h4>
                 <div className="flex flex-wrap gap-2">
                   {BOROUGHS.map(b => (
-                    <Link key={b.slug} href={\`/\${b.slug}\`} className="text-xs bg-white border border-gray-200 px-3 py-1.5 rounded-full hover:border-brand-accent">
+                    <Link key={b.slug} href={`/${b.slug}`} className="text-xs bg-white border border-gray-200 px-3 py-1.5 rounded-full hover:border-brand-accent">
                       {b.name}
                     </Link>
                   ))}
