@@ -1,23 +1,33 @@
-export const runtime = 'edge';
-
 import { Metadata } from 'next'
 import Link from 'next/link'
 import CTABanner from '@/components/ui/CTABanner'
 import { SERVICE_TYPES, BOROUGHS } from '@/lib/constants'
 import { generatePageMetadata } from '@/lib/metadata'
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const title = params.slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+export function generateStaticParams() {
+  return [
+    { slug: 'car-key-duplication-cost-nyc' },
+    { slug: 'dealer-vs-locksmith-key-duplication-nyc' },
+    { slug: 'can-you-duplicate-transponder-key' },
+    { slug: 'avoid-locksmith-scams-nyc' },
+    { slug: 'what-happens-with-only-one-car-key' }
+  ]
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const title = resolvedParams.slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
   return generatePageMetadata({
     title: `${title} | NYC Keys Blog`,
     description: `Expert automotive locksmith guide: ${title}. Learn how to duplicate car keys safely in NYC.`,
-    slug: `/blog/${params.slug}`,
-    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://www.carkeysduplicate.com'}/blog/${params.slug}.jpg`
+    slug: `/blog/${resolvedParams.slug}`,
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://www.carkeysduplicate.com'}/blog/${resolvedParams.slug}.jpg`
   })
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const title = params.slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const title = resolvedParams.slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
 
   return (
     <div className="bg-white min-h-screen py-12 border-t border-gray-100">
@@ -31,7 +41,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             </h1>
             
             <div className="w-full aspect-video rounded-2xl overflow-hidden mb-8 shadow-sm">
-              <img src={`/blog/${params.slug}.jpg`} alt={title} className="w-full h-full object-cover" />
+              <img src={`/blog/${resolvedParams.slug}.jpg`} alt={title} className="w-full h-full object-cover" />
             </div>
 
             <div className="flex items-center gap-4 text-gray-500 text-sm mb-10 border-b border-gray-100 pb-6">
