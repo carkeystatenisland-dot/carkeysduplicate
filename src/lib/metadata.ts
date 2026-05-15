@@ -10,28 +10,33 @@ interface PageMetaProps {
 }
 
 export function generatePageMetadata({ title, description, slug, keywords, image }: PageMetaProps): Metadata {
-  const url = `${SITE.url}${slug.startsWith('/') ? slug : `/${slug}`}`
-  const siteName = SITE.name
-  
+  // Always resolve from the canonical base domain
+  const base = SITE.url.replace(/\/$/, '')
+  const path = slug.startsWith('/') ? slug : `/${slug}`
+  const canonicalUrl = `${base}${path}`
+  const ogImage = image || `${base}/og-image.jpg`
+
   return {
     title,
     description,
     keywords: keywords?.join(', '),
     alternates: {
-      canonical: url,
+      canonical: canonicalUrl,
     },
     openGraph: {
       title,
       description,
-      url,
-      siteName,
+      url: canonicalUrl,
+      siteName: SITE.name,
       type: 'website',
+      locale: 'en_US',
       images: [
         {
-          url: image || `${SITE.url}/og-image.jpg`,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: title,
+          type: 'image/jpeg',
         },
       ],
     },
@@ -39,7 +44,7 @@ export function generatePageMetadata({ title, description, slug, keywords, image
       card: 'summary_large_image',
       title,
       description,
-      images: [image || `${SITE.url}/og-image.jpg`],
+      images: [ogImage],
     },
     robots: {
       index: true,

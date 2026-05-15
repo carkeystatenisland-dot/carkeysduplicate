@@ -26,11 +26,24 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: SITE.url,
     siteName: SITE.name,
+    images: [
+      {
+        url: `${SITE.url}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Car Keys Duplication NYC — Mobile Locksmith Service',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@carkeysduplication',
+    images: [`${SITE.url}/og-image.jpg`],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
 }
 
