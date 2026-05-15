@@ -10,17 +10,17 @@ const BLOG_SLUGS = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = SITE.url  // https://www.carkeysduplicate.com
+  const baseUrl = SITE.url  // https://www.carkeysduplication.com
 
   const staticPages = [
-    { url: baseUrl,                                         lastModified: new Date('2026-05-15'), changeFrequency: 'weekly'  as const, priority: 1.0 },
-    { url: `${baseUrl}/about`,                             lastModified: new Date('2026-05-15'), changeFrequency: 'monthly' as const, priority: 0.6 },
-    { url: `${baseUrl}/request-a-quote`,                   lastModified: new Date('2026-05-15'), changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${baseUrl}/book-now`,                          lastModified: new Date('2026-05-15'), changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${baseUrl}/mobile-car-key-duplication-nyc`,   lastModified: new Date('2026-05-15'), changeFrequency: 'weekly'  as const, priority: 0.9 },
-    { url: `${baseUrl}/same-day-car-key-duplication-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly'  as const, priority: 0.8 },
-    { url: `${baseUrl}/24-hour-car-key-duplication-nyc`,  lastModified: new Date('2026-05-15'), changeFrequency: 'weekly'  as const, priority: 0.8 },
-    { url: `${baseUrl}/blog`,                              lastModified: new Date('2026-05-15'), changeFrequency: 'weekly'  as const, priority: 0.7 },
+    { url: baseUrl, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 1.0 },
+    { url: `${baseUrl}/about`, lastModified: new Date('2026-05-15'), changeFrequency: 'monthly' as const, priority: 0.6 },
+    { url: `${baseUrl}/request-a-quote`, lastModified: new Date('2026-05-15'), changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${baseUrl}/book-now`, lastModified: new Date('2026-05-15'), changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${baseUrl}/mobile-car-key-duplication-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/same-day-car-key-duplication-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/24-hour-car-key-duplication-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/blog`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.7 },
   ]
 
   const boroughPages = BOROUGHS.map(b => ({
