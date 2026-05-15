@@ -11,8 +11,10 @@ export default function LocalBusinessSchema() {
     "telephone": SITE.phone,
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "New York",
+      "streetAddress": "75-20 Astoria Blvd",
+      "addressLocality": "East Elmhurst",
       "addressRegion": "NY",
+      "postalCode": "11370",
       "addressCountry": "US"
     },
     "geo": {
