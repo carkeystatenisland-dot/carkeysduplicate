@@ -80,8 +80,8 @@ export default function Navbar() {
           
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-heading font-bold text-2xl tracking-tight text-brand-primary">
-              NYC<span className="text-brand-accent">Keys</span>
+            <span className="font-heading font-bold text-xl tracking-tight text-brand-primary leading-tight">
+              Car Keys<span className="text-brand-accent"> Duplication</span>
             </span>
           </Link>
 

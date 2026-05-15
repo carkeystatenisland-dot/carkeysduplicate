@@ -12,8 +12,8 @@ export default function Footer() {
           {/* Column 1: Business Info */}
           <div className="space-y-6">
             <Link href="/" className="inline-block">
-              <span className="font-heading font-bold text-2xl tracking-tight text-white">
-                NYC<span className="text-brand-accent">Keys</span>
+              <span className="font-heading font-bold text-xl tracking-tight text-white leading-tight">
+                Car Keys<span className="text-brand-accent"> Duplication</span>
               </span>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
