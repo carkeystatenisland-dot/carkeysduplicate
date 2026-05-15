@@ -11,7 +11,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return generatePageMetadata({
     title: `${title} | NYC Keys Blog`,
     description: `Expert automotive locksmith guide: ${title}. Learn how to duplicate car keys safely in NYC.`,
-    slug: `/blog/${params.slug}`
+    slug: `/blog/${params.slug}`,
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://www.carkeysduplicate.com'}/blog/${params.slug}.jpg`
   })
 }
 
@@ -28,6 +29,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             <h1 className="text-3xl md:text-5xl font-heading font-extrabold text-brand-primary mb-6 leading-tight">
               {title}
             </h1>
+            
+            <div className="w-full aspect-video rounded-2xl overflow-hidden mb-8 shadow-sm">
+              <img src={`/blog/${params.slug}.jpg`} alt={title} className="w-full h-full object-cover" />
+            </div>
+
             <div className="flex items-center gap-4 text-gray-500 text-sm mb-10 border-b border-gray-100 pb-6">
               <span>By NYC Keys Specialist</span>
               <span>•</span>

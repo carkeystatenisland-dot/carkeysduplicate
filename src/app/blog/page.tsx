@@ -28,6 +28,9 @@ export default function BlogIndex() {
           {POSTS.map(post => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
               <div className="bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all h-full flex flex-col">
+                <div className="aspect-video relative bg-gray-200">
+                  <img src={`/blog/${post.slug}.jpg`} alt={post.title} className="w-full h-full object-cover" />
+                </div>
                 <div className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-bold text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
                     {post.title}
