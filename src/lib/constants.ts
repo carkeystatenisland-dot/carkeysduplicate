@@ -5,7 +5,7 @@ export const SITE = {
   phoneDisplay: '(929) 828-7009',
   email: 'info@carkeysduplication.com',
   address: '75-20 Astoria Blvd, East Elmhurst, NY 11370',
-  hours: '24/7 — We Come To You',
+  hours: 'Mon-Sun 9AM - 5PM (24/7 Emergencies)',
   mainSite: 'https://www.carkeyreplacementstatenisland.com',
 }
 

@@ -33,8 +33,8 @@ export default function LocalBusinessSchema() {
         "Saturday",
         "Sunday"
       ],
-      "opens": "00:00",
-      "closes": "23:59"
+      "opens": "09:00",
+      "closes": "17:00"
     },
     "sameAs": [
       SITE.mainSite
