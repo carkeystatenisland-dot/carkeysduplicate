@@ -1,8 +1,8 @@
 export const SITE = {
   name: 'Car Keys Duplication NYC',
   url: 'https://carkeysduplication.com',
-  phone: '+17185551234',           // Replace with real number
-  phoneDisplay: '(718) 555-1234',  // Replace with real number
+  phone: '+19298287009',
+  phoneDisplay: '(929) 828-7009',
   email: 'info@carkeysduplication.com',
   address: 'Mobile Service — All NYC Boroughs',
   hours: '24/7 — We Come To You',
