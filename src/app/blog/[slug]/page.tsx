@@ -3,6 +3,7 @@ import Link from 'next/link'
 import CTABanner from '@/components/ui/CTABanner'
 import { SERVICE_TYPES, BOROUGHS } from '@/lib/constants'
 import { generatePageMetadata } from '@/lib/metadata'
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return [
