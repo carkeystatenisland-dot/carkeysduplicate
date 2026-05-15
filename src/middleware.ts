@@ -8,8 +8,8 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get('host') || ''
 
   // Redirect naked domain to www
-  if (hostname === 'carkeysduplicate.com') {
-    url.hostname = 'www.carkeysduplicate.com'
+  if (hostname === 'carkeysduplication.com') {
+    url.hostname = 'www.carkeysduplication.com'
     return NextResponse.redirect(url, 301)
   }
 

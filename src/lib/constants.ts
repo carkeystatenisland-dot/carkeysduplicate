@@ -1,6 +1,6 @@
 export const SITE = {
   name: 'Car Keys Duplication NYC',
-  url: 'https://www.carkeysduplicate.com',
+  url: 'https://www.carkeysduplication.com',
   phone: '+19298287009',
   phoneDisplay: '(929) 828-7009',
   email: 'info@carkeysduplication.com',

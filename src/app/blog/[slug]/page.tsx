@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${title} | NYC Keys Blog`,
     description: `Expert automotive locksmith guide: ${title}. Learn how to duplicate car keys safely in NYC.`,
     slug: `/blog/${resolvedParams.slug}`,
-    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'http://www.carkeysduplicate.com'}/blog/${resolvedParams.slug}.jpg`
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.carkeysduplication.com'}/blog/${resolvedParams.slug}.jpg`
   })
 }
 
