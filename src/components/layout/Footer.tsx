@@ -102,12 +102,7 @@ export default function Footer() {
               </li>
             </ul>
             
-            {/* SEO Authority Link */}
-            <div className="mt-8 pt-8 border-t border-white/10">
-              <p className="text-xs text-gray-400">
-                Partnered with <a href={SITE.mainSite} className="hover:text-white underline decoration-white/30 underline-offset-2">car key replacement Staten Island</a>
-              </p>
-            </div>
+
           </div>
 
         </div>

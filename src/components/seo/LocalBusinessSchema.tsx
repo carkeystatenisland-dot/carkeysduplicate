@@ -35,10 +35,7 @@ export default function LocalBusinessSchema() {
       ],
       "opens": "09:00",
       "closes": "17:00"
-    },
-    "sameAs": [
-      SITE.mainSite
-    ]
+    }
   }
 
   return (

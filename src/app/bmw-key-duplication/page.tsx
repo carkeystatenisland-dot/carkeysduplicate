@@ -59,8 +59,8 @@ export default function MakePage() {
           </div>
           <div className="bg-brand-light p-8 rounded-2xl border-2 border-brand-accent flex flex-col justify-center">
             <h3 className="text-xl font-bold text-brand-primary mb-3">Lost All Keys?</h3>
-            <p className="text-sm text-gray-700 mb-6">If you have zero working keys, you require an emergency Key Origination service. Visit our sister service for full replacements.</p>
-            <a href="https://www.carkeyreplacementstatenisland.com/bmw-keys" target="_blank" rel="noopener noreferrer" className="inline-block text-center bg-brand-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">BMW key replacement Staten Island →</a>
+            <p className="text-sm text-gray-700 mb-6">If you have zero working keys, you require an emergency Key Origination service. We can help you right away.</p>
+            <Link href="/request-a-quote" className="inline-block text-center bg-brand-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">Request Emergency Service →</Link>
           </div>
         </div>
 
