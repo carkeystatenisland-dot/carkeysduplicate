@@ -89,14 +89,16 @@ const CAR_MAKES = [
 
 const getBoroughTemplate = (b) => `
 import Link from 'next/link'
+import { generatePageMetadata } from '@/lib/metadata'
 import CTABanner from '@/components/ui/CTABanner'
 import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, ShieldCheck, Clock, MapPin, Wrench } from 'lucide-react'
 
-export const metadata = {
+export const metadata = generatePageMetadata({
   title: 'Car Key Duplication ${b.name} NYC | Mobile Service, We Come To You',
-  description: 'Expert mobile car key duplication in ${b.name}. We program transponders, smart keys, and fobs on-site. Save time and avoid dealership towing fees.'
-}
+  description: 'Expert mobile car key duplication in ${b.name}. We program transponders, smart keys, and fobs on-site. Save time and avoid dealership towing fees.',
+  slug: '${b.slug}'
+})
 
 export default function BoroughPage() {
   return (
@@ -208,14 +210,16 @@ export default function BoroughPage() {
 
 const getServiceTemplate = (s) => `
 import Link from 'next/link'
+import { generatePageMetadata } from '@/lib/metadata'
 import CTABanner from '@/components/ui/CTABanner'
 import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, Cpu, Wrench, ShieldCheck, MapPin } from 'lucide-react'
 
-export const metadata = {
+export const metadata = generatePageMetadata({
   title: '${s.name} NYC | Mobile, On-Site Programming',
-  description: 'Expert ${s.name.toLowerCase()} across all NYC boroughs. We come to your location with OEM-grade diagnostic tools to program your vehicle securely.'
-}
+  description: 'Expert ${s.name.toLowerCase()} across all NYC boroughs. We come to your location with OEM-grade diagnostic tools to program your vehicle securely.',
+  slug: '${s.slug}'
+})
 
 export default function ServicePage() {
   return (
@@ -319,14 +323,16 @@ export default function ServicePage() {
 
 const getMakeTemplate = (m) => `
 import Link from 'next/link'
+import { generatePageMetadata } from '@/lib/metadata'
 import CTABanner from '@/components/ui/CTABanner'
 import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, Car, ShieldAlert, Cpu } from 'lucide-react'
 
-export const metadata = {
+export const metadata = generatePageMetadata({
   title: '${m.name} Car Key Duplication NYC | Mobile Locksmith Service',
-  description: 'Expert mobile ${m.name} car key duplication across NYC. We cut and program OEM-grade transponders, smart keys, and fobs on-site.'
-}
+  description: 'Expert mobile ${m.name} car key duplication across NYC. We cut and program OEM-grade transponders, smart keys, and fobs on-site.',
+  slug: '${m.slug}'
+})
 
 export default function MakePage() {
   return (

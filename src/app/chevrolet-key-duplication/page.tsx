@@ -1,12 +1,14 @@
 import Link from 'next/link'
+import { generatePageMetadata } from '@/lib/metadata'
 import CTABanner from '@/components/ui/CTABanner'
 import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, Car, ShieldAlert, Cpu } from 'lucide-react'
 
-export const metadata = {
+export const metadata = generatePageMetadata({
   title: 'Chevrolet Car Key Duplication NYC | Mobile Locksmith Service',
-  description: 'Expert mobile Chevrolet car key duplication across NYC. We cut and program OEM-grade transponders, smart keys, and fobs on-site.'
-}
+  description: 'Expert mobile Chevrolet car key duplication across NYC. We cut and program OEM-grade transponders, smart keys, and fobs on-site.',
+  slug: 'chevrolet-key-duplication'
+})
 
 export default function MakePage() {
   return (

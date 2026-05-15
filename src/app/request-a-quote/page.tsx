@@ -1,10 +1,12 @@
 import QuoteForm from '@/components/ui/QuoteForm'
 import TrustBadges from '@/components/ui/TrustBadges'
+import { generatePageMetadata } from '@/lib/metadata'
 
-export const metadata = {
+export const metadata = generatePageMetadata({
   title: 'Get a Free Car Key Duplication Quote | NYC Mobile Service',
   description: 'Get a free, no-obligation quote for car key duplication in NYC. No hidden fees. We serve all 5 boroughs. Response within 15 minutes.',
-}
+  slug: '/request-a-quote'
+})
 
 export default function RequestQuotePage() {
   return (

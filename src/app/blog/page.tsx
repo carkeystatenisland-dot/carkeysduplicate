@@ -1,9 +1,11 @@
 import Link from 'next/link'
+import { generatePageMetadata } from '@/lib/metadata'
 
-export const metadata = {
+export const metadata = generatePageMetadata({
   title: 'Blog | Car Keys Duplication NYC',
-  description: 'Expert tips and guides from our NYC automotive locksmith specialists.'
-}
+  description: 'Expert tips and guides from our NYC automotive locksmith specialists.',
+  slug: '/blog'
+})
 
 const POSTS = [
   { slug: 'car-key-duplication-cost-nyc', title: 'How Much Does Car Key Duplication Cost in NYC?' },

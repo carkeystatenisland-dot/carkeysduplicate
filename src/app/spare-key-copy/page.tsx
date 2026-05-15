@@ -1,12 +1,14 @@
 import Link from 'next/link'
+import { generatePageMetadata } from '@/lib/metadata'
 import CTABanner from '@/components/ui/CTABanner'
 import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, Cpu, Wrench, ShieldCheck, MapPin } from 'lucide-react'
 
-export const metadata = {
+export const metadata = generatePageMetadata({
   title: 'Spare Key Copy NYC | Mobile, On-Site Programming',
-  description: 'Expert spare key copy across all NYC boroughs. We come to your location with OEM-grade diagnostic tools to program your vehicle securely.'
-}
+  description: 'Expert spare key copy across all NYC boroughs. We come to your location with OEM-grade diagnostic tools to program your vehicle securely.',
+  slug: 'spare-key-copy'
+})
 
 export default function ServicePage() {
   return (

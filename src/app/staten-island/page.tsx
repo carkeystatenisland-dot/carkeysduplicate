@@ -1,12 +1,14 @@
 import Link from 'next/link'
+import { generatePageMetadata } from '@/lib/metadata'
 import CTABanner from '@/components/ui/CTABanner'
 import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, ShieldCheck, Clock, MapPin, Wrench } from 'lucide-react'
 
-export const metadata = {
+export const metadata = generatePageMetadata({
   title: 'Car Key Duplication Staten Island NYC | Mobile Service, We Come To You',
-  description: 'Expert mobile car key duplication in Staten Island. We program transponders, smart keys, and fobs on-site. Save time and avoid dealership towing fees.'
-}
+  description: 'Expert mobile car key duplication in Staten Island. We program transponders, smart keys, and fobs on-site. Save time and avoid dealership towing fees.',
+  slug: 'staten-island'
+})
 
 export default function BoroughPage() {
   return (

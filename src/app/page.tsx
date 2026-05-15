@@ -1,12 +1,19 @@
 import Link from 'next/link'
 import { ArrowRight, Clock, CheckCircle2, ShieldCheck, MapPin, Phone } from 'lucide-react'
 import { SITE, BOROUGHS, SERVICE_TYPES, CAR_MAKES } from '@/lib/constants'
+import { generatePageMetadata } from '@/lib/metadata'
 import TrustBadges from '@/components/ui/TrustBadges'
 import BoroughCard from '@/components/ui/BoroughCard'
 import ServiceCard from '@/components/ui/ServiceCard'
 import MakeCard from '@/components/ui/MakeCard'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
+
+export const metadata = generatePageMetadata({
+  title: 'Mobile Car Key Duplication NYC | All 5 Boroughs — We Come To You',
+  description: 'Mobile car key duplication across Brooklyn, Queens, Manhattan, Bronx & Staten Island. Transponder keys, smart keys, key fobs. Same-day service. We come to your location.',
+  slug: '/'
+})
 
 export default function Home() {
   const faqItems = [

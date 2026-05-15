@@ -2,13 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import CTABanner from '@/components/ui/CTABanner'
 import { SERVICE_TYPES, BOROUGHS } from '@/lib/constants'
+import { generatePageMetadata } from '@/lib/metadata'
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const title = params.slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
-  return {
+  return generatePageMetadata({
     title: `${title} | NYC Keys Blog`,
-    description: 'Expert automotive locksmith guide from NYC Keys.'
-  }
+    description: `Expert automotive locksmith guide: ${title}. Learn how to duplicate car keys safely in NYC.`,
+    slug: `/blog/${params.slug}`
+  })
 }
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
