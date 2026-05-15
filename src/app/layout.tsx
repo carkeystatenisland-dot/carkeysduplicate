@@ -5,6 +5,8 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import MobileCTA from '@/components/layout/MobileCTA'
 import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema'
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
+import MicrosoftClarity from '@/components/analytics/MicrosoftClarity'
 import { SITE } from '@/lib/constants'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -51,6 +53,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body className="font-sans bg-white text-gray-900 antialiased min-h-screen flex flex-col">
+        <GoogleAnalytics />
+        <MicrosoftClarity />
         <LocalBusinessSchema />
         <Navbar />
         {/* Added padding top to account for fixed navbar */}
