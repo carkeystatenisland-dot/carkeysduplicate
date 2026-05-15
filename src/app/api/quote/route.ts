@@ -7,6 +7,10 @@ export async function POST(request: NextRequest) {
   try {
     const data: QuoteData = await request.json()
 
+    // Extract source domain from request headers
+    const origin = request.headers.get('origin') || request.headers.get('referer') || 'Unknown'
+    const source = `${origin} (Quote Form)`
+
     // Validation
     if (!data.name || !data.phone || !data.make || !data.keyType || !data.borough) {
       return NextResponse.json(
@@ -24,7 +28,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const message = formatQuoteMessage(data)
+    const message = formatQuoteMessage(data, source)
     const sent = await sendTelegramMessage(message)
 
     if (!sent) {

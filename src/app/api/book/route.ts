@@ -7,6 +7,10 @@ export async function POST(request: NextRequest) {
   try {
     const data: BookingData = await request.json()
 
+    // Extract source domain from request headers
+    const origin = request.headers.get('origin') || request.headers.get('referer') || 'Unknown'
+    const source = `${origin} (Booking Form)`
+
     // Validation
     if (!data.name || !data.phone || !data.make || !data.service) {
       return NextResponse.json(
@@ -24,7 +28,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const message = formatBookingMessage(data)
+    const message = formatBookingMessage(data, source)
     const sent = await sendTelegramMessage(message)
 
     if (!sent) {

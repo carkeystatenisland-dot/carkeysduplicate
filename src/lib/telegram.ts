@@ -19,9 +19,11 @@ export async function sendTelegramMessage(message: string): Promise<boolean> {
   }
 }
 
-export function formatBookingMessage(data: BookingData): string {
+export function formatBookingMessage(data: BookingData, source: string): string {
   return `
 🔑 <b>NEW BOOKING REQUEST</b>
+━━━━━━━━━━━━━━━━━━━
+🌐 <b>Source:</b> ${source}
 ━━━━━━━━━━━━━━━━━━━
 👤 <b>Name:</b> ${data.name}
 📱 <b>Phone:</b> ${data.phone}
@@ -36,9 +38,11 @@ export function formatBookingMessage(data: BookingData): string {
   `.trim()
 }
 
-export function formatQuoteMessage(data: QuoteData): string {
+export function formatQuoteMessage(data: QuoteData, source: string): string {
   return `
 💰 <b>NEW QUOTE REQUEST</b>
+━━━━━━━━━━━━━━━━━━━
+🌐 <b>Source:</b> ${source}
 ━━━━━━━━━━━━━━━━━━━
 👤 <b>Name:</b> ${data.name}
 📱 <b>Phone:</b> ${data.phone}
