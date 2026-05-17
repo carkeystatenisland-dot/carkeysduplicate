@@ -24,7 +24,7 @@ export default function ServicePage() {
           <div className="mt-12 pt-8 border-t border-white/10"><TrustBadges /></div>
         </div>
       </div>
-      
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-6">

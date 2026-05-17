@@ -24,22 +24,22 @@ export default function MakePage() {
           <div className="mt-12 pt-8 border-t border-white/10"><TrustBadges /></div>
         </div>
       </div>
-      
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-        
+
         {/* Intro paragraph for semantic depth */}
         <article className="prose prose-lg max-w-none text-gray-700 mb-16">
           <p className="lead text-2xl font-bold text-brand-primary mb-6">Your Premier Volkswagen Locksmith in New York City</p>
           <p>
-            Losing a car key or needing a spare for your Volkswagen in New York City can be an incredibly stressful experience. 
-            Between alternate side parking rules, expensive parking garages in Manhattan, and the fast-paced lifestyle of Brooklyn and Queens, 
-            you do not have the time to tow your vehicle to a Volkswagen dealership and wait days for a replacement. That is exactly why our mobile 
-            automotive locksmith service exists. We provide on-site Volkswagen car key duplication, transponder key programming, and smart key fob 
+            Losing a car key or needing a spare for your Volkswagen in New York City can be an incredibly stressful experience.
+            Between alternate side parking rules, expensive parking garages in Manhattan, and the fast-paced lifestyle of Brooklyn and Queens,
+            you do not have the time to tow your vehicle to a Volkswagen dealership and wait days for a replacement. That is exactly why our mobile
+            automotive locksmith service exists. We provide on-site Volkswagen car key duplication, transponder key programming, and smart key fob
             replacements directly at your vehicle's location.
           </p>
           <p>
-            Our certified technicians are equipped with advanced diagnostic tools capable of reading your vehicle's ECU and safely programming 
-            a new key. Whether you need a standard metal blade duplicated or a complex push-to-start proximity fob synced to your car's computer, 
+            Our certified technicians are equipped with advanced diagnostic tools capable of reading your vehicle's ECU and safely programming
+            a new key. Whether you need a standard metal blade duplicated or a complex push-to-start proximity fob synced to your car's computer,
             we guarantee dealership-level quality at a fraction of the cost.
           </p>
         </article>
@@ -53,9 +53,9 @@ export default function MakePage() {
           <div className="p-8">
             <p className="text-lg text-gray-700 leading-relaxed mb-6">Volkswagen utilizes the Megamos Crypto 48 chip and the highly secure MQB platform. Duplication requires reading the instrument cluster data to extract the component security (CS) bytes. We have the specific VAG diagnostic tools to execute this flawlessly.</p>
             <p className="text-gray-700">
-              Modern Volkswagen vehicles utilize immobilizer systems designed to prevent theft. The key fob contains a microchip that transmits a specific 
-              radio frequency signal to the receiver located near the ignition. If the cryptographic code matches, the Engine Control Unit (ECU) enables 
-              the fuel injectors and ignition coils. Simple hardware store duplication cannot replicate this chip. We utilize factory-level OBD-II programmers 
+              Modern Volkswagen vehicles utilize immobilizer systems designed to prevent theft. The key fob contains a microchip that transmits a specific
+              radio frequency signal to the receiver located near the ignition. If the cryptographic code matches, the Engine Control Unit (ECU) enables
+              the fuel injectors and ignition coils. Simple hardware store duplication cannot replicate this chip. We utilize factory-level OBD-II programmers
               to securely extract the PIN code and pair the new key to your Volkswagen's immobilizer system.
             </p>
           </div>
@@ -91,7 +91,7 @@ export default function MakePage() {
         {/* Service Breakdown */}
         <div className="mb-16">
           <h2 className="text-3xl font-heading text-brand-primary font-bold mb-8">Comprehensive Volkswagen Key Services</h2>
-          
+
           <div className="space-y-8">
             <div className="border-l-4 border-brand-accent pl-6 py-2">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">1. Smart Key & Proximity Fobs</h3>
@@ -99,7 +99,7 @@ export default function MakePage() {
                 If your Volkswagen features push-to-start ignition, it relies on a smart proximity key. These fobs constantly communicate with the car's Body Control Module (BCM). We program these advanced fobs to ensure all features—including remote start, trunk release, and panic alarm—function flawlessly.
               </p>
             </div>
-            
+
             <div className="border-l-4 border-brand-accent pl-6 py-2">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">2. Transponder Key Programming</h3>
               <p className="text-gray-700">
@@ -144,15 +144,15 @@ export default function MakePage() {
 
         {/* Emergency Origination CTA */}
         <div className="bg-gray-50 p-8 rounded-2xl border-2 border-gray-300 flex flex-col justify-center mb-16 text-center">
-            <h3 className="text-2xl font-bold text-brand-primary mb-3">Lost All Keys?</h3>
-            <p className="text-lg text-gray-700 mb-6">If you have zero working keys, you require an emergency Key Origination service. We don't just duplicate—we can generate a key from scratch by decoding your door locks and reprogramming the car's computer.</p>
-            <Link href="/request-a-quote" className="inline-block mx-auto bg-brand-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-gray-800 transition-colors">Request Emergency Service →</Link>
+          <h3 className="text-2xl font-bold text-brand-primary mb-3">Lost All Keys?</h3>
+          <p className="text-lg text-gray-700 mb-6">If you have zero working keys, you require an emergency Key Origination service. We don't just duplicate—we can generate a key from scratch by decoding your door locks and reprogramming the car's computer.</p>
+          <Link href="/request-a-quote" className="inline-block mx-auto bg-brand-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-gray-800 transition-colors">Request Emergency Service →</Link>
         </div>
 
         {/* Extensive FAQ */}
         <div className="mb-16">
           <h2 className="text-3xl font-heading text-brand-primary font-bold mb-8">Frequently Asked Questions: Volkswagen Keys</h2>
-          
+
           <div className="space-y-6">
             <div>
               <h4 className="font-bold text-lg text-gray-800 mb-2">How much does a Volkswagen key duplication cost?</h4>

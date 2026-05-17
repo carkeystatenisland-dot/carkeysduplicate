@@ -35,7 +35,7 @@ export default function BoroughPage() {
           <div className="mt-12 pt-8 border-t border-white/10"><TrustBadges /></div>
         </div>
       </div>
-      
+
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-brand-light p-6 rounded-xl border border-gray-100 flex flex-col items-center text-center">
