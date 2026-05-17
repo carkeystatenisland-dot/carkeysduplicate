@@ -115,6 +115,25 @@ export default function Home() {
               <ServiceCard key={service.slug} service={service} />
             ))}
           </div>
+          
+          {/* Internal links to resolve orphan pages (0 href inlinks) */}
+          <div className="mt-12 text-center border-t border-gray-100 pt-8">
+            <p className="text-sm md:text-base font-medium text-gray-500">
+              Need specialized response? We offer rapid{' '}
+              <Link href="/same-day-car-key-duplication-nyc" className="text-brand-primary hover:text-brand-accent font-bold underline transition-colors">
+                Same-Day Service
+              </Link>
+              ,{' '}
+              <Link href="/24-hour-car-key-duplication-nyc" className="text-brand-primary hover:text-brand-accent font-bold underline transition-colors">
+                24-Hour Emergency Dispatches
+              </Link>
+              , and full{' '}
+              <Link href="/mobile-car-key-duplication-nyc" className="text-brand-primary hover:text-brand-accent font-bold underline transition-colors">
+                Mobile Car Key Duplication
+              </Link>{' '}
+              anywhere in NYC.
+            </p>
+          </div>
         </div>
       </section>
 

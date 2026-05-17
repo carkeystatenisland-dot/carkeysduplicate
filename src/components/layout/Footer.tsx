@@ -100,6 +100,21 @@ export default function Footer() {
                   About Us
                 </Link>
               </li>
+              <li className="pt-2 border-t border-white/10">
+                <Link href="/same-day-car-key-duplication-nyc" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
+                  Same-Day Duplication
+                </Link>
+              </li>
+              <li>
+                <Link href="/24-hour-car-key-duplication-nyc" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
+                  24-Hour Emergency Copy
+                </Link>
+              </li>
+              <li>
+                <Link href="/mobile-car-key-duplication-nyc" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
+                  Mobile Roadside Dispatch
+                </Link>
+              </li>
             </ul>
             
 
