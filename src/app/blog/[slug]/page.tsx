@@ -1,26 +1,32 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import CTABanner from '@/components/ui/CTABanner'
 import { SERVICE_TYPES, BOROUGHS } from '@/lib/constants'
 import { generatePageMetadata } from '@/lib/metadata'
+import { BLOG_POSTS_DATA } from '@/lib/blogData'
+
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return [
-    { slug: 'car-key-duplication-cost-nyc' },
-    { slug: 'dealer-vs-locksmith-key-duplication-nyc' },
-    { slug: 'can-you-duplicate-transponder-key' },
-    { slug: 'avoid-locksmith-scams-nyc' },
-    { slug: 'what-happens-with-only-one-car-key' }
-  ]
+  return Object.keys(BLOG_POSTS_DATA).map(slug => ({ slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
-  const title = resolvedParams.slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+  const post = BLOG_POSTS_DATA[resolvedParams.slug]
+  
+  if (!post) {
+    return generatePageMetadata({
+      title: 'Blog Post Not Found',
+      description: 'The requested automotive locksmith blog post was not found.',
+      slug: `/blog/${resolvedParams.slug}`
+    })
+  }
+
   return generatePageMetadata({
-    title: `${title} | NYC Keys Blog`,
-    description: `Expert automotive locksmith guide: ${title}. Learn how to duplicate car keys safely in NYC.`,
+    title: `${post.title} | NYC Keys Blog`,
+    description: post.description,
     slug: `/blog/${resolvedParams.slug}`,
     image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.carkeysduplication.com'}/blog/${resolvedParams.slug}.jpg`
   })
@@ -28,7 +34,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
-  const title = resolvedParams.slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+  const post = BLOG_POSTS_DATA[resolvedParams.slug]
+
+  if (!post) {
+    notFound()
+  }
 
   return (
     <div className="bg-white min-h-screen py-12 border-t border-gray-100">
@@ -38,37 +48,23 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           {/* Main Article Content */}
           <article className="lg:w-2/3">
             <h1 className="text-3xl md:text-5xl font-heading font-extrabold text-brand-primary mb-6 leading-tight">
-              {title}
+              {post.title}
             </h1>
             
             <div className="w-full aspect-video rounded-2xl overflow-hidden mb-8 shadow-sm">
-              <img src={`/blog/${resolvedParams.slug}.jpg`} alt={title} className="w-full h-full object-cover" />
+              <img src={`/blog/${resolvedParams.slug}.jpg`} alt={post.title} className="w-full h-full object-cover" />
             </div>
 
             <div className="flex items-center gap-4 text-gray-500 text-sm mb-10 border-b border-gray-100 pb-6">
               <span>By NYC Keys Specialist</span>
               <span>•</span>
+              <span>{post.readingTime}</span>
+              <span>•</span>
               <span>Updated: {new Date().toLocaleDateString()}</span>
             </div>
             
             <div className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-brand-primary prose-a:text-brand-accent">
-              <p className="lead text-xl text-gray-600 mb-8">
-                Welcome to our guide on {title.toLowerCase()}. As mobile automotive locksmiths serving all 5 boroughs of New York City, we see this topic come up frequently with our customers.
-              </p>
-              
-              <h2>Expert Insights</h2>
-              <p>
-                In NYC, car key emergencies are different than in the suburbs. Whether you're stuck in a Manhattan parking garage or need a spare key in Brooklyn, dealing with dealership wait times is often not an option.
-              </p>
-              
-              <div className="bg-brand-light p-6 rounded-xl border-l-4 border-brand-accent my-8">
-                <h3 className="text-xl font-bold text-brand-primary mb-2 mt-0">Need immediate assistance?</h3>
-                <p className="mb-0">We offer mobile service directly to your location. <Link href="/request-a-quote">Get a free quote online</Link> or call us for fastest response.</p>
-              </div>
-              
-              <p>
-                Stay tuned for the full detailed content on this topic, coming soon in Phase 5 content deployment.
-              </p>
+              {post.content}
             </div>
           </article>
           
