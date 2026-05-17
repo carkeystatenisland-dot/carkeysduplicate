@@ -6,7 +6,7 @@ import { CheckCircle2, Zap, Clock, ShieldCheck, MapPin, Truck, Award, UserCheck,
 
 export const metadata = generatePageMetadata({
   title: `Same Day Car Key Duplication NYC | Fast On-Site Service`,
-  description: `We stock over 2,000 blank fobs and transponders in our mobile units. If you call before 2 PM, we guarantee a same-day appointment for any make or model. Professional automotive locksmiths serving all NYC boroughs.`,
+  description: `Same-day car key duplication in NYC. Call before 2 PM for guaranteed same-day dispatch for any make/model. Professional mobile locksmiths in all 5 boroughs.`,
   slug: `same-day-car-key-duplication-nyc`
 })
 

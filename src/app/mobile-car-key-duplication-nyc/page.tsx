@@ -6,7 +6,7 @@ import { CheckCircle2, Zap, Clock, ShieldCheck, MapPin, Truck, Award, UserCheck,
 
 export const metadata = generatePageMetadata({
   title: `Mobile Car Key Duplication NYC | Fast On-Site Service`,
-  description: `No towing, no waiting rooms, and no hidden travel fees. We serve all 5 boroughs with a fleet of mobile workshops. Professional automotive locksmiths serving all NYC boroughs.`,
+  description: `Mobile car key duplication with no towing, no waiting, and no hidden fees. We serve all 5 NYC boroughs with on-site programming. Call (929) 828-7009.`,
   slug: `mobile-car-key-duplication-nyc`
 })
 

@@ -4,7 +4,7 @@ import { ShieldCheck, Clock, MapPin, Wrench } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
   title: 'About Us | Car Keys Duplication NYC',
-  description: 'Learn about our mobile automotive locksmith team serving all 5 boroughs of New York City.',
+  description: 'Learn about our expert mobile automotive locksmith team in NYC. Serving all 5 boroughs with licensed, fast, on-site car key duplication and programming.',
   slug: '/about'
 })
 

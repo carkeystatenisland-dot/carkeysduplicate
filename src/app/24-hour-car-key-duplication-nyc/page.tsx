@@ -6,7 +6,7 @@ import { CheckCircle2, Zap, Clock, ShieldCheck, MapPin, Truck, Award, UserCheck,
 
 export const metadata = generatePageMetadata({
   title: `24 Hour Car Key Duplication NYC | Fast On-Site Service`,
-  description: `Our dispatchers and technicians are on-call 24/7, 365 days a year. Whether it's New Year's Eve or a Sunday morning, we are the only ones answering the phone. Professional automotive locksmiths serving all NYC boroughs.`,
+  description: `Emergency 24-hour car key duplication in NYC. On-call 24/7/365 for immediate roadside key replacement and programming. We come to your exact coordinates!`,
   slug: `24-hour-car-key-duplication-nyc`
 })
 

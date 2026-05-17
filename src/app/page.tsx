@@ -11,7 +11,7 @@ import FAQAccordion from '@/components/ui/FAQAccordion'
 
 export const metadata = generatePageMetadata({
   title: 'Mobile Car Key Duplication NYC | All 5 Boroughs — We Come To You',
-  description: 'Mobile car key duplication across Brooklyn, Queens, Manhattan, Bronx & Staten Island. Transponder keys, smart keys, key fobs. Same-day service. We come to your location.',
+  description: 'Mobile car key duplication across Brooklyn, Queens, Manhattan, Bronx & Staten Island. We copy transponder keys, fobs & smart keys on-site. Same-day service.',
   slug: '/'
 })
 

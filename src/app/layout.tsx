@@ -10,10 +10,10 @@ import MicrosoftClarity from '@/components/analytics/MicrosoftClarity'
 import { SITE } from '@/lib/constants'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const poppins = Poppins({ 
-  subsets: ['latin'], 
+const poppins = Poppins({
+  subsets: ['latin'],
   weight: ['400', '600', '700', '800'],
-  variable: '--font-poppins' 
+  variable: '--font-poppins'
 })
 
 export const metadata: Metadata = {

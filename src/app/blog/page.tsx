@@ -3,7 +3,7 @@ import { generatePageMetadata } from '@/lib/metadata'
 
 export const metadata = generatePageMetadata({
   title: 'Blog | Car Keys Duplication NYC',
-  description: 'Expert tips and guides from our NYC automotive locksmith specialists.',
+  description: 'Read expert tips, pricing guides, and automotive security advice from our certified NYC car key duplication specialists. Learn how to save on replacement fobs.',
   slug: '/blog'
 })
 
