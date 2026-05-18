@@ -8,6 +8,21 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get('host') || ''
   const protocol = request.headers.get('x-forwarded-proto') || 'http'
 
+  // Detect spam/gambling query parameters to return 404 status immediately
+  const query = request.nextUrl.search.toLowerCase()
+  if (
+    query.includes('gambling') ||
+    query.includes('casino') ||
+    query.includes('betting') ||
+    query.includes('slots') ||
+    query.includes('vegas') ||
+    query.includes('stardust')
+  ) {
+    // Rewrite to a non-existent route to render our custom not-found.tsx page with 404 status
+    url.pathname = '/404'
+    return NextResponse.rewrite(url)
+  }
+
   // 1. Force WWW subdomain
   if (hostname === 'carkeysduplication.com') {
     url.hostname = 'www.carkeysduplication.com'
