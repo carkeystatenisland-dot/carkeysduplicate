@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get('host') || ''
   const protocol = request.headers.get('x-forwarded-proto') || 'http'
 
-  // Detect spam/gambling query parameters to return 404 status immediately
+  // Detect spam/gambling query parameters to return 410 Gone status immediately
   const query = request.nextUrl.search.toLowerCase()
   if (
     query.includes('gambling') ||
@@ -18,9 +18,8 @@ export function middleware(request: NextRequest) {
     query.includes('vegas') ||
     query.includes('stardust')
   ) {
-    // Rewrite to a non-existent route to render our custom not-found.tsx page with 404 status
-    url.pathname = '/404'
-    return NextResponse.rewrite(url)
+    // Return 410 Gone to tell search engines these pages were permanently removed
+    return new NextResponse('Gone', { status: 410 })
   }
 
   // 1. Force WWW subdomain
