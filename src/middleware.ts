@@ -25,6 +25,9 @@ export function middleware(request: NextRequest) {
     query.includes('sunset-station') ||
     query.includes('le-grand') ||
     query.includes('heart-of-vegas') ||
+    query.includes('winning') ||
+    query.includes('wedding') ||
+    query.includes('thrill') ||
     query.includes('world-cup')
   ) {
     // Return 410 Gone to tell search engines these pages were permanently removed
