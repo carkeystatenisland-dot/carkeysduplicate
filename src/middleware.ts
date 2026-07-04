@@ -28,7 +28,9 @@ export function middleware(request: NextRequest) {
     query.includes('winning') ||
     query.includes('wedding') ||
     query.includes('thrill') ||
-    query.includes('world-cup')
+    query.includes('world-cup') ||
+    query.includes('bookmaker') ||
+    query.includes('sportsbook')
   ) {
     // Return 410 Gone to tell search engines these pages were permanently removed
     return new NextResponse('Gone', { status: 410 })
