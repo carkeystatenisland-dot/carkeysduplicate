@@ -16,7 +16,16 @@ export function middleware(request: NextRequest) {
     query.includes('betting') ||
     query.includes('slots') ||
     query.includes('vegas') ||
-    query.includes('stardust')
+    query.includes('stardust') ||
+    query.includes('bettings') ||
+    query.includes('cherokee') ||
+    query.includes('exploring') ||
+    query.includes('bet365') ||
+    query.includes('tsuyoshi') ||
+    query.includes('sunset-station') ||
+    query.includes('le-grand') ||
+    query.includes('heart-of-vegas') ||
+    query.includes('world-cup')
   ) {
     // Return 410 Gone to tell search engines these pages were permanently removed
     return new NextResponse('Gone', { status: 410 })
