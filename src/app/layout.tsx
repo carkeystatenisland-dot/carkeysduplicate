@@ -18,8 +18,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: 'Car Keys Duplication NYC | Mobile Service All 5 Boroughs',
-  description: 'Mobile car key duplication across all NYC boroughs. We come to you — Brooklyn, Queens, Manhattan, Bronx & Staten Island. Transponder keys, smart keys, key fobs. Call 24/7.',
+  title: 'Car Keys duplicate NYC | Mobile Service All 5 Boroughs',
+  description: 'Mobile car key duplicate across all NYC boroughs. We come to you — Brooklyn, Queens, Manhattan, Bronx & Staten Island. Transponder keys, smart keys, key fobs. Call 24/7.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         url: `${SITE.url}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Car Keys Duplication NYC — Mobile Locksmith Service',
+        alt: 'Car Keys duplicate NYC — Mobile Locksmith Service',
       },
     ],
   },

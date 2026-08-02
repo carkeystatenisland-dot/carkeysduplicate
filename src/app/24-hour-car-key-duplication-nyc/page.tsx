@@ -5,9 +5,9 @@ import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, Zap, Clock, ShieldCheck, MapPin, Truck, Award, UserCheck, Lock } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: `24 Hour Car Key Duplication NYC | Fast On-Site Service`,
-  description: `Emergency 24-hour car key duplication in NYC. On-call 24/7/365 for immediate roadside key replacement and programming. We come to your exact coordinates!`,
-  slug: `24-hour-car-key-duplication-nyc`
+  title: `24 Hour Car Key duplicate NYC | Fast On-Site Service`,
+  description: `Emergency 24-hour car key duplicate in NYC. On-call 24/7/365 for immediate roadside key replacement and programming. We come to your exact coordinates!`,
+  slug: `24-hour-car-key-duplicate-nyc`
 })
 
 export default function IntentPage() {
@@ -15,7 +15,7 @@ export default function IntentPage() {
     <div className="pb-16 bg-white">
       <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center border-b-4 border-brand-accent">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">24 Hour Car Key Duplication NYC</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">24 Hour Car Key duplicate NYC</h1>
           <p className="text-xl text-gray-300 font-medium mb-8">Lost your keys at 3 AM in a parking garage?</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
              <Link href="/book-now" className="w-full sm:w-auto bg-brand-accent text-brand-primary font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition-colors shadow-lg text-lg">Book Immediate Dispatch</Link>
@@ -44,7 +44,7 @@ export default function IntentPage() {
         </div>
 
         <div className="prose prose-lg max-w-none text-gray-700 mb-16">
-          <h2 className="text-4xl font-heading text-brand-primary font-bold text-center mb-10">Why Choose Us for 24 Hour Car Key Duplication NYC?</h2>
+          <h2 className="text-4xl font-heading text-brand-primary font-bold text-center mb-10">Why Choose Us for 24 Hour Car Key duplicate NYC?</h2>
           <div className="bg-gray-50 p-12 rounded-3xl border border-gray-100 shadow-inner">
             <p className="text-xl leading-relaxed text-gray-800 text-center">Our dispatchers and technicians are on-call 24/7, 365 days a year. Whether it's New Year's Eve or a Sunday morning, we are the only ones answering the phone.</p>
           </div>

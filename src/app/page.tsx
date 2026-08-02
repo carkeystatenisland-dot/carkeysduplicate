@@ -10,31 +10,31 @@ import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
 
 export const metadata = generatePageMetadata({
-  title: 'Mobile Car Key Duplication NYC | All 5 Boroughs — We Come To You',
-  description: 'Mobile car key duplication across Brooklyn, Queens, Manhattan, Bronx & Staten Island. We copy transponder keys, fobs & smart keys on-site. Same-day service.',
+  title: 'Mobile Car Key duplicate NYC | All 5 Boroughs — We Come To You',
+  description: 'Mobile car key duplicate across Brooklyn, Queens, Manhattan, Bronx & Staten Island. We copy transponder keys, fobs & smart keys on-site. Same-day service.',
   slug: '/'
 })
 
 export default function Home() {
   const faqItems = [
     {
-      question: "How much does car key duplication cost in NYC?",
-      answer: "Car key duplication typically starts at $95 for basic transponder keys and can go up to $175+ for smart keys or push-to-start fobs. The exact price depends on your vehicle's make, model, year, and the type of key technology it uses. We always provide a clear, upfront quote before starting any work."
+      question: "How much does car key duplicate cost in NYC?",
+      answer: "Car key duplicate typically starts at $95 for basic transponder keys and can go up to $175+ for smart keys or push-to-start fobs. The exact price depends on your vehicle's make, model, year, and the type of key technology it uses. We always provide a clear, upfront quote before starting any work."
     },
     {
       question: "Can you duplicate a key without the original?",
       answer: "Yes! While having an original key makes the process faster (key cloning), our mobile locksmiths can generate a completely new key from scratch using your vehicle's VIN and specialized programming equipment. This is known as key origination."
     },
     {
-      question: "What's the difference between key duplication and key replacement?",
-      answer: "Duplication means you have at least one working key, and we make a copy of it. This is usually faster and cheaper. Replacement means you have lost all working keys, and we must cut and program a brand new key from scratch, which requires more advanced programming steps."
+      question: "What's the difference between key duplicate and key replacement?",
+      answer: "duplicate means you have at least one working key, and we make a copy of it. This is usually faster and cheaper. Replacement means you have lost all working keys, and we must cut and program a brand new key from scratch, which requires more advanced programming steps."
     },
     {
       question: "Do you come to my location or do I need to go somewhere?",
       answer: "We are a 100% mobile service. We come directly to your location anywhere in the 5 boroughs of NYC. Whether you're at home, at work, or stranded in a parking garage, our fully equipped vans arrive ready to cut and program your key on-site."
     },
     {
-      question: "How long does mobile car key duplication take?",
+      question: "How long does mobile car key duplicate take?",
       answer: "Once our technician arrives, the actual key cutting and programming process typically takes 15 to 30 minutes, depending on the complexity of your vehicle's security system. Same-day service is our standard."
     },
     {
@@ -59,7 +59,7 @@ export default function Home() {
             24/7 Mobile Locksmith Service
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold text-white tracking-tight mb-6 max-w-4xl mx-auto">
-            Mobile Car Key Duplication — We Come To You, Anywhere in NYC
+            Mobile Car Key duplicate — We Come To You, Anywhere in NYC
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-medium">
             Serving all 5 boroughs. Transponder keys, smart keys, key fobs — duplicated on-site.
@@ -105,7 +105,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">Car Key Duplication Services</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">Car Key duplicate Services</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               From basic transponder chips to advanced proximity smart keys, we have the technology to program them all.
             </p>
@@ -120,16 +120,16 @@ export default function Home() {
           <div className="mt-12 text-center border-t border-gray-100 pt-8">
             <p className="text-sm md:text-base font-medium text-gray-500">
               Need specialized response? We offer rapid{' '}
-              <Link href="/same-day-car-key-duplication-nyc" className="text-brand-primary hover:text-brand-accent font-bold underline transition-colors">
+              <Link href="/same-day-car-key-duplicate-nyc" className="text-brand-primary hover:text-brand-accent font-bold underline transition-colors">
                 Same-Day Service
               </Link>
               ,{' '}
-              <Link href="/24-hour-car-key-duplication-nyc" className="text-brand-primary hover:text-brand-accent font-bold underline transition-colors">
+              <Link href="/24-hour-car-key-duplicate-nyc" className="text-brand-primary hover:text-brand-accent font-bold underline transition-colors">
                 24-Hour Emergency Dispatches
               </Link>
               , and full{' '}
-              <Link href="/mobile-car-key-duplication-nyc" className="text-brand-primary hover:text-brand-accent font-bold underline transition-colors">
-                Mobile Car Key Duplication
+              <Link href="/mobile-car-key-duplicate-nyc" className="text-brand-primary hover:text-brand-accent font-bold underline transition-colors">
+                Mobile Car Key duplicate
               </Link>{' '}
               anywhere in NYC.
             </p>
@@ -257,7 +257,7 @@ export default function Home() {
       <section className="py-20 bg-brand-light border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">Common Questions About Car Key Duplication</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">Common Questions About Car Key duplicate</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Everything you need to know about our mobile service in NYC.
             </p>
@@ -289,7 +289,7 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Dummy Blog Cards based on briefs */}
-            <Link href="/blog/car-key-duplication-cost-nyc" className="block group">
+            <Link href="/blog/car-key-duplicate-cost-nyc" className="block group">
               <div className="bg-brand-light rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all h-full flex flex-col">
                 <div className="h-48 bg-gray-200 w-full relative overflow-hidden">
                   <div className="absolute inset-0 bg-brand-primary/10 group-hover:bg-transparent transition-colors"></div>
@@ -298,7 +298,7 @@ export default function Home() {
                 </div>
                 <div className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-bold text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
-                    How Much Does Car Key Duplication Cost in NYC? (2025 Guide)
+                    How Much Does Car Key duplicate Cost in NYC? (2025 Guide)
                   </h3>
                   <p className="text-gray-600 text-sm flex-grow mb-4">
                     Real price ranges by service type and make. Discover why NYC prices differ and what red flags to avoid.
@@ -308,7 +308,7 @@ export default function Home() {
               </div>
             </Link>
             
-            <Link href="/blog/dealer-vs-locksmith-key-duplication-nyc" className="block group">
+            <Link href="/blog/dealer-vs-locksmith-key-duplicate-nyc" className="block group">
               <div className="bg-brand-light rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all h-full flex flex-col">
                 <div className="h-48 bg-gray-200 w-full relative overflow-hidden">
                   <div className="absolute inset-0 bg-brand-primary/10 group-hover:bg-transparent transition-colors"></div>
@@ -316,7 +316,7 @@ export default function Home() {
                 </div>
                 <div className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-bold text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
-                    Dealer vs. Mobile Locksmith for Key Duplication
+                    Dealer vs. Mobile Locksmith for Key duplicate
                   </h3>
                   <p className="text-gray-600 text-sm flex-grow mb-4">
                     An honest comparison of speed, cost, quality, and convenience between NYC dealerships and mobile locksmiths.

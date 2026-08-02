@@ -81,7 +81,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <span className="font-heading font-bold text-xl tracking-tight text-brand-primary leading-tight">
-              Car Keys<span className="text-brand-accent"> Duplication</span>
+              Car Keys<span className="text-brand-accent"> duplicate</span>
             </span>
           </Link>
 

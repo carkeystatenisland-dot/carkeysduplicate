@@ -10,33 +10,33 @@ const BOROUGHS = [
 ];
 
 const SERVICE_TYPES = [
-  { slug: 'transponder-key-duplication', name: 'Transponder Key Duplication' },
-  { slug: 'key-fob-duplication', name: 'Key Fob Duplication' },
-  { slug: 'smart-key-duplication', name: 'Smart Key Duplication' },
-  { slug: 'push-to-start-key-duplication', name: 'Push-to-Start Key Duplication' },
-  { slug: 'laser-cut-key-duplication', name: 'Laser-Cut Key Duplication' },
+  { slug: 'transponder-key-duplicate', name: 'Transponder Key duplicate' },
+  { slug: 'key-fob-duplicate', name: 'Key Fob duplicate' },
+  { slug: 'smart-key-duplicate', name: 'Smart Key duplicate' },
+  { slug: 'push-to-start-key-duplicate', name: 'Push-to-Start Key duplicate' },
+  { slug: 'laser-cut-key-duplicate', name: 'Laser-Cut Key duplicate' },
   { slug: 'spare-key-copy', name: 'Spare Key Copy' }
 ];
 
 const CAR_MAKES = [
-  { slug: 'toyota-key-duplication', name: 'Toyota' },
-  { slug: 'honda-key-duplication', name: 'Honda' },
-  { slug: 'ford-key-duplication', name: 'Ford' },
-  { slug: 'bmw-key-duplication', name: 'BMW' },
-  { slug: 'nissan-key-duplication', name: 'Nissan' },
-  { slug: 'hyundai-key-duplication', name: 'Hyundai' },
-  { slug: 'jeep-key-duplication', name: 'Jeep' },
-  { slug: 'chevrolet-key-duplication', name: 'Chevrolet' },
-  { slug: 'kia-key-duplication', name: 'Kia' },
-  { slug: 'mercedes-key-duplication', name: 'Mercedes' },
-  { slug: 'subaru-key-duplication', name: 'Subaru' },
-  { slug: 'volkswagen-key-duplication', name: 'Volkswagen' }
+  { slug: 'toyota-key-duplicate', name: 'Toyota' },
+  { slug: 'honda-key-duplicate', name: 'Honda' },
+  { slug: 'ford-key-duplicate', name: 'Ford' },
+  { slug: 'bmw-key-duplicate', name: 'BMW' },
+  { slug: 'nissan-key-duplicate', name: 'Nissan' },
+  { slug: 'hyundai-key-duplicate', name: 'Hyundai' },
+  { slug: 'jeep-key-duplicate', name: 'Jeep' },
+  { slug: 'chevrolet-key-duplicate', name: 'Chevrolet' },
+  { slug: 'kia-key-duplicate', name: 'Kia' },
+  { slug: 'mercedes-key-duplicate', name: 'Mercedes' },
+  { slug: 'subaru-key-duplicate', name: 'Subaru' },
+  { slug: 'volkswagen-key-duplicate', name: 'Volkswagen' }
 ];
 
 const INTENT_PAGES = [
-  { slug: 'mobile-car-key-duplication-nyc', title: 'Mobile Car Key Duplication NYC' },
-  { slug: 'same-day-car-key-duplication-nyc', title: 'Same Day Car Key Duplication NYC' },
-  { slug: '24-hour-car-key-duplication-nyc', title: '24 Hour Car Key Duplication NYC' }
+  { slug: 'mobile-car-key-duplicate-nyc', title: 'Mobile Car Key duplicate NYC' },
+  { slug: 'same-day-car-key-duplicate-nyc', title: 'Same Day Car Key duplicate NYC' },
+  { slug: '24-hour-car-key-duplicate-nyc', title: '24 Hour Car Key duplicate NYC' }
 ];
 
 const getBoroughTemplate = (b) => `
@@ -44,15 +44,15 @@ import CTABanner from '@/components/ui/CTABanner'
 import TrustBadges from '@/components/ui/TrustBadges'
 
 export const metadata = {
-  title: 'Car Key Duplication ${b.name} NYC | Mobile Service, We Come To You',
-  description: 'Mobile car key duplication in ${b.name}. All neighborhoods covered. Transponder keys, smart keys, fobs. 30-60 min response. No towing needed — we come to you.'
+  title: 'Car Key duplicate ${b.name} NYC | Mobile Service, We Come To You',
+  description: 'Mobile car key duplicate in ${b.name}. All neighborhoods covered. Transponder keys, smart keys, fobs. 30-60 min response. No towing needed — we come to you.'
 }
 
 export default function BoroughPage() {
   return (
     <div className="pb-16">
       <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-heading font-extrabold mb-4">Mobile Car Key Duplication in ${b.name}, NYC</h1>
+        <h1 className="text-4xl md:text-5xl font-heading font-extrabold mb-4">Mobile Car Key duplicate in ${b.name}, NYC</h1>
         <p className="text-xl max-w-2xl mx-auto text-gray-300">Fast, on-site service everywhere in ${b.name}. We come to you.</p>
         <div className="mt-8"><TrustBadges /></div>
       </div>
@@ -106,15 +106,15 @@ import CTABanner from '@/components/ui/CTABanner'
 import TrustBadges from '@/components/ui/TrustBadges'
 
 export const metadata = {
-  title: '${m.name} Car Key Duplication NYC | Mobile Service',
-  description: 'Mobile ${m.name} car key duplication across NYC. Transponders and smart keys programmed on-site.'
+  title: '${m.name} Car Key duplicate NYC | Mobile Service',
+  description: 'Mobile ${m.name} car key duplicate across NYC. Transponders and smart keys programmed on-site.'
 }
 
 export default function MakePage() {
   return (
     <div className="pb-16">
       <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-heading font-extrabold mb-4">${m.name} Car Key Duplication NYC — Mobile Service</h1>
+        <h1 className="text-4xl md:text-5xl font-heading font-extrabold mb-4">${m.name} Car Key duplicate NYC — Mobile Service</h1>
         <p className="text-xl max-w-2xl mx-auto text-gray-300">Specialized programming for ${m.name} vehicles.</p>
         <div className="mt-8"><TrustBadges /></div>
       </div>

@@ -20,8 +20,8 @@ import {
 } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: 'Privacy Policy | Car Keys Duplication NYC',
-  description: 'Learn how Car Keys Duplication NYC securely collects, protects, and manages your personal and vehicle verification information.',
+  title: 'Privacy Policy | Car Keys duplicate NYC',
+  description: 'Learn how Car Keys duplicate NYC securely collects, protects, and manages your personal and vehicle verification information.',
   slug: '/privacy-policy'
 })
 
@@ -52,7 +52,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-            How Car Keys Duplication NYC collects, protects, and handles your personal and vehicle verification data.
+            How Car Keys duplicate NYC collects, protects, and handles your personal and vehicle verification data.
           </p>
           <div className="flex items-center gap-2 mt-6 text-sm text-gray-400">
             <Calendar className="w-4 h-4 text-brand-accent" />
@@ -86,7 +86,7 @@ export default function PrivacyPolicyPage() {
                     <a href={SITE.url} target="_blank" rel="noopener noreferrer">{SITE.url.replace('https://', '')}</a>) or hire our mobile automotive locksmith services in the New York City metropolitan area.
                   </p>
                   <p>
-                    By accessing our website or requesting our mobile key duplication and automotive lock services, you agree to the collection and use of information in accordance with this policy. If you do not agree with any terms in this policy, please do not use our website or request our services.
+                    By accessing our website or requesting our mobile key duplicate and automotive lock services, you agree to the collection and use of information in accordance with this policy. If you do not agree with any terms in this policy, please do not use our website or request our services.
                   </p>
                 </section>
 
@@ -101,7 +101,7 @@ export default function PrivacyPolicyPage() {
                   </p>
                   <ul className="space-y-2">
                     <li><strong>Contact Information:</strong> Name, phone number, email address, and billing/mailing address.</li>
-                    <li><strong>Service Location Details:</strong> The physical address, GPS coordinates, or cross streets where you require mobile roadside or residential key duplication.</li>
+                    <li><strong>Service Location Details:</strong> The physical address, GPS coordinates, or cross streets where you require mobile roadside or residential key duplicate.</li>
                     <li><strong>Vehicle Information:</strong> Year, make, model, trim, and Vehicle Identification Number (VIN) of the automobile requiring service. This is necessary to ensure we cut and program the correct transponder, remote fob, or smart key blank.</li>
                     <li><strong>Identity Verification Records:</strong> Digital photos or physical copies of government-issued identification (e.g., driver's license) and proof of vehicle ownership/registration. (See Section 5).</li>
                     <li><strong>Billing and Transaction Details:</strong> Payment card details (processed securely via PCI-compliant payment gateways; we never store your full credit card details on our local servers), billing history, and payment status.</li>
@@ -154,7 +154,7 @@ export default function PrivacyPolicyPage() {
                     <h2 className="text-2xl font-bold text-brand-primary m-0">5. Verification & Anti-Theft Policy</h2>
                   </div>
                   <p>
-                    To prevent vehicle theft, fraudulent key duplication, and criminal trespassing, <strong>{SITE.name}</strong> operates a strict verification standard. Before any mobile key cutting or transponder programming can begin, the on-site client must present:
+                    To prevent vehicle theft, fraudulent key duplicate, and criminal trespassing, <strong>{SITE.name}</strong> operates a strict verification standard. Before any mobile key cutting or transponder programming can begin, the on-site client must present:
                   </p>
                   <ol className="space-y-2">
                     <li>A valid, government-issued photo identification (e.g., Driver's License or Passport).</li>

@@ -5,8 +5,8 @@ import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, ShieldCheck, Clock, MapPin, Wrench, ShieldAlert, BarChart3, AlertTriangle } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: `Car Key Duplication Brooklyn NYC | Mobile Service, We Come To You`,
-  description: `Expert mobile car key duplication in Brooklyn. We program transponders, smart keys, and fobs on-site. Save time and avoid dealership towing fees.`,
+  title: `Car Key duplicate Brooklyn NYC | Mobile Service, We Come To You`,
+  description: `Expert mobile car key duplicate in Brooklyn. We program transponders, smart keys, and fobs on-site. Save time and avoid dealership towing fees.`,
   slug: `brooklyn`
 })
 
@@ -19,7 +19,7 @@ export default function BoroughPage() {
             Local Brooklyn Mobile Locksmith
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">
-            Mobile Car Key Duplication in Brooklyn, NYC
+            Mobile Car Key duplicate in Brooklyn, NYC
           </h1>
           <p className="text-xl text-gray-300 font-medium mb-8">
             Fast, professional, on-site programming. Don't tow your car to the dealer—we bring the dealership to you.
@@ -132,11 +132,11 @@ export default function BoroughPage() {
         <div className="mt-12 pt-12 border-t border-gray-200">
           <h2 className="text-2xl font-bold text-brand-primary mb-6">Explore Our Services in Brooklyn</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/transponder-key-duplication" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Transponder Key Duplication in Brooklyn</Link>
-            <Link href="/key-fob-duplication" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Key Fob Duplication in Brooklyn</Link>
-            <Link href="/smart-key-duplication" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Smart Key Duplication in Brooklyn</Link>
-            <Link href="/push-to-start-key-duplication" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Push-to-Start Key Duplication in Brooklyn</Link>
-            <Link href="/laser-cut-key-duplication" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Laser-Cut Key Duplication in Brooklyn</Link>
+            <Link href="/transponder-key-duplicate" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Transponder Key duplicate in Brooklyn</Link>
+            <Link href="/key-fob-duplicate" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Key Fob duplicate in Brooklyn</Link>
+            <Link href="/smart-key-duplicate" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Smart Key duplicate in Brooklyn</Link>
+            <Link href="/push-to-start-key-duplicate" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Push-to-Start Key duplicate in Brooklyn</Link>
+            <Link href="/laser-cut-key-duplicate" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Laser-Cut Key duplicate in Brooklyn</Link>
             <Link href="/spare-key-copy" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Spare Key Copy in Brooklyn</Link>
           </div>
         </div>

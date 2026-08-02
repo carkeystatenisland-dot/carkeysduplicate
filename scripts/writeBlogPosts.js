@@ -3,27 +3,27 @@ const path = require('path');
 
 const posts = [
   {
-    filename: 'car-key-duplication-cost-nyc.mdx',
+    filename: 'car-key-duplicate-cost-nyc.mdx',
     content: `---
-title: "How Much Does Car Key Duplication Cost in NYC? (2025 Honest Price Guide)"
+title: "How Much Does Car Key duplicate Cost in NYC? (2025 Honest Price Guide)"
 date: "2025-01-15"
 author: "NYC Keys Specialist"
 ---
 
-# How Much Does Car Key Duplication Cost in NYC? (2025 Honest Price Guide)
+# How Much Does Car Key duplicate Cost in NYC? (2025 Honest Price Guide)
 
-If you're looking for car key duplication in New York City, you might be overwhelmed by the range of prices quoted by dealerships and local hardware stores. As mobile automotive locksmiths, we believe in complete transparency. 
+If you're looking for car key duplicate in New York City, you might be overwhelmed by the range of prices quoted by dealerships and local hardware stores. As mobile automotive locksmiths, we believe in complete transparency. 
 
 ## Real Price Ranges by Service Type
 
 The cost of duplicating a car key depends heavily on the technology inside the key:
 
 - **Basic Spare Key Copy (Non-transponder):** $75 - $95
-- **Transponder Key Duplication:** $95 - $150
-- **Key Fob Duplication & Programming:** $120 - $175
-- **Smart Key / Proximity Key Duplication:** $175 - $250
-- **Push-to-Start Key Duplication:** $175 - $275
-- **Laser-Cut Key Duplication:** $150 - $200
+- **Transponder Key duplicate:** $95 - $150
+- **Key Fob duplicate & Programming:** $120 - $175
+- **Smart Key / Proximity Key duplicate:** $175 - $250
+- **Push-to-Start Key duplicate:** $175 - $275
+- **Laser-Cut Key duplicate:** $150 - $200
 
 ## Why NYC Prices Differ from National Averages
 
@@ -31,30 +31,30 @@ Operating in New York City involves unique logistical challenges. Traffic, parki
 
 ## Dealer vs. Locksmith Cost Breakdown
 
-Dealerships often quote $250 to over $400 for a standard transponder key, adding a "programming fee" on top of the physical key cost. As specialized mobile locksmiths, our starting price for transponder duplication is typically around $95, inclusive of cutting and programming. We use the exact same OEM-grade equipment without the massive markups.
+Dealerships often quote $250 to over $400 for a standard transponder key, adding a "programming fee" on top of the physical key cost. As specialized mobile locksmiths, our starting price for transponder duplicate is typically around $95, inclusive of cutting and programming. We use the exact same OEM-grade equipment without the massive markups.
 
 ## What Drives the Price Up?
 
 Certain factors will push your cost toward the higher end of the range:
 1. **Advanced Technology:** Smart keys and push-to-start fobs require sophisticated programming to sync with your vehicle's immobilizer.
 2. **Luxury Makes:** Brands like BMW, Mercedes, and Audi often use proprietary, highly secure systems (like infrared or rolling codes) that require specialized, expensive equipment to duplicate.
-3. **No Working Key:** If you have lost all keys, it is no longer a duplication. We must originate a key from scratch, which takes more time and resources.
+3. **No Working Key:** If you have lost all keys, it is no longer a duplicate. We must originate a key from scratch, which takes more time and resources.
 
 ## Red Flags: Quotes That Are Suspiciously Low
 
 Beware of "locksmiths" quoting $15 or $25 over the phone. This is a common bait-and-switch scam in NYC. Once they arrive, they will claim your lock is "high security" and charge hundreds of dollars. Always look for upfront, transparent pricing.
 
-Need an exact quote for your vehicle? [Request a free quote online](/request-a-quote) or explore our [Transponder Key Duplication](/transponder-key-duplication) services to learn more.`
+Need an exact quote for your vehicle? [Request a free quote online](/request-a-quote) or explore our [Transponder Key duplicate](/transponder-key-duplicate) services to learn more.`
   },
   {
-    filename: 'dealer-vs-locksmith-key-duplication-nyc.mdx',
+    filename: 'dealer-vs-locksmith-key-duplicate-nyc.mdx',
     content: `---
-title: "Dealer vs. Mobile Locksmith for Car Key Duplication in NYC — Honest Comparison"
+title: "Dealer vs. Mobile Locksmith for Car Key duplicate in NYC — Honest Comparison"
 date: "2025-01-20"
 author: "NYC Keys Specialist"
 ---
 
-# Dealer vs. Mobile Locksmith for Car Key Duplication in NYC — Honest Comparison
+# Dealer vs. Mobile Locksmith for Car Key duplicate in NYC — Honest Comparison
 
 When you need a spare car key or find yourself completely locked out, you typically have two choices: go to the dealership or call a mobile automotive locksmith. 
 
@@ -99,7 +99,7 @@ author: "NYC Keys Specialist"
 
 Since the late 1990s, most vehicles have been equipped with an immobilizer system. The plastic head of your car key contains a tiny microchip (a transponder). When you insert the key into the ignition, the car sends a radio frequency signal to the chip. If the chip responds with the correct encrypted code, the engine starts. 
 
-## The Two Methods of Duplication
+## The Two Methods of duplicate
 
 ### 1. Key Cloning
 For older or less complex transponder systems, we can "clone" the key. We read the data from your working key and copy the exact same code onto a new chip. The car's computer sees both keys as the identical original key. 
@@ -113,9 +113,9 @@ If you want to *clone* a key, yes, we need the original to copy the data. Howeve
 
 ## Cost and Timeline
 
-Transponder duplication typically ranges from $95 to $150. If we are at your location, the entire process of cutting the blade and programming the chip takes about 15 to 30 minutes.
+Transponder duplicate typically ranges from $95 to $150. If we are at your location, the entire process of cutting the blade and programming the chip takes about 15 to 30 minutes.
 
-If you drive a common make like Toyota or Honda, learn more about our specific [Transponder Key Duplication](/transponder-key-duplication) services or [Get a Quote](/request-a-quote) today.`
+If you drive a common make like Toyota or Honda, learn more about our specific [Transponder Key duplicate](/transponder-key-duplicate) services or [Get a Quote](/request-a-quote) today.`
   },
   {
     filename: 'avoid-locksmith-scams-nyc.mdx',
@@ -167,14 +167,14 @@ If you only have one working key for your vehicle, you are living on borrowed ti
 
 Keys break. They get dropped in puddles, run over, or simply misplaced. If you share a car with a family member, the chances of losing the sole key double. 
 
-## Emergency Replacement vs. Proactive Duplication
+## Emergency Replacement vs. Proactive duplicate
 
 When you have one working key, a [Spare Key Copy](/spare-key-copy) is straightforward. We copy the blade and clone or program the transponder chip. This process is fast, relatively inexpensive (starting around $95), and completely stress-free.
 
 When you lose your *last* key, the situation becomes an emergency "Key Origination":
 1. The locksmith must decode your door or ignition lock to figure out the mechanical cuts, or purchase the key codes from a database using your VIN.
 2. The vehicle's computer must be accessed to erase the old keys and program new ones.
-3. The cost jumps significantly—often 3 to 5 times more expensive than a simple duplication.
+3. The cost jumps significantly—often 3 to 5 times more expensive than a simple duplicate.
 
 ## The NYC Context
 

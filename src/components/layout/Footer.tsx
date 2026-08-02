@@ -13,11 +13,11 @@ export default function Footer() {
           <div className="space-y-6">
             <Link href="/" className="inline-block">
               <span className="font-heading font-bold text-xl tracking-tight text-white leading-tight">
-                Car Keys<span className="text-brand-accent"> Duplication</span>
+                Car Keys<span className="text-brand-accent"> duplicate</span>
               </span>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Mobile car key duplication serving all 5 NYC boroughs. We come to your location for fast, on-site service.
+              Mobile car key duplicate serving all 5 NYC boroughs. We come to your location for fast, on-site service.
             </p>
             <div className="space-y-2 text-sm text-gray-300">
               <p className="flex items-center gap-2">
@@ -101,17 +101,17 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="pt-2 border-t border-white/10">
-                <Link href="/same-day-car-key-duplication-nyc" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
-                  Same-Day Duplication
+                <Link href="/same-day-car-key-duplicate-nyc" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
+                  Same-Day duplicate
                 </Link>
               </li>
               <li>
-                <Link href="/24-hour-car-key-duplication-nyc" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
+                <Link href="/24-hour-car-key-duplicate-nyc" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
                   24-Hour Emergency Copy
                 </Link>
               </li>
               <li>
-                <Link href="/mobile-car-key-duplication-nyc" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
+                <Link href="/mobile-car-key-duplicate-nyc" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
                   Mobile Roadside Dispatch
                 </Link>
               </li>

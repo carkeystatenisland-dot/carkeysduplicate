@@ -5,9 +5,9 @@ import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, Cpu, Wrench, ShieldCheck, MapPin, ShieldAlert, Zap, Lock } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: `Push-to-Start Key Duplication NYC | Mobile, On-Site Programming`,
-  description: `Expert push-to-start key duplication across all NYC boroughs. We come to your location with OEM-grade diagnostic tools to program your vehicle securely.`,
-  slug: `push-to-start-key-duplication`
+  title: `Push-to-Start Key duplicate NYC | Mobile, On-Site Programming`,
+  description: `Expert push-to-start key duplicate across all NYC boroughs. We come to your location with OEM-grade diagnostic tools to program your vehicle securely.`,
+  slug: `push-to-start-key-duplicate`
 })
 
 export default function ServicePage() {
@@ -15,7 +15,7 @@ export default function ServicePage() {
     <div className="pb-16 bg-white">
       <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center border-b-4 border-brand-accent">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">Push-to-Start Key Duplication in NYC</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">Push-to-Start Key duplicate in NYC</h1>
           <p className="text-xl text-gray-300 font-medium mb-8">Precision cutting and OEM-grade electronic programming. 100% Mobile Service.</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link href="/request-a-quote" className="w-full sm:w-auto bg-white/10 text-white border border-white/20 font-bold px-8 py-4 rounded-lg hover:bg-white/20 transition-colors shadow-lg text-lg">Get a Free Quote</Link>
@@ -84,11 +84,11 @@ export default function ServicePage() {
         <div className="mt-12 pt-12 border-t border-gray-200">
           <h2 className="text-2xl font-bold text-brand-primary mb-6">Service Available in All NYC Boroughs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Link href="/brooklyn" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key Duplication in Brooklyn</Link>
-            <Link href="/queens" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key Duplication in Queens</Link>
-            <Link href="/manhattan" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key Duplication in Manhattan</Link>
-            <Link href="/bronx" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key Duplication in The Bronx</Link>
-            <Link href="/staten-island" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key Duplication in Staten Island</Link>
+            <Link href="/brooklyn" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key duplicate in Brooklyn</Link>
+            <Link href="/queens" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key duplicate in Queens</Link>
+            <Link href="/manhattan" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key duplicate in Manhattan</Link>
+            <Link href="/bronx" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key duplicate in The Bronx</Link>
+            <Link href="/staten-island" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Push-to-Start Key duplicate in Staten Island</Link>
           </div>
         </div>
 

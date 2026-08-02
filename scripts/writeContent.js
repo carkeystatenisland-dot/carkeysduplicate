@@ -32,7 +32,7 @@ const BOROUGHS = [
   { 
     slug: 'bronx', name: 'The Bronx', 
     paragraphs: [
-      "The Bronx boasts a high rate of car ownership, with many residents relying heavily on their vehicles for commuting outside the borough. We see high demand for key duplication on reliable daily drivers like the Toyota Camry, Honda Accord, and Nissan Altima.",
+      "The Bronx boasts a high rate of car ownership, with many residents relying heavily on their vehicles for commuting outside the borough. We see high demand for key duplicate on reliable daily drivers like the Toyota Camry, Honda Accord, and Nissan Altima.",
       "Our mobile technicians regularly service large residential areas including Co-op City, Riverdale, and Pelham Bay, bringing dealership-level key programming right to your driveway.",
       "Response Time: Typically 30–60 minutes anywhere in the Bronx."
     ],
@@ -42,53 +42,53 @@ const BOROUGHS = [
     slug: 'staten-island', name: 'Staten Island', 
     paragraphs: [
       "As the most car-dependent borough in New York City, over 75% of Staten Island households own a vehicle. Having a reliable spare key isn't a luxury here—it's a necessity for daily life.",
-      "We specialize in mobile car key duplication across all Staten Island neighborhoods, from Tottenville to St. George.",
-      "If you need a complete key replacement rather than a simple duplication, please visit our sister service. For full car key replacement services on Staten Island, visit <a href='https://www.carkeyreplacementstatenisland.com' target='_blank' rel='noopener noreferrer' className='text-brand-accent underline'>car key replacement Staten Island</a>."
+      "We specialize in mobile car key duplicate across all Staten Island neighborhoods, from Tottenville to St. George.",
+      "If you need a complete key replacement rather than a simple duplicate, please visit our sister service. For full car key replacement services on Staten Island, visit <a href='https://www.carkeyreplacementstatenisland.com' target='_blank' rel='noopener noreferrer' className='text-brand-accent underline'>car key replacement Staten Island</a>."
     ],
-    faq: { q: "What's the difference between this service and your sister site?", a: "We specialize purely in duplication and spare keys here, while our sister site handles complete key origination when all keys are lost." }
+    faq: { q: "What's the difference between this service and your sister site?", a: "We specialize purely in duplicate and spare keys here, while our sister site handles complete key origination when all keys are lost." }
   }
 ];
 
 const SERVICE_TYPES = [
   { 
-    slug: 'transponder-key-duplication', name: 'Transponder Key Duplication',
+    slug: 'transponder-key-duplicate', name: 'Transponder Key duplicate',
     content: "Transponder keys use a microchip in the plastic head (often operating at 125 kHz or 433 MHz) that sends a radio frequency authentication signal to your car's immobilizer. If the code doesn't match, the engine won't start. A simple hardware store key cut will not work. We use specialized equipment to either 'clone' your existing key or program a brand new chip into your vehicle's ECU. Prices typically range from $95 to $200 depending on the make and year."
   },
   { 
-    slug: 'key-fob-duplication', name: 'Key Fob Duplication',
+    slug: 'key-fob-duplicate', name: 'Key Fob duplicate',
     content: "A key fob is a separate remote or an integrated head key that controls your door locks and alarm. Unlike a simple gate remote, modern fobs use 'rolling code' technology that changes the signal every time you press a button, preventing thieves from copying the signal. We provide and program high-quality aftermarket and OEM fobs directly to your vehicle's immobilizer system, complete with fresh batteries."
   },
   { 
-    slug: 'smart-key-duplication', name: 'Smart Key Duplication',
+    slug: 'smart-key-duplicate', name: 'Smart Key duplicate',
     content: "Smart keys (or proximity keys) allow for passive entry—the car detects the key in your pocket when you touch the door handle. This advanced technology is standard on modern BMW, Mercedes, and newer Toyota models. Duplicating a smart key requires the vehicle to be present so our computers can securely sync the new proximity sensor with the car's security module. Services for smart keys typically start at $175."
   },
   { 
-    slug: 'push-to-start-key-duplication', name: 'Push-to-Start Key Duplication',
+    slug: 'push-to-start-key-duplicate', name: 'Push-to-Start Key duplicate',
     content: "Often confused with smart keys, push-to-start fobs communicate directly with a push-button ignition module. Because this involves deeper integration with the vehicle's starting mechanism, programming is highly complex and requires specialized diagnostic tools. The vehicle must be present during the service. If you only have one push-to-start fob left, we highly recommend getting a spare before an emergency replacement is needed."
   },
   { 
-    slug: 'laser-cut-key-duplication', name: 'Laser-Cut Key Duplication',
+    slug: 'laser-cut-key-duplicate', name: 'Laser-Cut Key duplicate',
     content: "Laser-cut keys, also known as sidewinder keys, feature a distinctive side-milling pattern rather than traditional jagged cuts on the edge. Common on European vehicles like BMW, Mercedes, Audi, and VW, as well as newer Fords and Hondas, these keys require an expensive, specialized laser cutting machine to duplicate. Standard hardware store machines cannot cut these blades. In almost all cases, laser-cut keys also contain a transponder chip that must be programmed."
   },
   { 
     slug: 'spare-key-copy', name: 'Spare Key Copy',
-    content: "Getting a spare key copy made before you lose your original is the smartest, most cost-effective decision you can make as a car owner. Emergency key replacement when all keys are lost can cost 3 to 5 times more than a simple proactive duplication. Even basic 'spare keys' for modern cars require chip programming. We can cut and program your spare on-site in about 15 to 30 minutes."
+    content: "Getting a spare key copy made before you lose your original is the smartest, most cost-effective decision you can make as a car owner. Emergency key replacement when all keys are lost can cost 3 to 5 times more than a simple proactive duplicate. Even basic 'spare keys' for modern cars require chip programming. We can cut and program your spare on-site in about 15 to 30 minutes."
   }
 ];
 
 const CAR_MAKES = [
-  { slug: 'toyota-key-duplication', name: 'Toyota', tech: "Toyota vehicles utilize a range of chip systems, notably transitioning to the highly secure H-chip (Texas Crypto 128-bit) around 2010. Generic key cutters lack the software to program H-chips. We cover all popular models including Camry, Corolla, RAV4, Highlander, Prius, Tacoma, and Tundra.", link: "https://www.carkeyreplacementstatenisland.com/toyota-keys", anchor: "Toyota key replacement Staten Island" },
-  { slug: 'honda-key-duplication', name: 'Honda', tech: "Modern Hondas heavily rely on the Honda G chip (ID47) and high-security laser-cut blades. We expertly duplicate keys for the Accord, Civic, CR-V, Pilot, and Odyssey.", link: "https://www.carkeyreplacementstatenisland.com/honda-keys", anchor: "Honda key replacement Staten Island" },
-  { slug: 'ford-key-duplication', name: 'Ford', tech: "Ford's PATS (Passive Anti-Theft System) evolved into the Tiris DST+ (4D-63) system. We program keys for the F-150, Explorer, Escape, Mustang, and more.", link: "https://www.carkeyreplacementstatenisland.com/ford-keys", anchor: "Ford key replacement Staten Island" },
-  { slug: 'bmw-key-duplication', name: 'BMW', tech: "BMW utilizes complex CAS and FEM/BDC systems with Hitag 2 encryption. Duplicating a BMW key requires dealer-level diagnostic equipment. We service the 3 Series, 5 Series, X3, X5, and more.", link: "https://www.carkeyreplacementstatenisland.com/bmw-keys", anchor: "BMW key replacement Staten Island" },
-  { slug: 'nissan-key-duplication', name: 'Nissan', tech: "Nissan's Intelligent Key system (often using PCF7936 / ID46 chips) is standard on models like the Altima, Rogue, Sentra, and Maxima.", link: "https://www.carkeyreplacementstatenisland.com/nissan-keys", anchor: "Nissan key replacement Staten Island" },
-  { slug: 'hyundai-key-duplication', name: 'Hyundai', tech: "Hyundai keys utilize ID46 / 4D-60 transponders and advanced proximity fobs. We service the Elantra, Sonata, Tucson, and Santa Fe.", link: "https://www.carkeyreplacementstatenisland.com/hyundai-keys", anchor: "Hyundai key replacement Staten Island" },
-  { slug: 'jeep-key-duplication', name: 'Jeep', tech: "Jeep uses the Chrysler Y-4 / 4D-64 system, featuring Fobik and proximity keys for the Grand Cherokee, Wrangler, and Cherokee.", link: "https://www.carkeyreplacementstatenisland.com/jeep-keys", anchor: "Jeep key replacement Staten Island" },
-  { slug: 'chevrolet-key-duplication', name: 'Chevrolet', tech: "Chevy's GM VATS and modern ID46 systems are common. We cut and program for the Silverado, Equinox, Malibu, and Tahoe.", link: "https://www.carkeyreplacementstatenisland.com/chevrolet-keys", anchor: "Chevrolet key replacement Staten Island" },
-  { slug: 'kia-key-duplication', name: 'Kia', tech: "Similar to Hyundai, Kia uses ID46 / 4D-60 chips. We handle duplication for the Optima, Sorento, Sportage, and Soul.", link: "https://www.carkeyreplacementstatenisland.com/kia-keys", anchor: "Kia key replacement Staten Island" },
-  { slug: 'mercedes-key-duplication', name: 'Mercedes', tech: "Mercedes relies on advanced Infrared, NEC, and Hitag Pro systems. Duplicating these requires specialized programming tools. We handle C-Class, E-Class, GLC, and more.", link: "https://www.carkeyreplacementstatenisland.com/mercedes-keys", anchor: "Mercedes key replacement Staten Island" },
-  { slug: 'subaru-key-duplication', name: 'Subaru', tech: "Subaru's G-chip (ID47) is standard across their lineup. We duplicate laser-cut and proximity keys for the Outback, Forester, and Crosstrek.", link: "https://www.carkeyreplacementstatenisland.com/subaru-keys", anchor: "Subaru key replacement Staten Island" },
-  { slug: 'volkswagen-key-duplication', name: 'Volkswagen', tech: "VW's highly secure Megamos Crypto 48 and MQB platforms make duplication complex. We service the Jetta, Passat, Tiguan, and Golf.", link: "https://www.carkeyreplacementstatenisland.com/volkswagen-keys", anchor: "Volkswagen key replacement Staten Island" }
+  { slug: 'toyota-key-duplicate', name: 'Toyota', tech: "Toyota vehicles utilize a range of chip systems, notably transitioning to the highly secure H-chip (Texas Crypto 128-bit) around 2010. Generic key cutters lack the software to program H-chips. We cover all popular models including Camry, Corolla, RAV4, Highlander, Prius, Tacoma, and Tundra.", link: "https://www.carkeyreplacementstatenisland.com/toyota-keys", anchor: "Toyota key replacement Staten Island" },
+  { slug: 'honda-key-duplicate', name: 'Honda', tech: "Modern Hondas heavily rely on the Honda G chip (ID47) and high-security laser-cut blades. We expertly duplicate keys for the Accord, Civic, CR-V, Pilot, and Odyssey.", link: "https://www.carkeyreplacementstatenisland.com/honda-keys", anchor: "Honda key replacement Staten Island" },
+  { slug: 'ford-key-duplicate', name: 'Ford', tech: "Ford's PATS (Passive Anti-Theft System) evolved into the Tiris DST+ (4D-63) system. We program keys for the F-150, Explorer, Escape, Mustang, and more.", link: "https://www.carkeyreplacementstatenisland.com/ford-keys", anchor: "Ford key replacement Staten Island" },
+  { slug: 'bmw-key-duplicate', name: 'BMW', tech: "BMW utilizes complex CAS and FEM/BDC systems with Hitag 2 encryption. Duplicating a BMW key requires dealer-level diagnostic equipment. We service the 3 Series, 5 Series, X3, X5, and more.", link: "https://www.carkeyreplacementstatenisland.com/bmw-keys", anchor: "BMW key replacement Staten Island" },
+  { slug: 'nissan-key-duplicate', name: 'Nissan', tech: "Nissan's Intelligent Key system (often using PCF7936 / ID46 chips) is standard on models like the Altima, Rogue, Sentra, and Maxima.", link: "https://www.carkeyreplacementstatenisland.com/nissan-keys", anchor: "Nissan key replacement Staten Island" },
+  { slug: 'hyundai-key-duplicate', name: 'Hyundai', tech: "Hyundai keys utilize ID46 / 4D-60 transponders and advanced proximity fobs. We service the Elantra, Sonata, Tucson, and Santa Fe.", link: "https://www.carkeyreplacementstatenisland.com/hyundai-keys", anchor: "Hyundai key replacement Staten Island" },
+  { slug: 'jeep-key-duplicate', name: 'Jeep', tech: "Jeep uses the Chrysler Y-4 / 4D-64 system, featuring Fobik and proximity keys for the Grand Cherokee, Wrangler, and Cherokee.", link: "https://www.carkeyreplacementstatenisland.com/jeep-keys", anchor: "Jeep key replacement Staten Island" },
+  { slug: 'chevrolet-key-duplicate', name: 'Chevrolet', tech: "Chevy's GM VATS and modern ID46 systems are common. We cut and program for the Silverado, Equinox, Malibu, and Tahoe.", link: "https://www.carkeyreplacementstatenisland.com/chevrolet-keys", anchor: "Chevrolet key replacement Staten Island" },
+  { slug: 'kia-key-duplicate', name: 'Kia', tech: "Similar to Hyundai, Kia uses ID46 / 4D-60 chips. We handle duplicate for the Optima, Sorento, Sportage, and Soul.", link: "https://www.carkeyreplacementstatenisland.com/kia-keys", anchor: "Kia key replacement Staten Island" },
+  { slug: 'mercedes-key-duplicate', name: 'Mercedes', tech: "Mercedes relies on advanced Infrared, NEC, and Hitag Pro systems. Duplicating these requires specialized programming tools. We handle C-Class, E-Class, GLC, and more.", link: "https://www.carkeyreplacementstatenisland.com/mercedes-keys", anchor: "Mercedes key replacement Staten Island" },
+  { slug: 'subaru-key-duplicate', name: 'Subaru', tech: "Subaru's G-chip (ID47) is standard across their lineup. We duplicate laser-cut and proximity keys for the Outback, Forester, and Crosstrek.", link: "https://www.carkeyreplacementstatenisland.com/subaru-keys", anchor: "Subaru key replacement Staten Island" },
+  { slug: 'volkswagen-key-duplicate', name: 'Volkswagen', tech: "VW's highly secure Megamos Crypto 48 and MQB platforms make duplicate complex. We service the Jetta, Passat, Tiguan, and Golf.", link: "https://www.carkeyreplacementstatenisland.com/volkswagen-keys", anchor: "Volkswagen key replacement Staten Island" }
 ];
 
 const getBoroughTemplate = (b) => `
@@ -97,15 +97,15 @@ import CTABanner from '@/components/ui/CTABanner'
 import TrustBadges from '@/components/ui/TrustBadges'
 
 export const metadata = {
-  title: 'Car Key Duplication ${b.name} NYC | Mobile Service, We Come To You',
-  description: 'Mobile car key duplication in ${b.name}. All neighborhoods covered. Transponder keys, smart keys, fobs. 30-60 min response. No towing needed — we come to you.'
+  title: 'Car Key duplicate ${b.name} NYC | Mobile Service, We Come To You',
+  description: 'Mobile car key duplicate in ${b.name}. All neighborhoods covered. Transponder keys, smart keys, fobs. 30-60 min response. No towing needed — we come to you.'
 }
 
 export default function BoroughPage() {
   return (
     <div className="pb-16 bg-white">
       <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-heading font-extrabold mb-4">Mobile Car Key Duplication in ${b.name}, NYC</h1>
+        <h1 className="text-4xl md:text-5xl font-heading font-extrabold mb-4">Mobile Car Key duplicate in ${b.name}, NYC</h1>
         <p className="text-xl max-w-2xl mx-auto text-gray-300">Fast, on-site service everywhere in ${b.name}. We come to you.</p>
         <div className="mt-8"><TrustBadges /></div>
       </div>
@@ -122,8 +122,8 @@ export default function BoroughPage() {
           </div>
           
           <div className="grid grid-cols-2 gap-4 mt-8">
-             <Link href="/transponder-key-duplication" className="bg-brand-light p-4 rounded text-center hover:bg-brand-accent transition-colors font-bold text-brand-primary">Transponder Keys in ${b.name}</Link>
-             <Link href="/key-fob-duplication" className="bg-brand-light p-4 rounded text-center hover:bg-brand-accent transition-colors font-bold text-brand-primary">Key Fobs in ${b.name}</Link>
+             <Link href="/transponder-key-duplicate" className="bg-brand-light p-4 rounded text-center hover:bg-brand-accent transition-colors font-bold text-brand-primary">Transponder Keys in ${b.name}</Link>
+             <Link href="/key-fob-duplicate" className="bg-brand-light p-4 rounded text-center hover:bg-brand-accent transition-colors font-bold text-brand-primary">Key Fobs in ${b.name}</Link>
           </div>
         </div>
         
@@ -182,15 +182,15 @@ import CTABanner from '@/components/ui/CTABanner'
 import TrustBadges from '@/components/ui/TrustBadges'
 
 export const metadata = {
-  title: '${m.name} Car Key Duplication NYC | Mobile Service',
-  description: 'Mobile ${m.name} car key duplication across NYC. Transponders and smart keys programmed on-site.'
+  title: '${m.name} Car Key duplicate NYC | Mobile Service',
+  description: 'Mobile ${m.name} car key duplicate across NYC. Transponders and smart keys programmed on-site.'
 }
 
 export default function MakePage() {
   return (
     <div className="pb-16 bg-white">
       <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-heading font-extrabold mb-4">${m.name} Car Key Duplication NYC — Mobile Service</h1>
+        <h1 className="text-4xl md:text-5xl font-heading font-extrabold mb-4">${m.name} Car Key duplicate NYC — Mobile Service</h1>
         <p className="text-xl max-w-2xl mx-auto text-gray-300">Specialized programming for ${m.name} vehicles.</p>
         <div className="mt-8"><TrustBadges /></div>
       </div>

@@ -5,9 +5,9 @@ import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, Zap, Clock, ShieldCheck, MapPin, Truck, Award, UserCheck, Lock } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: `Mobile Car Key Duplication NYC | Fast On-Site Service`,
-  description: `Mobile car key duplication with no towing, no waiting, and no hidden fees. We serve all 5 NYC boroughs with on-site programming. Call (929) 828-7009.`,
-  slug: `mobile-car-key-duplication-nyc`
+  title: `Mobile Car Key duplicate NYC | Fast On-Site Service`,
+  description: `Mobile car key duplicate with no towing, no waiting, and no hidden fees. We serve all 5 NYC boroughs with on-site programming. Call (929) 828-7009.`,
+  slug: `mobile-car-key-duplicate-nyc`
 })
 
 export default function IntentPage() {
@@ -15,7 +15,7 @@ export default function IntentPage() {
     <div className="pb-16 bg-white">
       <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center border-b-4 border-brand-accent">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">Mobile Car Key Duplication NYC</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">Mobile Car Key duplicate NYC</h1>
           <p className="text-xl text-gray-300 font-medium mb-8">We bring the entire locksmith shop to your exact GPS coordinates.</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
              <Link href="/book-now" className="w-full sm:w-auto bg-brand-accent text-brand-primary font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition-colors shadow-lg text-lg">Book Immediate Dispatch</Link>
@@ -44,7 +44,7 @@ export default function IntentPage() {
         </div>
 
         <div className="prose prose-lg max-w-none text-gray-700 mb-16">
-          <h2 className="text-4xl font-heading text-brand-primary font-bold text-center mb-10">Why Choose Us for Mobile Car Key Duplication NYC?</h2>
+          <h2 className="text-4xl font-heading text-brand-primary font-bold text-center mb-10">Why Choose Us for Mobile Car Key duplicate NYC?</h2>
           <div className="bg-gray-50 p-12 rounded-3xl border border-gray-100 shadow-inner">
             <p className="text-xl leading-relaxed text-gray-800 text-center">No towing, no waiting rooms, and no hidden travel fees. We serve all 5 boroughs with a fleet of mobile workshops.</p>
           </div>

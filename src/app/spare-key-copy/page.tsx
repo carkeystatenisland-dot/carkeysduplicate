@@ -32,7 +32,7 @@ export default function ServicePage() {
             <h2 className="text-3xl font-heading text-brand-primary font-bold m-0 italic underline decoration-brand-accent">The Engineering Behind the Key</h2>
           </div>
           <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm leading-relaxed text-lg text-gray-700">
-            <p className="mb-6">A 'spare key' is a proactive insurance policy. If you lose your only working key, the vehicle's computer must be reset, and lock cylinders may need to be mechanically decoded. This turns a simple duplication process into an emergency 'Key Origination', which is significantly more time-consuming and expensive.</p>
+            <p className="mb-6">A 'spare key' is a proactive insurance policy. If you lose your only working key, the vehicle's computer must be reset, and lock cylinders may need to be mechanically decoded. This turns a simple duplicate process into an emergency 'Key Origination', which is significantly more time-consuming and expensive.</p>
             <p className="font-semibold text-brand-primary">We offer 'valet keys' as a cost-effective spare option. These keys will start the car and open the doors, but won't open the trunk or glovebox, providing security when leaving your car with a parking attendant.</p>
           </div>
         </div>

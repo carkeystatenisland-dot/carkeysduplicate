@@ -5,9 +5,9 @@ import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, Car, ShieldAlert, Cpu, ListChecks, Info, Wrench, Clock, Zap, MapPin } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: `Honda Car Key Duplication NYC | Mobile Locksmith Service`,
-  description: `Expert mobile Honda car key duplication across NYC. We cut and program OEM-grade transponders, smart keys, and fobs on-site.`,
-  slug: `honda-key-duplication`
+  title: `Honda Car Key duplicate NYC | Mobile Locksmith Service`,
+  description: `Expert mobile Honda car key duplicate across NYC. We cut and program OEM-grade transponders, smart keys, and fobs on-site.`,
+  slug: `honda-key-duplicate`
 })
 
 export default function MakePage() {
@@ -16,7 +16,7 @@ export default function MakePage() {
       {/* Hero Section */}
       <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center border-b-4 border-brand-accent">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">Honda Car Key Duplication NYC</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">Honda Car Key duplicate NYC</h1>
           <p className="text-xl text-gray-300 font-medium mb-8">Specialized programming and cutting for Honda vehicles. We bypass the dealership wait times by bringing the equipment directly to your location in all 5 boroughs.</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link href="/request-a-quote" className="w-full sm:w-auto bg-brand-accent text-brand-primary font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition-colors shadow-lg text-lg">Get an Exact Quote</Link>
@@ -34,7 +34,7 @@ export default function MakePage() {
             Losing a car key or needing a spare for your Honda in New York City can be an incredibly stressful experience. 
             Between alternate side parking rules, expensive parking garages in Manhattan, and the fast-paced lifestyle of Brooklyn and Queens, 
             you do not have the time to tow your vehicle to a Honda dealership and wait days for a replacement. That is exactly why our mobile 
-            automotive locksmith service exists. We provide on-site Honda car key duplication, transponder key programming, and smart key fob 
+            automotive locksmith service exists. We provide on-site Honda car key duplicate, transponder key programming, and smart key fob 
             replacements directly at your vehicle's location.
           </p>
           <p>
@@ -55,7 +55,7 @@ export default function MakePage() {
             <p className="text-gray-700">
               Modern Honda vehicles utilize immobilizer systems designed to prevent theft. The key fob contains a microchip that transmits a specific 
               radio frequency signal to the receiver located near the ignition. If the cryptographic code matches, the Engine Control Unit (ECU) enables 
-              the fuel injectors and ignition coils. Simple hardware store duplication cannot replicate this chip. We utilize factory-level OBD-II programmers 
+              the fuel injectors and ignition coils. Simple hardware store duplicate cannot replicate this chip. We utilize factory-level OBD-II programmers 
               to securely extract the PIN code and pair the new key to your Honda's immobilizer system.
             </p>
           </div>
@@ -156,7 +156,7 @@ export default function MakePage() {
           
           <div className="space-y-6">
             <div>
-              <h4 className="font-bold text-lg text-gray-800 mb-2">How much does a Honda key duplication cost?</h4>
+              <h4 className="font-bold text-lg text-gray-800 mb-2">How much does a Honda key duplicate cost?</h4>
               <p className="text-gray-600">The cost varies entirely depending on the year and model. A basic transponder key starts around $95, while a high-tech smart proximity fob can range from $175 to $350. We provide exact quotes over the phone based on your VIN.</p>
             </div>
             <div>
@@ -168,8 +168,8 @@ export default function MakePage() {
               <p className="text-gray-600">Yes, we can cut and program customer-supplied keys. However, be warned: many online keys are counterfeit or have the wrong chip frequency. We cannot guarantee keys we do not supply, and the programming fee still applies.</p>
             </div>
             <div>
-              <h4 className="font-bold text-lg text-gray-800 mb-2">How long does the duplication take?</h4>
-              <p className="text-gray-600">Once our technician arrives, standard duplication takes about 20-30 minutes. More complex systems or key origination may take up to an hour.</p>
+              <h4 className="font-bold text-lg text-gray-800 mb-2">How long does the duplicate take?</h4>
+              <p className="text-gray-600">Once our technician arrives, standard duplicate takes about 20-30 minutes. More complex systems or key origination may take up to an hour.</p>
             </div>
             <div>
               <h4 className="font-bold text-lg text-gray-800 mb-2">Are you licensed to work in NYC?</h4>

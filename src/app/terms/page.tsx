@@ -20,7 +20,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: 'Terms of Service | Car Keys Duplication NYC',
+  title: 'Terms of Service | Car Keys duplicate NYC',
   description: 'Review our professional locksmith terms of service, ownership verification rules, payment terms, and mobile service call policies.',
   slug: '/terms'
 })
@@ -52,7 +52,7 @@ export default function TermsOfServicePage() {
             Terms of Service
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-            Please read these terms carefully before requesting mobile locksmith services or key duplication in New York City.
+            Please read these terms carefully before requesting mobile locksmith services or key duplicate in New York City.
           </p>
           <div className="flex items-center gap-2 mt-6 text-sm text-gray-400">
             <Calendar className="w-4 h-4 text-brand-accent" />
@@ -83,7 +83,7 @@ export default function TermsOfServicePage() {
                   </div>
                   <p>
                     These Terms of Service (the "Terms", "Agreement") constitute a legally binding agreement between you ("Customer", "User", "you") and <strong>{SITE.name}</strong> ("Company", "we", "us", "our"), governing your access to and use of our website (
-                    <a href={SITE.url} target="_blank" rel="noopener noreferrer">{SITE.url.replace('https://', '')}</a>) and any dispatch or physical mobile locksmith, key duplication, key programming, lock rekeying, or vehicle lockout emergency services we provide.
+                    <a href={SITE.url} target="_blank" rel="noopener noreferrer">{SITE.url.replace('https://', '')}</a>) and any dispatch or physical mobile locksmith, key duplicate, key programming, lock rekeying, or vehicle lockout emergency services we provide.
                   </p>
                   <p>
                     By browsing our site, filling out a contact, quote, or booking form, calling our dispatch phone numbers, or authorizing our technicians to perform work, you agree to comply with and be bound by these Terms. If you do not accept these Terms in their entirety, you are strictly prohibited from utilizing our site and requesting our services.
@@ -116,7 +116,7 @@ export default function TermsOfServicePage() {
                     <h2 className="text-2xl font-bold text-brand-primary m-0">3. Mandatory Ownership Verification</h2>
                   </div>
                   <p>
-                    Because locksmith and key duplication services involve granting access to high-value personal property, <strong>{SITE.name}</strong> operates in strict compliance with public safety standards to prevent grand theft auto, unlawful entry, and criminal activity.
+                    Because locksmith and key duplicate services involve granting access to high-value personal property, <strong>{SITE.name}</strong> operates in strict compliance with public safety standards to prevent grand theft auto, unlawful entry, and criminal activity.
                   </p>
                   
                   {/* Strict Ownership Verification Alert */}

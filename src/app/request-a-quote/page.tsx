@@ -3,8 +3,8 @@ import TrustBadges from '@/components/ui/TrustBadges'
 import { generatePageMetadata } from '@/lib/metadata'
 
 export const metadata = generatePageMetadata({
-  title: 'Get a Free Car Key Duplication Quote | NYC Mobile Service',
-  description: 'Get a free, no-obligation quote for car key duplication in NYC. No hidden fees. We serve all 5 boroughs. Response within 15 minutes.',
+  title: 'Get a Free Car Key duplicate Quote | NYC Mobile Service',
+  description: 'Get a free, no-obligation quote for car key duplicate in NYC. No hidden fees. We serve all 5 boroughs. Response within 15 minutes.',
   slug: '/request-a-quote'
 })
 
@@ -15,7 +15,7 @@ export default function RequestQuotePage() {
         
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-primary tracking-tight mb-4">
-            Get a Free Car Key Duplication Quote — NYC
+            Get a Free Car Key duplicate Quote — NYC
           </h1>
           <p className="text-xl text-gray-600 font-medium">
             No hidden fees. No dealer markup. Mobile service to your location.

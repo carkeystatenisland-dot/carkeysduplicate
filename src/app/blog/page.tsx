@@ -2,14 +2,14 @@ import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/metadata'
 
 export const metadata = generatePageMetadata({
-  title: 'Blog | Car Keys Duplication NYC',
-  description: 'Read expert tips, pricing guides, and automotive security advice from our certified NYC car key duplication specialists. Learn how to save on replacement fobs.',
+  title: 'Blog | Car Keys duplicate NYC',
+  description: 'Read expert tips, pricing guides, and automotive security advice from our certified NYC car key duplicate specialists. Learn how to save on replacement fobs.',
   slug: '/blog'
 })
 
 const POSTS = [
-  { slug: 'car-key-duplication-cost-nyc', title: 'How Much Does Car Key Duplication Cost in NYC?' },
-  { slug: 'dealer-vs-locksmith-key-duplication-nyc', title: 'Dealer vs. Mobile Locksmith for Key Duplication' },
+  { slug: 'car-key-duplicate-cost-nyc', title: 'How Much Does Car Key duplicate Cost in NYC?' },
+  { slug: 'dealer-vs-locksmith-key-duplicate-nyc', title: 'Dealer vs. Mobile Locksmith for Key duplicate' },
   { slug: 'can-you-duplicate-transponder-key', title: 'Can You Duplicate a Transponder Key?' },
   { slug: 'avoid-locksmith-scams-nyc', title: 'How to Avoid Locksmith Scams in NYC' },
   { slug: 'what-happens-with-only-one-car-key', title: 'What Happens When You Only Have One Car Key Left' }

@@ -3,8 +3,8 @@ import CTABanner from '@/components/ui/CTABanner'
 import { ShieldCheck, Clock, MapPin, Wrench } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: 'About Us | Car Keys Duplication NYC',
-  description: 'Learn about our expert mobile automotive locksmith team in NYC. Serving all 5 boroughs with licensed, fast, on-site car key duplication and programming.',
+  title: 'About Us | Car Keys duplicate NYC',
+  description: 'Learn about our expert mobile automotive locksmith team in NYC. Serving all 5 boroughs with licensed, fast, on-site car key duplicate and programming.',
   slug: '/about'
 })
 
@@ -14,7 +14,7 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-primary mb-6">
-          About Car Keys Duplication
+          About Car Keys duplicate
         </h1>
         <p className="text-xl text-gray-600 mb-12">
           New York City's premier mobile automotive locksmith service. We bring the dealership directly to you.
@@ -23,7 +23,7 @@ export default function AboutPage() {
         <div className="prose prose-lg max-w-none text-gray-700 mb-16">
           <h2>Our Mission</h2>
           <p>
-            We founded Car Keys Duplication with one simple goal: to eliminate the stress, cost, and waiting times associated with replacing or duplicating car keys at a traditional dealership. In a fast-paced city like New York, you don't have days to wait for a new key, and you certainly don't want to pay exorbitant towing fees just to get your vehicle to a service center.
+            We founded Car Keys duplicate with one simple goal: to eliminate the stress, cost, and waiting times associated with replacing or duplicating car keys at a traditional dealership. In a fast-paced city like New York, you don't have days to wait for a new key, and you certainly don't want to pay exorbitant towing fees just to get your vehicle to a service center.
           </p>
           <p>
             Our fully equipped mobile workshops act as self-contained laboratories. We carry the exact same OEM-grade diagnostic scanners, key cutting machines, and programming software that the dealerships use. The only difference? We come to your exact GPS coordinates, whether you're parked in a tight Brooklyn driveway, a Manhattan parking garage, or stranded at JFK airport.

@@ -5,8 +5,8 @@ import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, ShieldCheck, Clock, MapPin, Wrench, ShieldAlert, BarChart3, AlertTriangle } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: `Car Key Duplication Queens NYC | Mobile Service, We Come To You`,
-  description: `Expert mobile car key duplication in Queens. We program transponders, smart keys, and fobs on-site. Save time and avoid dealership towing fees.`,
+  title: `Car Key duplicate Queens NYC | Mobile Service, We Come To You`,
+  description: `Expert mobile car key duplicate in Queens. We program transponders, smart keys, and fobs on-site. Save time and avoid dealership towing fees.`,
   slug: `queens`
 })
 
@@ -19,7 +19,7 @@ export default function BoroughPage() {
             Local Queens Mobile Locksmith
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">
-            Mobile Car Key Duplication in Queens, NYC
+            Mobile Car Key duplicate in Queens, NYC
           </h1>
           <p className="text-xl text-gray-300 font-medium mb-8">
             Fast, professional, on-site programming. Don't tow your car to the dealer—we bring the dealership to you.
@@ -74,7 +74,7 @@ export default function BoroughPage() {
             <h3 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
               <BarChart3 className="w-6 h-6 text-blue-600" /> Local Service Data
             </h3>
-            <p className="text-blue-800 leading-relaxed">Queens accounts for nearly 35% of all car key duplication requests in NYC, primarily driven by multi-generational households needing spare keys.</p>
+            <p className="text-blue-800 leading-relaxed">Queens accounts for nearly 35% of all car key duplicate requests in NYC, primarily driven by multi-generational households needing spare keys.</p>
           </div>
         </div>
 
@@ -132,11 +132,11 @@ export default function BoroughPage() {
         <div className="mt-12 pt-12 border-t border-gray-200">
           <h2 className="text-2xl font-bold text-brand-primary mb-6">Explore Our Services in Queens</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/transponder-key-duplication" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Transponder Key Duplication in Queens</Link>
-            <Link href="/key-fob-duplication" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Key Fob Duplication in Queens</Link>
-            <Link href="/smart-key-duplication" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Smart Key Duplication in Queens</Link>
-            <Link href="/push-to-start-key-duplication" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Push-to-Start Key Duplication in Queens</Link>
-            <Link href="/laser-cut-key-duplication" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Laser-Cut Key Duplication in Queens</Link>
+            <Link href="/transponder-key-duplicate" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Transponder Key duplicate in Queens</Link>
+            <Link href="/key-fob-duplicate" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Key Fob duplicate in Queens</Link>
+            <Link href="/smart-key-duplicate" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Smart Key duplicate in Queens</Link>
+            <Link href="/push-to-start-key-duplicate" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Push-to-Start Key duplicate in Queens</Link>
+            <Link href="/laser-cut-key-duplicate" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Laser-Cut Key duplicate in Queens</Link>
             <Link href="/spare-key-copy" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><CheckCircle2 className="w-4 h-4 text-brand-accent" /> Spare Key Copy in Queens</Link>
           </div>
         </div>

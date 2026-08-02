@@ -4,8 +4,8 @@ import { SITE } from '@/lib/constants'
 import { generatePageMetadata } from '@/lib/metadata'
 
 export const metadata = generatePageMetadata({
-  title: 'Book Mobile Car Key Duplication in NYC',
-  description: 'Book our mobile car key duplication service. We come to you anywhere in the 5 boroughs. 24/7 fast response.',
+  title: 'Book Mobile Car Key duplicate in NYC',
+  description: 'Book our mobile car key duplicate service. We come to you anywhere in the 5 boroughs. 24/7 fast response.',
   slug: '/book-now'
 })
 
@@ -16,7 +16,7 @@ export default function BookNowPage() {
         
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-brand-primary tracking-tight mb-4">
-            Book Mobile Car Key Duplication in NYC
+            Book Mobile Car Key duplicate in NYC
           </h1>
           <p className="text-xl text-gray-600 font-medium">
             We come to you — anywhere in all 5 boroughs

@@ -17,7 +17,7 @@ const BOROUGHS = [
     expertise: "Queens has the highest number of registered vehicles in NYC. We've optimized our dispatch routes to reach deep into neighborhoods like Bayside, Jamaica, and Flushing in record time. We also specialize in rapid response for travelers stranded at JFK or LaGuardia airports who have lost their keys during transit.",
     neighborhoods: ["Astoria", "Long Island City", "Flushing", "Jamaica", "Bayside", "Forest Hills", "Jackson Heights", "Corona"],
     scamAdvice: "Queens residents are often targeted by bait-and-switch locksmiths near airport terminals. Always verify the van branding matches the company you called.",
-    stats: "Queens accounts for nearly 35% of all car key duplication requests in NYC, primarily driven by multi-generational households needing spare keys.",
+    stats: "Queens accounts for nearly 35% of all car key duplicate requests in NYC, primarily driven by multi-generational households needing spare keys.",
     faq: { q: "Do you service the parking garages at JFK and LaGuardia?", a: "Yes, we frequently dispatch technicians to airport parking facilities to assist returning travelers who have lost their car keys." }
   },
   { 
@@ -45,68 +45,68 @@ const BOROUGHS = [
     neighborhoods: ["Tottenville", "St. George", "New Dorp", "Great Kills", "Eltingville", "West New Brighton", "Annadale", "Bulls Head"],
     scamAdvice: "Check for Staten Island business licenses. Many vendors pretend to be local but dispatch from New Jersey with hidden bridge toll surcharges.",
     stats: "Staten Island residents have the highest rate of 'Smart Key' adoption per capita, requiring specialized proximity programming equipment.",
-    faq: { q: "What is the difference between key duplication and full replacement?", a: "Duplication means you have one working key and need a spare. If you have lost all keys, it requires key origination. For full origination on Staten Island, visit our sister site." }
+    faq: { q: "What is the difference between key duplicate and full replacement?", a: "duplicate means you have one working key and need a spare. If you have lost all keys, it requires key origination. For full origination on Staten Island, visit our sister site." }
   }
 ];
 
 const SERVICE_TYPES = [
   { 
-    slug: 'transponder-key-duplication', name: 'Transponder Key Duplication',
+    slug: 'transponder-key-duplicate', name: 'Transponder Key duplicate',
     techDetail: "Since 1998, nearly all vehicles utilize an immobilizer system. The plastic head of your key contains a microchip (transponder) that emits a specific radio frequency (typically 125 kHz or 433 MHz). When inserted, the vehicle's Engine Control Unit (ECU) reads this signal. If the cryptographic code matches, the fuel pump and ignition are enabled. A standard metal cut from a hardware store will turn the lock, but the engine will immediately stall.",
     ourSolution: "We don't just cut metal. We utilize OEM-grade diagnostic scanners to interface directly with your vehicle's OBD-II port. We securely read the immobilizer data and program a brand-new transponder chip to sync perfectly with your car's security system. This guarantees a 100% factory-level start every time.",
     deepDetail: "Modern transponders use rolling code encryption (like Megamos Crypto or Texas 128-bit). This means the code changes every time the car starts, preventing 'replay attacks' where a thief records your signal. Our machines support the latest encryption protocols for 2024 models."
   },
   { 
-    slug: 'key-fob-duplication', name: 'Key Fob Duplication',
+    slug: 'key-fob-duplicate', name: 'Key Fob duplicate',
     techDetail: "Modern key fobs utilize 'rolling code' technology. Every time you press the unlock button, the remote generates a brand-new, cryptographically secure code. The vehicle's receiver anticipates this specific sequence. This prevents thieves from recording and replaying your unlock signal. Because of this, simple 'cloning' tools cannot copy a key fob.",
     ourSolution: "We supply high-quality, FCC-approved aftermarket and genuine OEM key fobs. Our technicians connect to your vehicle's computer to officially register the new fob's unique serial number into the vehicle's memory, ensuring flawless rolling code synchronization and avoiding any warranty issues.",
     deepDetail: "Incorrectly programmed fobs can 'desync' your existing keys or trigger alarm malfunctions. We perform a full system check after every programming session to ensure all remote functions (lock, unlock, trunk, panic) work perfectly."
   },
   { 
-    slug: 'smart-key-duplication', name: 'Smart Key Duplication',
+    slug: 'smart-key-duplicate', name: 'Smart Key duplicate',
     techDetail: "Smart keys (or proximity keys) represent the height of modern vehicle convenience. These fobs constantly emit a low-frequency signal. When you touch the door handle or press the start button, the vehicle's internal antennas triangulate the key's exact position. If it detects the authorized key inside the cabin, it authenticates the start.",
     ourSolution: "Programming a proximity key requires advanced security clearances within the vehicle's software. We utilize state-of-the-art programmers capable of bypassing dealer lockouts to safely add a new smart key to your system. We also ensure that any lost smart keys are erased from the vehicle's memory to prevent theft.",
     deepDetail: "Smart key systems are integrated with your car's Body Control Module (BCM). A mistake here can immobilize the entire car. We carry redundant programming units to ensure a safe, 'read-only' diagnostic check before writing any data."
   },
   { 
-    slug: 'push-to-start-key-duplication', name: 'Push-to-Start Key Duplication',
+    slug: 'push-to-start-key-duplicate', name: 'Push-to-Start Key duplicate',
     techDetail: "Push-to-start ignition systems eliminate the mechanical ignition cylinder entirely. The vehicle relies 100% on the electronic handshake between the key fob and the push-button module (often integrated into the steering column lock or body control module).",
     ourSolution: "Because there is no mechanical backup, precision programming is critical. We use specialized diagnostic software to securely pair your new push-to-start fob. We also demonstrate how to use the emergency backup start method (usually holding the fob against the start button) before we leave your location.",
     deepDetail: "Many people don't realize that push-to-start fobs still contain a 'hidden' emergency mechanical blade. We cut this blade for you as part of the service, so you can still enter the car if the battery dies."
   },
   { 
-    slug: 'laser-cut-key-duplication', name: 'Laser-Cut Key Duplication',
+    slug: 'laser-cut-key-duplicate', name: 'Laser-Cut Key duplicate',
     techDetail: "Unlike traditional keys with jagged cuts on the top and bottom, laser-cut (or sidewinder) keys feature a continuous groove milled down the center of the blade. This design provides significantly higher physical security and is much harder to pick or duplicate. It is the standard for European luxury vehicles, Honda, and newer Ford models.",
     ourSolution: "We carry high-precision, automated CNC laser cutting machines inside our mobile vans. We decode your existing key's bitting using digital calipers and input the exact specifications into our machine, resulting in a factory-perfect laser cut that turns smoothly in your locks without causing internal wear.",
     deepDetail: "Standard hardware store machines produce 'vibration cuts' that wear down your ignition pins over time. Our laser-cut blades have a tolerance of 0.05mm, ensuring zero friction and maximum longevity for your ignition cylinder."
   },
   { 
     slug: 'spare-key-copy', name: 'Spare Key Copy',
-    techDetail: "A 'spare key' is a proactive insurance policy. If you lose your only working key, the vehicle's computer must be reset, and lock cylinders may need to be mechanically decoded. This turns a simple duplication process into an emergency 'Key Origination', which is significantly more time-consuming and expensive.",
+    techDetail: "A 'spare key' is a proactive insurance policy. If you lose your only working key, the vehicle's computer must be reset, and lock cylinders may need to be mechanically decoded. This turns a simple duplicate process into an emergency 'Key Origination', which is significantly more time-consuming and expensive.",
     ourSolution: "By getting a spare key duplicated while you still have a working original, we can simply clone the existing transponder data or quickly add a secondary key to the ECU. It takes less than 30 minutes and saves you hundreds of dollars compared to a complete key loss emergency.",
     deepDetail: "We offer 'valet keys' as a cost-effective spare option. These keys will start the car and open the doors, but won't open the trunk or glovebox, providing security when leaving your car with a parking attendant."
   }
 ];
 
 const CAR_MAKES = [
-  { slug: 'toyota-key-duplication', name: 'Toyota', tech: "Toyota's immobilizer systems are renowned for their reliability but require specific programming protocols. Models from roughly 2010 onwards transitioned to the highly secure H-chip (Texas Crypto 128-bit) and recent models use advanced smart proximity systems.", link: "https://www.carkeyreplacementstatenisland.com/toyota-keys", anchor: "Toyota key replacement Staten Island", models: "Camry, Corolla, RAV4, Highlander, Prius, Tacoma, Tundra" },
-  { slug: 'honda-key-duplication', name: 'Honda', tech: "Modern Hondas universally employ high-security laser-cut (sidewinder) blades paired with the Honda G chip or the advanced ID47 transponder. Precision CNC cutting is absolutely mandatory, as a poorly cut Honda key will permanently jam the ignition cylinder.", link: "https://www.carkeyreplacementstatenisland.com/honda-keys", anchor: "Honda key replacement Staten Island", models: "Accord, Civic, CR-V, Pilot, Odyssey, HR-V" },
-  { slug: 'ford-key-duplication', name: 'Ford', tech: "Ford utilizes the PATS (Passive Anti-Theft System), which has evolved into the robust Tiris DST+ (4D-63) system. Programming often requires a 10-minute security access delay to prevent unauthorized key generation.", link: "https://www.carkeyreplacementstatenisland.com/ford-keys", anchor: "Ford key replacement Staten Island", models: "F-150, Explorer, Escape, Mustang, Edge, Fusion" },
-  { slug: 'bmw-key-duplication', name: 'BMW', tech: "BMW key duplication is highly complex. They utilize CAS (Car Access System) and FEM/BDC modules with Hitag 2 encryption. Many locksmiths cannot handle BMWs. We possess the dealer-level engineering software required to safely extract the ISN and program new fobs.", link: "https://www.carkeyreplacementstatenisland.com/bmw-keys", anchor: "BMW key replacement Staten Island", models: "3 Series, 5 Series, 7 Series, X3, X5, X7" },
-  { slug: 'nissan-key-duplication', name: 'Nissan', tech: "Nissan's Intelligent Key system (utilizing PCF7936 / ID46 chips) is standard across their lineup. We carry the specific diagnostic software required to bypass the BCM (Body Control Module) PIN code to program new intelligent fobs on the spot.", link: "https://www.carkeyreplacementstatenisland.com/nissan-keys", anchor: "Nissan key replacement Staten Island", models: "Altima, Rogue, Sentra, Maxima, Pathfinder, Murano" },
-  { slug: 'hyundai-key-duplication', name: 'Hyundai', tech: "Hyundai keys utilize ID46 / 4D-60 transponders and increasingly feature advanced proximity fobs. We stock a massive inventory of Hyundai OEM-equivalent smart keys to ensure same-day service without dealership wait times.", link: "https://www.carkeyreplacementstatenisland.com/hyundai-keys", anchor: "Hyundai key replacement Staten Island", models: "Elantra, Sonata, Tucson, Santa Fe, Kona, Palisade" },
-  { slug: 'jeep-key-duplication', name: 'Jeep', tech: "Jeep vehicles use the Chrysler Y-4 / 4D-64 system. The unique Fobik style keys and newer proximity keys for models like the Grand Cherokee require a localized PIN code extraction from the vehicle's SKIM module, which we perform on-site.", link: "https://www.carkeyreplacementstatenisland.com/jeep-keys", anchor: "Jeep key replacement Staten Island", models: "Wrangler, Grand Cherokee, Cherokee, Compass, Renegade" },
-  { slug: 'chevrolet-key-duplication', name: 'Chevrolet', tech: "Chevrolet moved from the classic GM VATS system to modern ID46 transponders and proximity fobs. We utilize specialized GM programming tools (SPS) to securely add new fobs and remote start capabilities.", link: "https://www.carkeyreplacementstatenisland.com/chevrolet-keys", anchor: "Chevrolet key replacement Staten Island", models: "Silverado, Equinox, Malibu, Tahoe, Suburban, Colorado" },
-  { slug: 'kia-key-duplication', name: 'Kia', tech: "Sharing technology with Hyundai, Kia utilizes ID46 / 4D-60 chips. We handle everything from the standard bladed keys for older Optimas to the push-to-start smart fobs for the newest Telluride models.", link: "https://www.carkeyreplacementstatenisland.com/kia-keys", anchor: "Kia key replacement Staten Island", models: "Optima, Sorento, Sportage, Soul, Telluride, Forte" },
-  { slug: 'mercedes-key-duplication', name: 'Mercedes', tech: "Mercedes relies on highly advanced Infrared (IR), NEC, and Hitag Pro systems. The EIS (Electronic Ignition Switch) must be carefully read to calculate a key password. We are among the few NYC mobile locksmiths equipped to safely handle Mercedes EIS programming.", link: "https://www.carkeyreplacementstatenisland.com/mercedes-keys", anchor: "Mercedes key replacement Staten Island", models: "C-Class, E-Class, S-Class, GLC, GLE, GLS" },
-  { slug: 'subaru-key-duplication', name: 'Subaru', tech: "Subaru's G-chip (ID47) is standard across their rugged lineup. We provide precision laser cutting and secure programming for both standard transponder keys and the advanced proximity fobs used in the Outback and Forester.", link: "https://www.carkeyreplacementstatenisland.com/subaru-keys", anchor: "Subaru key replacement Staten Island", models: "Outback, Forester, Crosstrek, Impreza, Ascent" },
-  { slug: 'volkswagen-key-duplication', name: 'Volkswagen', tech: "Volkswagen utilizes the Megamos Crypto 48 chip and the highly secure MQB platform. Duplication requires reading the instrument cluster data to extract the component security (CS) bytes. We have the specific VAG diagnostic tools to execute this flawlessly.", link: "https://www.carkeyreplacementstatenisland.com/volkswagen-keys", anchor: "Volkswagen key replacement Staten Island", models: "Jetta, Passat, Tiguan, Golf, Atlas" }
+  { slug: 'toyota-key-duplicate', name: 'Toyota', tech: "Toyota's immobilizer systems are renowned for their reliability but require specific programming protocols. Models from roughly 2010 onwards transitioned to the highly secure H-chip (Texas Crypto 128-bit) and recent models use advanced smart proximity systems.", link: "https://www.carkeyreplacementstatenisland.com/toyota-keys", anchor: "Toyota key replacement Staten Island", models: "Camry, Corolla, RAV4, Highlander, Prius, Tacoma, Tundra" },
+  { slug: 'honda-key-duplicate', name: 'Honda', tech: "Modern Hondas universally employ high-security laser-cut (sidewinder) blades paired with the Honda G chip or the advanced ID47 transponder. Precision CNC cutting is absolutely mandatory, as a poorly cut Honda key will permanently jam the ignition cylinder.", link: "https://www.carkeyreplacementstatenisland.com/honda-keys", anchor: "Honda key replacement Staten Island", models: "Accord, Civic, CR-V, Pilot, Odyssey, HR-V" },
+  { slug: 'ford-key-duplicate', name: 'Ford', tech: "Ford utilizes the PATS (Passive Anti-Theft System), which has evolved into the robust Tiris DST+ (4D-63) system. Programming often requires a 10-minute security access delay to prevent unauthorized key generation.", link: "https://www.carkeyreplacementstatenisland.com/ford-keys", anchor: "Ford key replacement Staten Island", models: "F-150, Explorer, Escape, Mustang, Edge, Fusion" },
+  { slug: 'bmw-key-duplicate', name: 'BMW', tech: "BMW key duplicate is highly complex. They utilize CAS (Car Access System) and FEM/BDC modules with Hitag 2 encryption. Many locksmiths cannot handle BMWs. We possess the dealer-level engineering software required to safely extract the ISN and program new fobs.", link: "https://www.carkeyreplacementstatenisland.com/bmw-keys", anchor: "BMW key replacement Staten Island", models: "3 Series, 5 Series, 7 Series, X3, X5, X7" },
+  { slug: 'nissan-key-duplicate', name: 'Nissan', tech: "Nissan's Intelligent Key system (utilizing PCF7936 / ID46 chips) is standard across their lineup. We carry the specific diagnostic software required to bypass the BCM (Body Control Module) PIN code to program new intelligent fobs on the spot.", link: "https://www.carkeyreplacementstatenisland.com/nissan-keys", anchor: "Nissan key replacement Staten Island", models: "Altima, Rogue, Sentra, Maxima, Pathfinder, Murano" },
+  { slug: 'hyundai-key-duplicate', name: 'Hyundai', tech: "Hyundai keys utilize ID46 / 4D-60 transponders and increasingly feature advanced proximity fobs. We stock a massive inventory of Hyundai OEM-equivalent smart keys to ensure same-day service without dealership wait times.", link: "https://www.carkeyreplacementstatenisland.com/hyundai-keys", anchor: "Hyundai key replacement Staten Island", models: "Elantra, Sonata, Tucson, Santa Fe, Kona, Palisade" },
+  { slug: 'jeep-key-duplicate', name: 'Jeep', tech: "Jeep vehicles use the Chrysler Y-4 / 4D-64 system. The unique Fobik style keys and newer proximity keys for models like the Grand Cherokee require a localized PIN code extraction from the vehicle's SKIM module, which we perform on-site.", link: "https://www.carkeyreplacementstatenisland.com/jeep-keys", anchor: "Jeep key replacement Staten Island", models: "Wrangler, Grand Cherokee, Cherokee, Compass, Renegade" },
+  { slug: 'chevrolet-key-duplicate', name: 'Chevrolet', tech: "Chevrolet moved from the classic GM VATS system to modern ID46 transponders and proximity fobs. We utilize specialized GM programming tools (SPS) to securely add new fobs and remote start capabilities.", link: "https://www.carkeyreplacementstatenisland.com/chevrolet-keys", anchor: "Chevrolet key replacement Staten Island", models: "Silverado, Equinox, Malibu, Tahoe, Suburban, Colorado" },
+  { slug: 'kia-key-duplicate', name: 'Kia', tech: "Sharing technology with Hyundai, Kia utilizes ID46 / 4D-60 chips. We handle everything from the standard bladed keys for older Optimas to the push-to-start smart fobs for the newest Telluride models.", link: "https://www.carkeyreplacementstatenisland.com/kia-keys", anchor: "Kia key replacement Staten Island", models: "Optima, Sorento, Sportage, Soul, Telluride, Forte" },
+  { slug: 'mercedes-key-duplicate', name: 'Mercedes', tech: "Mercedes relies on highly advanced Infrared (IR), NEC, and Hitag Pro systems. The EIS (Electronic Ignition Switch) must be carefully read to calculate a key password. We are among the few NYC mobile locksmiths equipped to safely handle Mercedes EIS programming.", link: "https://www.carkeyreplacementstatenisland.com/mercedes-keys", anchor: "Mercedes key replacement Staten Island", models: "C-Class, E-Class, S-Class, GLC, GLE, GLS" },
+  { slug: 'subaru-key-duplicate', name: 'Subaru', tech: "Subaru's G-chip (ID47) is standard across their rugged lineup. We provide precision laser cutting and secure programming for both standard transponder keys and the advanced proximity fobs used in the Outback and Forester.", link: "https://www.carkeyreplacementstatenisland.com/subaru-keys", anchor: "Subaru key replacement Staten Island", models: "Outback, Forester, Crosstrek, Impreza, Ascent" },
+  { slug: 'volkswagen-key-duplicate', name: 'Volkswagen', tech: "Volkswagen utilizes the Megamos Crypto 48 chip and the highly secure MQB platform. duplicate requires reading the instrument cluster data to extract the component security (CS) bytes. We have the specific VAG diagnostic tools to execute this flawlessly.", link: "https://www.carkeyreplacementstatenisland.com/volkswagen-keys", anchor: "Volkswagen key replacement Staten Island", models: "Jetta, Passat, Tiguan, Golf, Atlas" }
 ];
 
 const INTENT_PAGES = [
-  { slug: 'mobile-car-key-duplication-nyc', name: 'Mobile Car Key Duplication NYC', focus: "We bring the entire locksmith shop to your exact GPS coordinates.", benefit: "No towing, no waiting rooms, and no hidden travel fees. We serve all 5 boroughs with a fleet of mobile workshops." },
-  { slug: 'same-day-car-key-duplication-nyc', name: 'Same Day Car Key Duplication NYC', focus: "Why wait for the dealer to order a key from the factory?", benefit: "We stock over 2,000 blank fobs and transponders in our mobile units. If you call before 2 PM, we guarantee a same-day appointment for any make or model." },
-  { slug: '24-hour-car-key-duplication-nyc', name: '24 Hour Car Key Duplication NYC', focus: "Lost your keys at 3 AM in a parking garage?", benefit: "Our dispatchers and technicians are on-call 24/7, 365 days a year. Whether it's New Year's Eve or a Sunday morning, we are the only ones answering the phone." }
+  { slug: 'mobile-car-key-duplicate-nyc', name: 'Mobile Car Key duplicate NYC', focus: "We bring the entire locksmith shop to your exact GPS coordinates.", benefit: "No towing, no waiting rooms, and no hidden travel fees. We serve all 5 boroughs with a fleet of mobile workshops." },
+  { slug: 'same-day-car-key-duplicate-nyc', name: 'Same Day Car Key duplicate NYC', focus: "Why wait for the dealer to order a key from the factory?", benefit: "We stock over 2,000 blank fobs and transponders in our mobile units. If you call before 2 PM, we guarantee a same-day appointment for any make or model." },
+  { slug: '24-hour-car-key-duplicate-nyc', name: '24 Hour Car Key duplicate NYC', focus: "Lost your keys at 3 AM in a parking garage?", benefit: "Our dispatchers and technicians are on-call 24/7, 365 days a year. Whether it's New Year's Eve or a Sunday morning, we are the only ones answering the phone." }
 ];
 
 const getBoroughTemplate = (b) => `
@@ -117,8 +117,8 @@ import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, ShieldCheck, Clock, MapPin, Wrench, ShieldAlert, BarChart3, AlertTriangle } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: \`Car Key Duplication ${b.name} NYC | Mobile Service, We Come To You\`,
-  description: \`Expert mobile car key duplication in ${b.name}. We program transponders, smart keys, and fobs on-site. Save time and avoid dealership towing fees.\`,
+  title: \`Car Key duplicate ${b.name} NYC | Mobile Service, We Come To You\`,
+  description: \`Expert mobile car key duplicate in ${b.name}. We program transponders, smart keys, and fobs on-site. Save time and avoid dealership towing fees.\`,
   slug: \`${b.slug}\`
 })
 
@@ -131,7 +131,7 @@ export default function BoroughPage() {
             Local ${b.name} Mobile Locksmith
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">
-            Mobile Car Key Duplication in ${b.name}, NYC
+            Mobile Car Key duplicate in ${b.name}, NYC
           </h1>
           <p className="text-xl text-gray-300 font-medium mb-8">
             Fast, professional, on-site programming. Don't tow your car to the dealer—we bring the dealership to you.
@@ -361,8 +361,8 @@ import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, Car, ShieldAlert, Cpu, ListChecks, Info } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: \`${m.name} Car Key Duplication NYC | Mobile Locksmith Service\`,
-  description: \`Expert mobile ${m.name} car key duplication across NYC. We cut and program OEM-grade transponders, smart keys, and fobs on-site.\`,
+  title: \`${m.name} Car Key duplicate NYC | Mobile Locksmith Service\`,
+  description: \`Expert mobile ${m.name} car key duplicate across NYC. We cut and program OEM-grade transponders, smart keys, and fobs on-site.\`,
   slug: \`${m.slug}\`
 })
 
@@ -371,7 +371,7 @@ export default function MakePage() {
     <div className="pb-16 bg-white">
       <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center border-b-4 border-brand-accent">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">${m.name} Car Key Duplication NYC</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">${m.name} Car Key duplicate NYC</h1>
           <p className="text-xl text-gray-300 font-medium mb-8">Specialized programming and cutting for ${m.name} vehicles. We bypass the dealership wait times.</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link href="/request-a-quote" className="w-full sm:w-auto bg-brand-accent text-brand-primary font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition-colors shadow-lg text-lg">Get an Exact Quote</Link>
@@ -410,7 +410,7 @@ export default function MakePage() {
               <li className="flex gap-2"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> Your VIN (Vehicle Identification Number)</li>
               <li className="flex gap-2"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> Proof of ownership (Registration/Title)</li>
               <li className="flex gap-2"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> A valid photo ID</li>
-              <li className="flex gap-2"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> Your working key (for duplication)</li>
+              <li className="flex gap-2"><CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" /> Your working key (for duplicate)</li>
             </ul>
           </div>
           <div className="bg-brand-light p-8 rounded-2xl border-2 border-brand-accent flex flex-col justify-center">

@@ -10,27 +10,27 @@ const BOROUGHS = [
 ];
 
 const SERVICE_TYPES = [
-  { slug: 'transponder-key-duplication', name: 'Transponder Key Duplication' },
-  { slug: 'key-fob-duplication', name: 'Key Fob Duplication' },
-  { slug: 'smart-key-duplication', name: 'Smart Key Duplication' },
-  { slug: 'push-to-start-key-duplication', name: 'Push-to-Start Key Duplication' },
-  { slug: 'laser-cut-key-duplication', name: 'Laser-Cut Key Duplication' },
+  { slug: 'transponder-key-duplicate', name: 'Transponder Key duplicate' },
+  { slug: 'key-fob-duplicate', name: 'Key Fob duplicate' },
+  { slug: 'smart-key-duplicate', name: 'Smart Key duplicate' },
+  { slug: 'push-to-start-key-duplicate', name: 'Push-to-Start Key duplicate' },
+  { slug: 'laser-cut-key-duplicate', name: 'Laser-Cut Key duplicate' },
   { slug: 'spare-key-copy', name: 'Spare Key Copy' }
 ];
 
 const CAR_MAKES = [
-  { slug: 'toyota-key-duplication', name: 'Toyota', link: 'https://www.carkeyreplacementstatenisland.com/toyota-keys', anchor: 'Toyota key replacement Staten Island' },
-  { slug: 'honda-key-duplication', name: 'Honda', link: 'https://www.carkeyreplacementstatenisland.com/honda-keys', anchor: 'Honda key replacement Staten Island' },
-  { slug: 'ford-key-duplication', name: 'Ford', link: 'https://www.carkeyreplacementstatenisland.com/ford-keys', anchor: 'Ford key replacement Staten Island' },
-  { slug: 'bmw-key-duplication', name: 'BMW', link: 'https://www.carkeyreplacementstatenisland.com/bmw-keys', anchor: 'BMW key replacement Staten Island' },
-  { slug: 'nissan-key-duplication', name: 'Nissan', link: 'https://www.carkeyreplacementstatenisland.com/nissan-keys', anchor: 'Nissan key replacement Staten Island' },
-  { slug: 'hyundai-key-duplication', name: 'Hyundai', link: 'https://www.carkeyreplacementstatenisland.com/hyundai-keys', anchor: 'Hyundai key replacement Staten Island' },
-  { slug: 'jeep-key-duplication', name: 'Jeep', link: 'https://www.carkeyreplacementstatenisland.com/jeep-keys', anchor: 'Jeep key replacement Staten Island' },
-  { slug: 'chevrolet-key-duplication', name: 'Chevrolet', link: 'https://www.carkeyreplacementstatenisland.com/chevrolet-keys', anchor: 'Chevrolet key replacement Staten Island' },
-  { slug: 'kia-key-duplication', name: 'Kia', link: 'https://www.carkeyreplacementstatenisland.com/kia-keys', anchor: 'Kia key replacement Staten Island' },
-  { slug: 'mercedes-key-duplication', name: 'Mercedes', link: 'https://www.carkeyreplacementstatenisland.com/mercedes-keys', anchor: 'Mercedes key replacement Staten Island' },
-  { slug: 'subaru-key-duplication', name: 'Subaru', link: 'https://www.carkeyreplacementstatenisland.com/subaru-keys', anchor: 'Subaru key replacement Staten Island' },
-  { slug: 'volkswagen-key-duplication', name: 'Volkswagen', link: 'https://www.carkeyreplacementstatenisland.com/volkswagen-keys', anchor: 'Volkswagen key replacement Staten Island' }
+  { slug: 'toyota-key-duplicate', name: 'Toyota', link: 'https://www.carkeyreplacementstatenisland.com/toyota-keys', anchor: 'Toyota key replacement Staten Island' },
+  { slug: 'honda-key-duplicate', name: 'Honda', link: 'https://www.carkeyreplacementstatenisland.com/honda-keys', anchor: 'Honda key replacement Staten Island' },
+  { slug: 'ford-key-duplicate', name: 'Ford', link: 'https://www.carkeyreplacementstatenisland.com/ford-keys', anchor: 'Ford key replacement Staten Island' },
+  { slug: 'bmw-key-duplicate', name: 'BMW', link: 'https://www.carkeyreplacementstatenisland.com/bmw-keys', anchor: 'BMW key replacement Staten Island' },
+  { slug: 'nissan-key-duplicate', name: 'Nissan', link: 'https://www.carkeyreplacementstatenisland.com/nissan-keys', anchor: 'Nissan key replacement Staten Island' },
+  { slug: 'hyundai-key-duplicate', name: 'Hyundai', link: 'https://www.carkeyreplacementstatenisland.com/hyundai-keys', anchor: 'Hyundai key replacement Staten Island' },
+  { slug: 'jeep-key-duplicate', name: 'Jeep', link: 'https://www.carkeyreplacementstatenisland.com/jeep-keys', anchor: 'Jeep key replacement Staten Island' },
+  { slug: 'chevrolet-key-duplicate', name: 'Chevrolet', link: 'https://www.carkeyreplacementstatenisland.com/chevrolet-keys', anchor: 'Chevrolet key replacement Staten Island' },
+  { slug: 'kia-key-duplicate', name: 'Kia', link: 'https://www.carkeyreplacementstatenisland.com/kia-keys', anchor: 'Kia key replacement Staten Island' },
+  { slug: 'mercedes-key-duplicate', name: 'Mercedes', link: 'https://www.carkeyreplacementstatenisland.com/mercedes-keys', anchor: 'Mercedes key replacement Staten Island' },
+  { slug: 'subaru-key-duplicate', name: 'Subaru', link: 'https://www.carkeyreplacementstatenisland.com/subaru-keys', anchor: 'Subaru key replacement Staten Island' },
+  { slug: 'volkswagen-key-duplicate', name: 'Volkswagen', link: 'https://www.carkeyreplacementstatenisland.com/volkswagen-keys', anchor: 'Volkswagen key replacement Staten Island' }
 ];
 
 const updateBoroughPageLinks = (b) => {
@@ -51,7 +51,7 @@ const updateBoroughPageLinks = (b) => {
 
             <h3 className="text-xl font-bold mt-8 mb-4">Popular Vehicle Makes Serviced in ${b.name}</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              ${top4Makes.map(m => `<Link href="/${m.slug}" className="text-brand-accent hover:underline">${m.name} Key Duplication</Link>`).join('\\n              ')}
+              ${top4Makes.map(m => `<Link href="/${m.slug}" className="text-brand-accent hover:underline">${m.name} Key duplicate</Link>`).join('\\n              ')}
             </div>
 
             <div className="mt-8 flex gap-4">
@@ -93,7 +93,7 @@ const updateServicePageLinks = (s) => {
 
             <h3 className="text-xl font-bold mt-8 mb-4">Supported Vehicle Brands for ${s.name}</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              ${relevantMakes.map(m => `<Link href="/${m.slug}" className="text-brand-accent hover:underline">${m.name} Key Duplication</Link>`).join('\\n              ')}
+              ${relevantMakes.map(m => `<Link href="/${m.slug}" className="text-brand-accent hover:underline">${m.name} Key duplicate</Link>`).join('\\n              ')}
             </div>
 
             <div className="mt-8 flex gap-4">
@@ -124,19 +124,19 @@ const updateMakePageLinks = (m) => {
 
   const linksHtml = `
           <div className="mt-12 pt-8 border-t border-gray-200">
-            <h2 className="text-2xl font-bold mb-6">${m.name} Key Duplication Available In:</h2>
+            <h2 className="text-2xl font-bold mb-6">${m.name} Key duplicate Available In:</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              ${BOROUGHS.map(b => `<Link href="/${b.slug}" className="text-brand-accent hover:underline">${m.name} key duplication in ${b.name}</Link>`).join('\\n              ')}
+              ${BOROUGHS.map(b => `<Link href="/${b.slug}" className="text-brand-accent hover:underline">${m.name} key duplicate in ${b.name}</Link>`).join('\\n              ')}
             </div>
 
             <div className="mt-8 flex gap-4">
               <Link href="/request-a-quote" className="btn-primary">Get a Free Quote</Link>
-              <Link href="/transponder-key-duplication" className="btn-secondary">View Transponder Key Services</Link>
+              <Link href="/transponder-key-duplicate" className="btn-secondary">View Transponder Key Services</Link>
             </div>
           </div>
   `;
   
-  if(!content.includes(m.name + " Key Duplication Available In:")) {
+  if(!content.includes(m.name + " Key duplicate Available In:")) {
     content = content.replace('<CTABanner', linksHtml + '\n        <CTABanner');
     fs.writeFileSync(filePath, content);
   }

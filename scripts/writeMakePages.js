@@ -2,18 +2,18 @@ const fs = require('fs');
 const path = require('path');
 
 const CAR_MAKES = [
-  { slug: 'toyota-key-duplication', name: 'Toyota', tech: "Toyota's immobilizer systems are renowned for their reliability but require specific programming protocols. Models from roughly 2010 onwards transitioned to the highly secure H-chip (Texas Crypto 128-bit) and recent models use advanced smart proximity systems. Our mobile labs carry exact OEM-grade diagnostic scanners.", models: "Camry, Corolla, RAV4, Highlander, Prius, Tacoma, Tundra, Sienna, 4Runner, Sequoia, Avalon, Yaris, C-HR, Venza, Land Cruiser, Supra, bZ4X, FJ Cruiser, Matrix, Solara" },
-  { slug: 'honda-key-duplication', name: 'Honda', tech: "Modern Hondas universally employ high-security laser-cut (sidewinder) blades paired with the Honda G chip or the advanced ID47 transponder. Precision CNC cutting is absolutely mandatory, as a poorly cut Honda key will permanently jam the ignition cylinder. We use factory-level cutters.", models: "Accord, Civic, CR-V, Pilot, Odyssey, HR-V, Fit, Ridgeline, Insight, Passport, Clarity, Element, Crosstour, S2000, Prelude" },
-  { slug: 'ford-key-duplication', name: 'Ford', tech: "Ford utilizes the PATS (Passive Anti-Theft System), which has evolved into the robust Tiris DST+ (4D-63) system. Programming often requires a 10-minute security access delay to prevent unauthorized key generation. We handle this flawlessly.", models: "F-150, Explorer, Escape, Mustang, Edge, Fusion, Focus, Ranger, Expedition, Bronco, Taurus, Transit, E-Series, Flex, Fiesta, EcoSport, Maverick, Mach-E" },
-  { slug: 'bmw-key-duplication', name: 'BMW', tech: "BMW key duplication is highly complex. They utilize CAS (Car Access System) and FEM/BDC modules with Hitag 2 encryption. Many locksmiths cannot handle BMWs. We possess the dealer-level engineering software required to safely extract the ISN and program new fobs.", models: "3 Series, 5 Series, 7 Series, X3, X5, X7, 4 Series, 2 Series, 8 Series, Z4, M3, M4, M5, i3, i8, i4, iX" },
-  { slug: 'nissan-key-duplication', name: 'Nissan', tech: "Nissan's Intelligent Key system (utilizing PCF7936 / ID46 chips) is standard across their lineup. We carry the specific diagnostic software required to bypass the BCM (Body Control Module) PIN code to program new intelligent fobs on the spot.", models: "Altima, Rogue, Sentra, Maxima, Pathfinder, Murano, Titan, Frontier, Versa, Kicks, Armada, LEAF, 370Z, GT-R, NV, Juke" },
-  { slug: 'hyundai-key-duplication', name: 'Hyundai', tech: "Hyundai keys utilize ID46 / 4D-60 transponders and increasingly feature advanced proximity fobs. We stock a massive inventory of Hyundai OEM-equivalent smart keys to ensure same-day service without dealership wait times.", models: "Elantra, Sonata, Tucson, Santa Fe, Kona, Palisade, Accent, Veloster, Ioniq, Venue, Azera, Genesis, Equus, Veracruz" },
-  { slug: 'jeep-key-duplication', name: 'Jeep', tech: "Jeep vehicles use the Chrysler Y-4 / 4D-64 system. The unique Fobik style keys and newer proximity keys for models like the Grand Cherokee require a localized PIN code extraction from the vehicle's SKIM module, which we perform on-site.", models: "Wrangler, Grand Cherokee, Cherokee, Compass, Renegade, Gladiator, Patriot, Liberty, Commander, Wagoneer" },
-  { slug: 'chevrolet-key-duplication', name: 'Chevrolet', tech: "Chevrolet moved from the classic GM VATS system to modern ID46 transponders and proximity fobs. We utilize specialized GM programming tools (SPS) to securely add new fobs and remote start capabilities.", models: "Silverado, Equinox, Malibu, Tahoe, Suburban, Colorado, Traverse, Cruze, Impala, Camaro, Corvette, Trailblazer, Trax, Sonic, Spark, Volt, Bolt" },
-  { slug: 'kia-key-duplication', name: 'Kia', tech: "Sharing technology with Hyundai, Kia utilizes ID46 / 4D-60 chips. We handle everything from the standard bladed keys for older Optimas to the push-to-start smart fobs for the newest Telluride models.", models: "Optima, Sorento, Sportage, Soul, Telluride, Forte, Rio, Stinger, Sedona, Carnival, Niro, K5, Cadenza, Seltos" },
-  { slug: 'mercedes-key-duplication', name: 'Mercedes', tech: "Mercedes relies on highly advanced Infrared (IR), NEC, and Hitag Pro systems. The EIS (Electronic Ignition Switch) must be carefully read to calculate a key password. We are among the few NYC mobile locksmiths equipped to safely handle Mercedes EIS programming.", models: "C-Class, E-Class, S-Class, GLC, GLE, GLS, A-Class, CLA, GLA, G-Class, SL, SLC, AMG GT, Sprinter, Metris" },
-  { slug: 'subaru-key-duplication', name: 'Subaru', tech: "Subaru's G-chip (ID47) is standard across their rugged lineup. We provide precision laser cutting and secure programming for both standard transponder keys and the advanced proximity fobs used in the Outback and Forester.", models: "Outback, Forester, Crosstrek, Impreza, Ascent, Legacy, WRX, BRZ, Solterra, Tribeca, Baja" },
-  { slug: 'volkswagen-key-duplication', name: 'Volkswagen', tech: "Volkswagen utilizes the Megamos Crypto 48 chip and the highly secure MQB platform. Duplication requires reading the instrument cluster data to extract the component security (CS) bytes. We have the specific VAG diagnostic tools to execute this flawlessly.", models: "Jetta, Passat, Tiguan, Golf, Atlas, Taos, ID.4, Arteon, Beetle, Touareg, CC, Eos, Routan, GTI" }
+  { slug: 'toyota-key-duplicate', name: 'Toyota', tech: "Toyota's immobilizer systems are renowned for their reliability but require specific programming protocols. Models from roughly 2010 onwards transitioned to the highly secure H-chip (Texas Crypto 128-bit) and recent models use advanced smart proximity systems. Our mobile labs carry exact OEM-grade diagnostic scanners.", models: "Camry, Corolla, RAV4, Highlander, Prius, Tacoma, Tundra, Sienna, 4Runner, Sequoia, Avalon, Yaris, C-HR, Venza, Land Cruiser, Supra, bZ4X, FJ Cruiser, Matrix, Solara" },
+  { slug: 'honda-key-duplicate', name: 'Honda', tech: "Modern Hondas universally employ high-security laser-cut (sidewinder) blades paired with the Honda G chip or the advanced ID47 transponder. Precision CNC cutting is absolutely mandatory, as a poorly cut Honda key will permanently jam the ignition cylinder. We use factory-level cutters.", models: "Accord, Civic, CR-V, Pilot, Odyssey, HR-V, Fit, Ridgeline, Insight, Passport, Clarity, Element, Crosstour, S2000, Prelude" },
+  { slug: 'ford-key-duplicate', name: 'Ford', tech: "Ford utilizes the PATS (Passive Anti-Theft System), which has evolved into the robust Tiris DST+ (4D-63) system. Programming often requires a 10-minute security access delay to prevent unauthorized key generation. We handle this flawlessly.", models: "F-150, Explorer, Escape, Mustang, Edge, Fusion, Focus, Ranger, Expedition, Bronco, Taurus, Transit, E-Series, Flex, Fiesta, EcoSport, Maverick, Mach-E" },
+  { slug: 'bmw-key-duplicate', name: 'BMW', tech: "BMW key duplicate is highly complex. They utilize CAS (Car Access System) and FEM/BDC modules with Hitag 2 encryption. Many locksmiths cannot handle BMWs. We possess the dealer-level engineering software required to safely extract the ISN and program new fobs.", models: "3 Series, 5 Series, 7 Series, X3, X5, X7, 4 Series, 2 Series, 8 Series, Z4, M3, M4, M5, i3, i8, i4, iX" },
+  { slug: 'nissan-key-duplicate', name: 'Nissan', tech: "Nissan's Intelligent Key system (utilizing PCF7936 / ID46 chips) is standard across their lineup. We carry the specific diagnostic software required to bypass the BCM (Body Control Module) PIN code to program new intelligent fobs on the spot.", models: "Altima, Rogue, Sentra, Maxima, Pathfinder, Murano, Titan, Frontier, Versa, Kicks, Armada, LEAF, 370Z, GT-R, NV, Juke" },
+  { slug: 'hyundai-key-duplicate', name: 'Hyundai', tech: "Hyundai keys utilize ID46 / 4D-60 transponders and increasingly feature advanced proximity fobs. We stock a massive inventory of Hyundai OEM-equivalent smart keys to ensure same-day service without dealership wait times.", models: "Elantra, Sonata, Tucson, Santa Fe, Kona, Palisade, Accent, Veloster, Ioniq, Venue, Azera, Genesis, Equus, Veracruz" },
+  { slug: 'jeep-key-duplicate', name: 'Jeep', tech: "Jeep vehicles use the Chrysler Y-4 / 4D-64 system. The unique Fobik style keys and newer proximity keys for models like the Grand Cherokee require a localized PIN code extraction from the vehicle's SKIM module, which we perform on-site.", models: "Wrangler, Grand Cherokee, Cherokee, Compass, Renegade, Gladiator, Patriot, Liberty, Commander, Wagoneer" },
+  { slug: 'chevrolet-key-duplicate', name: 'Chevrolet', tech: "Chevrolet moved from the classic GM VATS system to modern ID46 transponders and proximity fobs. We utilize specialized GM programming tools (SPS) to securely add new fobs and remote start capabilities.", models: "Silverado, Equinox, Malibu, Tahoe, Suburban, Colorado, Traverse, Cruze, Impala, Camaro, Corvette, Trailblazer, Trax, Sonic, Spark, Volt, Bolt" },
+  { slug: 'kia-key-duplicate', name: 'Kia', tech: "Sharing technology with Hyundai, Kia utilizes ID46 / 4D-60 chips. We handle everything from the standard bladed keys for older Optimas to the push-to-start smart fobs for the newest Telluride models.", models: "Optima, Sorento, Sportage, Soul, Telluride, Forte, Rio, Stinger, Sedona, Carnival, Niro, K5, Cadenza, Seltos" },
+  { slug: 'mercedes-key-duplicate', name: 'Mercedes', tech: "Mercedes relies on highly advanced Infrared (IR), NEC, and Hitag Pro systems. The EIS (Electronic Ignition Switch) must be carefully read to calculate a key password. We are among the few NYC mobile locksmiths equipped to safely handle Mercedes EIS programming.", models: "C-Class, E-Class, S-Class, GLC, GLE, GLS, A-Class, CLA, GLA, G-Class, SL, SLC, AMG GT, Sprinter, Metris" },
+  { slug: 'subaru-key-duplicate', name: 'Subaru', tech: "Subaru's G-chip (ID47) is standard across their rugged lineup. We provide precision laser cutting and secure programming for both standard transponder keys and the advanced proximity fobs used in the Outback and Forester.", models: "Outback, Forester, Crosstrek, Impreza, Ascent, Legacy, WRX, BRZ, Solterra, Tribeca, Baja" },
+  { slug: 'volkswagen-key-duplicate', name: 'Volkswagen', tech: "Volkswagen utilizes the Megamos Crypto 48 chip and the highly secure MQB platform. duplicate requires reading the instrument cluster data to extract the component security (CS) bytes. We have the specific VAG diagnostic tools to execute this flawlessly.", models: "Jetta, Passat, Tiguan, Golf, Atlas, Taos, ID.4, Arteon, Beetle, Touareg, CC, Eos, Routan, GTI" }
 ];
 
 const BOROUGHS = [
@@ -32,8 +32,8 @@ import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, Car, ShieldAlert, Cpu, ListChecks, Info, Wrench, Clock, Zap, MapPin } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: \`${m.name} Car Key Duplication NYC | Mobile Locksmith Service\`,
-  description: \`Expert mobile ${m.name} car key duplication across NYC. We cut and program OEM-grade transponders, smart keys, and fobs on-site.\`,
+  title: \`${m.name} Car Key duplicate NYC | Mobile Locksmith Service\`,
+  description: \`Expert mobile ${m.name} car key duplicate across NYC. We cut and program OEM-grade transponders, smart keys, and fobs on-site.\`,
   slug: \`${m.slug}\`
 })
 
@@ -43,7 +43,7 @@ export default function MakePage() {
       {/* Hero Section */}
       <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center border-b-4 border-brand-accent">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">${m.name} Car Key Duplication NYC</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">${m.name} Car Key duplicate NYC</h1>
           <p className="text-xl text-gray-300 font-medium mb-8">Specialized programming and cutting for ${m.name} vehicles. We bypass the dealership wait times by bringing the equipment directly to your location in all 5 boroughs.</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link href="/request-a-quote" className="w-full sm:w-auto bg-brand-accent text-brand-primary font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition-colors shadow-lg text-lg">Get an Exact Quote</Link>
@@ -61,7 +61,7 @@ export default function MakePage() {
             Losing a car key or needing a spare for your ${m.name} in New York City can be an incredibly stressful experience. 
             Between alternate side parking rules, expensive parking garages in Manhattan, and the fast-paced lifestyle of Brooklyn and Queens, 
             you do not have the time to tow your vehicle to a ${m.name} dealership and wait days for a replacement. That is exactly why our mobile 
-            automotive locksmith service exists. We provide on-site ${m.name} car key duplication, transponder key programming, and smart key fob 
+            automotive locksmith service exists. We provide on-site ${m.name} car key duplicate, transponder key programming, and smart key fob 
             replacements directly at your vehicle's location.
           </p>
           <p>
@@ -82,7 +82,7 @@ export default function MakePage() {
             <p className="text-gray-700">
               Modern ${m.name} vehicles utilize immobilizer systems designed to prevent theft. The key fob contains a microchip that transmits a specific 
               radio frequency signal to the receiver located near the ignition. If the cryptographic code matches, the Engine Control Unit (ECU) enables 
-              the fuel injectors and ignition coils. Simple hardware store duplication cannot replicate this chip. We utilize factory-level OBD-II programmers 
+              the fuel injectors and ignition coils. Simple hardware store duplicate cannot replicate this chip. We utilize factory-level OBD-II programmers 
               to securely extract the PIN code and pair the new key to your ${m.name}'s immobilizer system.
             </p>
           </div>
@@ -169,7 +169,7 @@ export default function MakePage() {
           
           <div className="space-y-6">
             <div>
-              <h4 className="font-bold text-lg text-gray-800 mb-2">How much does a ${m.name} key duplication cost?</h4>
+              <h4 className="font-bold text-lg text-gray-800 mb-2">How much does a ${m.name} key duplicate cost?</h4>
               <p className="text-gray-600">The cost varies entirely depending on the year and model. A basic transponder key starts around $95, while a high-tech smart proximity fob can range from $175 to $350. We provide exact quotes over the phone based on your VIN.</p>
             </div>
             <div>
@@ -181,8 +181,8 @@ export default function MakePage() {
               <p className="text-gray-600">Yes, we can cut and program customer-supplied keys. However, be warned: many online keys are counterfeit or have the wrong chip frequency. We cannot guarantee keys we do not supply, and the programming fee still applies.</p>
             </div>
             <div>
-              <h4 className="font-bold text-lg text-gray-800 mb-2">How long does the duplication take?</h4>
-              <p className="text-gray-600">Once our technician arrives, standard duplication takes about 20-30 minutes. More complex systems or key origination may take up to an hour.</p>
+              <h4 className="font-bold text-lg text-gray-800 mb-2">How long does the duplicate take?</h4>
+              <p className="text-gray-600">Once our technician arrives, standard duplicate takes about 20-30 minutes. More complex systems or key origination may take up to an hour.</p>
             </div>
             <div>
               <h4 className="font-bold text-lg text-gray-800 mb-2">Are you licensed to work in NYC?</h4>

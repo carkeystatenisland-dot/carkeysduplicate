@@ -3,8 +3,8 @@ import { KeyRound, Phone, Home, ArrowRight, MapPin } from 'lucide-react'
 import { SITE, BOROUGHS, SERVICE_TYPES } from '@/lib/constants'
 
 export const metadata = {
-  title: 'Page Not Found | Car Keys Duplication NYC',
-  description: 'The requested page was not found. Contact Car Keys Duplication NYC for mobile transponder key, smart key, and key fob duplication services across all 5 boroughs.',
+  title: 'Page Not Found | Car Keys duplicate NYC',
+  description: 'The requested page was not found. Contact Car Keys duplicate NYC for mobile transponder key, smart key, and key fob duplicate services across all 5 boroughs.',
 }
 
 export default function NotFound() {

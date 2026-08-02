@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next'
 import { SITE, BOROUGHS, CAR_MAKES, SERVICE_TYPES } from '@/lib/constants'
 
 const BLOG_SLUGS = [
-  'car-key-duplication-cost-nyc',
-  'dealer-vs-locksmith-key-duplication-nyc',
+  'car-key-duplicate-cost-nyc',
+  'dealer-vs-locksmith-key-duplicate-nyc',
   'can-you-duplicate-transponder-key',
   'avoid-locksmith-scams-nyc',
   'what-happens-with-only-one-car-key',
@@ -17,17 +17,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/about`, lastModified: new Date('2026-05-15'), changeFrequency: 'monthly' as const, priority: 0.6 },
     { url: `${baseUrl}/request-a-quote`, lastModified: new Date('2026-05-15'), changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${baseUrl}/book-now`, lastModified: new Date('2026-05-15'), changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${baseUrl}/mobile-car-key-duplication-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/same-day-car-key-duplication-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/24-hour-car-key-duplication-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/mobile-car-key-duplicate-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/same-day-car-key-duplicate-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/24-hour-car-key-duplicate-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.8 },
     { url: `${baseUrl}/blog`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${baseUrl}/privacy-policy`, lastModified: new Date('2026-05-15'), changeFrequency: 'yearly' as const, priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified: new Date('2026-05-15'), changeFrequency: 'yearly' as const, priority: 0.3 },
-    { url: `${baseUrl}/key-fob-duplication`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/smart-key-duplication`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/push-to-start-key-duplication`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/laser-cut-key-duplication`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/transponder-key-duplication`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/key-fob-duplicate`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/smart-key-duplicate`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/push-to-start-key-duplicate`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/laser-cut-key-duplicate`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/transponder-key-duplicate`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
     { url: `${baseUrl}/spare-key-copy`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
   ]
 
