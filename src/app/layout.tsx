@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@carkeysduplication',
+    site: '@carkeyduplicate',
     images: [`${SITE.url}/og-image.jpg`],
   },
   robots: {

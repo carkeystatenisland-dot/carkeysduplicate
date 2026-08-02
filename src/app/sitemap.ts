@@ -10,7 +10,7 @@ const BLOG_SLUGS = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = SITE.url  // https://www.carkeysduplication.com
+  const baseUrl = SITE.url  // https://www.carkeyduplicate.com
 
   const staticPages = [
     { url: baseUrl, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 1.0 },

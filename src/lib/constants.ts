@@ -1,9 +1,9 @@
 export const SITE = {
   name: 'Car Keys Duplication NYC',
-  url: 'https://www.carkeysduplication.com',
+  url: 'https://www.carkeyduplicate.com',
   phone: '+19298287009',
   phoneDisplay: '(929) 828-7009',
-  email: 'info@carkeysduplication.com',
+  email: 'info@carkeyduplicate.com',
   address: '75-20 Astoria Blvd, East Elmhurst, NY 11370',
   hours: 'Mon-Sun 9AM - 5PM (24/7 Emergencies)'
 }

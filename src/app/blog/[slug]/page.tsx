@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${post.title} | NYC Keys Blog`,
     description: post.description,
     slug: `/blog/${resolvedParams.slug}`,
-    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.carkeysduplication.com'}/blog/${resolvedParams.slug}.jpg`
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.carkeyduplicate.com'}/blog/${resolvedParams.slug}.jpg`
   })
 }
 

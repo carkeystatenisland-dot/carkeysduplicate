@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-
-
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone()
   const hostname = request.headers.get('host') || ''
@@ -36,14 +34,21 @@ export function middleware(request: NextRequest) {
     return new NextResponse('Gone', { status: 410 })
   }
 
-  // 1. Force WWW subdomain
-  if (hostname === 'carkeysduplication.com') {
-    url.hostname = 'www.carkeysduplication.com'
+  // 1. Redirect old domain (carkeysduplication.com) to new domain (carkeyduplicate.com)
+  if (hostname === 'carkeysduplication.com' || hostname === 'www.carkeysduplication.com') {
+    url.hostname = 'www.carkeyduplicate.com'
     url.protocol = 'https:' // Explicitly use https for the redirect
     return NextResponse.redirect(url, 301)
   }
 
-  // 2. Force HTTPS if not already (Cloudflare usually handles this, but good for local/edge consistency)
+  // 2. Force WWW subdomain
+  if (hostname === 'carkeyduplicate.com') {
+    url.hostname = 'www.carkeyduplicate.com'
+    url.protocol = 'https:' // Explicitly use https for the redirect
+    return NextResponse.redirect(url, 301)
+  }
+
+  // 3. Force HTTPS if not already (Cloudflare usually handles this, but good for local/edge consistency)
   if (protocol === 'http' && process.env.NODE_ENV === 'production') {
     url.protocol = 'https:'
     return NextResponse.redirect(url, 301)
