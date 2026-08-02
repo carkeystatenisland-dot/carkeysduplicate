@@ -275,7 +275,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
   },
 
   'dealer-vs-locksmith-key-duplicate-nyc': {
-    title: 'Dealer vs. Mobile Locksmith for Car Key duplicate in NYC',
+    title: 'Dealer vs. Locksmith for Car Key Duplicate in NYC',
     description: 'An expert, authority-grade comparison between car dealerships and mobile locksmiths in NYC. Discover the truth about costs, security protocols, software, and consumer rights.',
     readingTime: '22 min read',
     content: (
@@ -561,7 +561,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
     )
   },
     'can-you-duplicate-transponder-key': {
-    title: 'Can You Duplicate a Transponder Key? | NYC Specialist Guide',
+    title: 'Can You Duplicate a Transponder Key?',
     description: 'Expert, authority-grade guide to transponder key duplicate in NYC. Learn the exact science of immobilizers, RFID frequencies, challenge-response cryptographics, and cloning vs. programming.',
     readingTime: '23 min read',
     content: (
@@ -826,7 +826,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
     )
   },
     'avoid-locksmith-scams-nyc': {
-    title: 'How to Avoid Locksmith Scams in NYC | Expert Security Guide',
+    title: 'How to Avoid Locksmith Scams in NYC',
     description: 'Protect yourself from predatory locksmith scams in NYC. Learn the warning signs, lead generation cartels, NYC DCWP licensing laws, and your legal rights.',
     readingTime: '24 min read',
     content: (
@@ -1109,7 +1109,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
     )
   },
           'what-happens-with-only-one-car-key': {
-    title: 'What Happens When You Only Have One Car Key Left? | Expert Guide',
+    title: 'What Happens When You Only Have One Car Key Left?',
     description: 'Avoid the high-risk, expensive single-key lifestyle. Learn the technical failures of fobs, key duplicate vs. key origination, and your proactive spare key options.',
     readingTime: '24 min read',
     content: (
