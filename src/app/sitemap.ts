@@ -33,28 +33,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const boroughPages = BOROUGHS.map(b => ({
     url: `${baseUrl}/${b.slug}`,
-    lastModified: new Date('2026-05-15'),
+    lastModified: new Date('2026-08-05'),
     changeFrequency: 'weekly' as const,
     priority: 0.9,
   }))
 
   const servicePages = SERVICE_TYPES.map(s => ({
     url: `${baseUrl}/${s.slug}`,
-    lastModified: new Date('2026-05-15'),
+    lastModified: new Date('2026-08-01'),
     changeFrequency: 'weekly' as const,
     priority: 0.85,
   }))
 
   const makePages = CAR_MAKES.map(m => ({
     url: `${baseUrl}/${m.slug}`,
-    lastModified: new Date('2026-05-15'),
+    lastModified: new Date('2026-07-27'),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
 
   const blogPages = BLOG_SLUGS.map(slug => ({
     url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date('2026-05-15'),
+    lastModified: new Date('2026-08-03'),
     changeFrequency: 'monthly' as const,
     priority: 0.75,
   }))

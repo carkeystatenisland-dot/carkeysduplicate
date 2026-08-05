@@ -35,7 +35,7 @@ export function middleware(request: NextRequest) {
   }
 
   // 1. Redirect old domain (carkeysduplicate.com) to new domain (carkeyduplicate.com)
-  if (hostname === 'carkeysduplicate.com' || hostname === 'www.carkeysduplicate.com') {
+  if (hostname === 'carkeyduplicate.com' || hostname === 'www.carkeyduplicate.com') {
     url.hostname = 'www.carkeyduplicate.com'
     url.protocol = 'https:' // Explicitly use https for the redirect
     return NextResponse.redirect(url, 301)

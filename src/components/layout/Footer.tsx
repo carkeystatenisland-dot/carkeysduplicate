@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Link href="/" className="inline-block">
               <span className="font-heading font-bold text-xl tracking-tight text-white leading-tight">
-                Car Keys<span className="text-brand-accent"> duplicate</span>
+                Car Key<span className="text-brand-accent"> duplicate</span>
               </span>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
