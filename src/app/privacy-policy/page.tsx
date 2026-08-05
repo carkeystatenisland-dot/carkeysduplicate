@@ -20,8 +20,8 @@ import {
 } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: 'Privacy Policy | Car Keys duplicate NYC',
-  description: 'Learn how Car Keys duplicate NYC securely collects, protects, and manages your personal and vehicle verification information.',
+  title: 'Privacy Policy | car key duplicate NYC',
+  description: 'Learn how car key duplicate NYC securely collects, protects, and manages your personal and vehicle verification information.',
   slug: '/privacy-policy'
 })
 
@@ -52,7 +52,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-            How Car Keys duplicate NYC collects, protects, and handles your personal and vehicle verification data.
+            How car key duplicate NYC collects, protects, and handles your personal and vehicle verification data.
           </p>
           <div className="flex items-center gap-2 mt-6 text-sm text-gray-400">
             <Calendar className="w-4 h-4 text-brand-accent" />

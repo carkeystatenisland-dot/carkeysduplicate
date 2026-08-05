@@ -168,7 +168,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
                 <tr>
                   <th className="px-6 py-4 text-left font-bold text-brand-primary">Cost Factor</th>
                   <th className="px-6 py-4 text-left font-bold text-brand-primary">Car Dealership</th>
-                  <th className="px-6 py-4 text-left font-bold text-brand-primary">Car Keys duplicate</th>
+                  <th className="px-6 py-4 text-left font-bold text-brand-primary">car key duplicate</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 text-gray-700">
@@ -873,7 +873,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
             </li>
             <li>
               <strong>Vague and Generic Phone Answering:</strong> 
-              When you call a certified locksmith company, they will answer the phone with their official, registered business name (e.g., "Car Keys duplicate"). A scam operator will answer with a generic phrase like "Locksmith Service" or "Car Key Services." This is because the central call center operates hundreds of different fake Google Maps listings under different names from a single room and cannot track which name you are calling.
+              When you call a certified locksmith company, they will answer the phone with their official, registered business name (e.g., "car key duplicate"). A scam operator will answer with a generic phrase like "Locksmith Service" or "Car Key Services." This is because the central call center operates hundreds of different fake Google Maps listings under different names from a single room and cannot track which name you are calling.
             </li>
             <li>
               <strong>Unmarked Vehicles and Out-of-State Plates:</strong> 
@@ -1033,7 +1033,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
         <section id="our-commitment" className="scroll-mt-24 mb-12">
           <h2 className="text-3xl font-heading text-brand-primary font-bold mb-4 font-heading">7. Our Standards: Absolute Integrity, Flat-Rate Pricing & Safe Operations</h2>
           <p>
-            At <Link href="/about" className="font-bold underline text-brand-primary hover:text-brand-accent">Car Keys duplicate</Link>, our entire mobile operations were structured to provide an honest, premium, and highly secure alternative to predatory operators. We believe in complete transparency and maintain the highest professional security standards:
+            At <Link href="/about" className="font-bold underline text-brand-primary hover:text-brand-accent">car key duplicate</Link>, our entire mobile operations were structured to provide an honest, premium, and highly secure alternative to predatory operators. We believe in complete transparency and maintain the highest professional security standards:
           </p>
           <ul>
             <li><strong>100% Guaranteed Flat-Rate Quotes:</strong> When you contact our office, we analyze your vehicle's exact Year, Make, and Model. We provide an all-inclusive, guaranteed flat price. The rate we quote is the exact price you will pay once the job is completed—we have zero hidden dispatch or toll fees.</li>
@@ -1305,7 +1305,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
             The conclusion is clear: driving with a single key is a costly, unnecessary financial risk. Taking proactive action to secure a spare key today is the single best investment you can make for your vehicle's security and your peace of mind.
           </p>
           <p>
-            At <Link href="/about" className="font-bold underline text-brand-primary hover:text-brand-accent">Car Keys duplicate</Link>, we make duplicating a key incredibly simple:
+            At <Link href="/about" className="font-bold underline text-brand-primary hover:text-brand-accent">car key duplicate</Link>, we make duplicating a key incredibly simple:
           </p>
           <ul>
             <li>Call our dispatcher or request a quote online. We provide guaranteed, flat-rate pricing based on your vehicle's parameters.</li>

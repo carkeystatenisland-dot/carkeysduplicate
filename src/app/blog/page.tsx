@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/metadata'
 
 export const metadata = generatePageMetadata({
-  title: 'Blog | Car Keys duplicate NYC',
+  title: 'Blog | car key duplicate NYC',
   description: 'Read expert tips, pricing guides, and automotive security advice from our certified NYC car key duplicate specialists. Learn how to save on replacement fobs.',
   slug: '/blog'
 })

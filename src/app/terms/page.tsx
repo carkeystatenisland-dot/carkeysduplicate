@@ -20,7 +20,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: 'Terms of Service | Car Keys duplicate NYC',
+  title: 'Terms of Service | car key duplicate NYC',
   description: 'Review our professional locksmith terms of service, ownership verification rules, payment terms, and mobile service call policies.',
   slug: '/terms'
 })

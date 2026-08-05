@@ -1,5 +1,5 @@
 export const SITE = {
-  name: 'Car Keys duplicate NYC',
+  name: 'car key duplicate NYC',
   url: 'https://www.carkeyduplicate.com',
   phone: '+19298287009',
   phoneDisplay: '(929) 828-7009',
