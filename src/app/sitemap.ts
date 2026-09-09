@@ -11,50 +11,51 @@ const BLOG_SLUGS = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE.url  // https://www.carkeyduplicate.com
+  const TODAY = new Date('2026-09-09')
 
   const staticPages = [
-    { url: baseUrl, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 1.0 },
-    { url: `${baseUrl}/about`, lastModified: new Date('2026-05-15'), changeFrequency: 'monthly' as const, priority: 0.6 },
-    { url: `${baseUrl}/request-a-quote`, lastModified: new Date('2026-05-15'), changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${baseUrl}/book-now`, lastModified: new Date('2026-05-15'), changeFrequency: 'monthly' as const, priority: 0.9 },
-    { url: `${baseUrl}/mobile-car-key-duplicate-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.9 },
-    { url: `${baseUrl}/same-day-car-key-duplicate-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/24-hour-car-key-duplicate-nyc`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.8 },
-    { url: `${baseUrl}/blog`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.7 },
-    { url: `${baseUrl}/privacy-policy`, lastModified: new Date('2026-05-15'), changeFrequency: 'yearly' as const, priority: 0.3 },
-    { url: `${baseUrl}/terms`, lastModified: new Date('2026-05-15'), changeFrequency: 'yearly' as const, priority: 0.3 },
-    { url: `${baseUrl}/key-fob-duplicate`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/smart-key-duplicate`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/push-to-start-key-duplicate`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/laser-cut-key-duplicate`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/transponder-key-duplicate`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/spare-key-copy`, lastModified: new Date('2026-05-15'), changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: baseUrl, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 1.0 },
+    { url: `${baseUrl}/about`, lastModified: TODAY, changeFrequency: 'monthly' as const, priority: 0.6 },
+    { url: `${baseUrl}/request-a-quote`, lastModified: TODAY, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${baseUrl}/book-now`, lastModified: TODAY, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${baseUrl}/mobile-car-key-duplicate-nyc`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${baseUrl}/same-day-car-key-duplicate-nyc`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/24-hour-car-key-duplicate-nyc`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/blog`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${baseUrl}/privacy-policy`, lastModified: TODAY, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: `${baseUrl}/terms`, lastModified: TODAY, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: `${baseUrl}/key-fob-duplicate`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/smart-key-duplicate`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/push-to-start-key-duplicate`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/laser-cut-key-duplicate`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/transponder-key-duplicate`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.85 },
+    { url: `${baseUrl}/spare-key-copy`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.85 },
   ]
 
   const boroughPages = BOROUGHS.map(b => ({
     url: `${baseUrl}/${b.slug}`,
-    lastModified: new Date('2026-08-05'),
+    lastModified: TODAY,
     changeFrequency: 'weekly' as const,
     priority: 0.9,
   }))
 
   const servicePages = SERVICE_TYPES.map(s => ({
     url: `${baseUrl}/${s.slug}`,
-    lastModified: new Date('2026-08-01'),
+    lastModified: TODAY,
     changeFrequency: 'weekly' as const,
     priority: 0.85,
   }))
 
   const makePages = CAR_MAKES.map(m => ({
     url: `${baseUrl}/${m.slug}`,
-    lastModified: new Date('2026-07-27'),
+    lastModified: TODAY,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
 
   const blogPages = BLOG_SLUGS.map(slug => ({
     url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date('2026-08-03'),
+    lastModified: TODAY,
     changeFrequency: 'monthly' as const,
     priority: 0.75,
   }))
