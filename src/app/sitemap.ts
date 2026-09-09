@@ -24,12 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${baseUrl}/privacy-policy`, lastModified: TODAY, changeFrequency: 'yearly' as const, priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified: TODAY, changeFrequency: 'yearly' as const, priority: 0.3 },
-    { url: `${baseUrl}/key-fob-duplicate`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/smart-key-duplicate`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/push-to-start-key-duplicate`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/laser-cut-key-duplicate`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/transponder-key-duplicate`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.85 },
-    { url: `${baseUrl}/spare-key-copy`, lastModified: TODAY, changeFrequency: 'weekly' as const, priority: 0.85 },
+    // NOTE: Service pages (key-fob-duplicate, smart-key-duplicate, etc.) are intentionally
+    // omitted here — they are already generated dynamically by the servicePages loop below.
   ]
 
   const boroughPages = BOROUGHS.map(b => ({
