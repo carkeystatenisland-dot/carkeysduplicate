@@ -1,98 +1,217 @@
 import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/metadata'
+import { SITE, CAR_MAKES, BOROUGHS } from '@/lib/constants'
+import ServiceSchema from '@/components/seo/ServiceSchema'
+import ServiceHero from '@/components/content/ServiceHero'
+import QuickAnswer from '@/components/content/QuickAnswer'
+import Section from '@/components/content/Section'
+import PriceTable from '@/components/content/PriceTable'
+import StepList from '@/components/content/StepList'
+import FAQSection from '@/components/content/FAQSection'
+import LinkGrid from '@/components/content/LinkGrid'
 import CTABanner from '@/components/ui/CTABanner'
-import TrustBadges from '@/components/ui/TrustBadges'
-import { CheckCircle2, Cpu, Wrench, ShieldCheck, MapPin, ShieldAlert, Zap, Lock } from 'lucide-react'
+import { KeyRound, DollarSign, Scale, Wrench, ClipboardCheck, Lightbulb } from 'lucide-react'
+
+const PATH = '/spare-key-copy'
 
 export const metadata = generatePageMetadata({
-  title: `Spare Key Copy NYC | Mobile, On-Site Programming`,
-  description: `Expert spare key copy across all NYC boroughs. We come to your location with OEM-grade diagnostic tools to program your vehicle securely.`,
-  slug: `spare-key-copy`
+  title: 'Spare Car Key Copy NYC | Mobile Key Duplication From $75',
+  description:
+    'Spare car key made at your door anywhere in NYC. Basic, transponder, remote and smart key copies in 15-30 min. Cheaper than the dealer, no towing.',
+  slug: PATH,
+  keywords: ['spare car key copy nyc', 'spare key copy nyc', 'car key copy nyc', 'nyc key copy', 'same day key copy', 'duplicate car key nyc', 'spare key for car'],
 })
 
-export default function ServicePage() {
+const faqItems = [
+  {
+    question: 'How much does a spare car key cost in NYC?',
+    answer:
+      'A basic non-chip spare key costs $75 (includes the service visit), a transponder chip spare $95-$180, a remote key fob spare $120-$220, and a smart or push-to-start spare $175-$395. Dealers typically charge double and need the car at the dealership for 2-5 days. We cut and program the spare at your location in 15-30 minutes.',
+  },
+  {
+    question: 'Is it cheaper to get a spare key now or wait until I lose my only key?',
+    answer:
+      'Making a spare while you still have a working key is roughly half the price of an all-keys-lost replacement, because we can clone or add the new key without decoding locks or generating a key by VIN. It also avoids a tow and the risk of being stranded. If you are down to one key, this is the cheapest moment to act.',
+  },
+  {
+    question: 'Can I get a spare car key made without the original?',
+    answer:
+      'Yes. We can generate a key from your VIN or by decoding the door lock, cut it, and program it to the vehicle. It costs more than copying from a working key, and you must show photo ID and proof of ownership. See our lost car key replacement page.',
+  },
+  {
+    question: 'Where is the best place to get a spare car key copied in NYC: dealer, kiosk, hardware store or locksmith?',
+    answer:
+      'A hardware store or kiosk can copy a plain metal key and a few older transponder chips, but cannot program remotes, smart keys or most post-2010 chips. The dealer can do everything but is slower and more expensive and usually needs the car on-site. A licensed mobile automotive locksmith programs any key type at your location the same day, typically for 40-60% less than the dealer.',
+  },
+  {
+    question: 'How long does it take to make a spare key?',
+    answer:
+      'Basic keys take 5 minutes, transponder keys 15-30 minutes, and smart keys 30-45 minutes once the technician arrives. Response time across the five boroughs is usually 30-60 minutes.',
+  },
+  {
+    question: 'What is a valet key and is it a good spare?',
+    answer:
+      'A valet key starts the car and opens the doors but will not open the trunk or glove box. It is a lower-cost spare that is ideal for parking attendants, teen drivers or keeping in a lockbox. We can cut and program valet keys for most makes.',
+  },
+  {
+    question: 'Do I have to be present to get a spare key made?',
+    answer:
+      'The vehicle must be present for programming, and the owner (or an authorized driver with the owner\'s documents) needs to show photo ID and registration, title or insurance card. We can meet you at home, work, a parking garage or on the street.',
+  },
+  {
+    question: 'Will the spare key work exactly like my original?',
+    answer:
+      'Yes. A properly programmed spare starts the car, operates every lock and, if it is a remote or smart key, all buttons and proximity functions. We test the spare and your original before we leave to make sure both work.',
+  },
+  {
+    question: 'How many spare keys can a car have?',
+    answer:
+      'Most vehicles store 4-8 keys in the immobilizer memory. We can program several spares in one visit, which is useful for families and company fleets, and each additional key in the same visit is discounted.',
+  },
+]
+
+export default function SpareKeyCopyPage() {
   return (
     <div className="pb-16 bg-white">
-      <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center border-b-4 border-brand-accent">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">Spare Key Copy in NYC</h1>
-          <p className="text-xl text-gray-300 font-medium mb-8">Precision cutting and OEM-grade electronic programming. 100% Mobile Service.</p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link href="/request-a-quote" className="w-full sm:w-auto bg-white/10 text-white border border-white/20 font-bold px-8 py-4 rounded-lg hover:bg-white/20 transition-colors shadow-lg text-lg">Get a Free Quote</Link>
-            <Link href="/book-now" className="w-full sm:w-auto bg-brand-accent text-brand-primary font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition-colors shadow-lg text-lg">Book Service</Link>
-          </div>
-          <div className="mt-12 pt-8 border-t border-white/10"><TrustBadges /></div>
-        </div>
-      </div>
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-        <div className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <Cpu className="w-8 h-8 text-brand-accent" />
-            <h2 className="text-3xl font-heading text-brand-primary font-bold m-0 italic underline decoration-brand-accent">The Engineering Behind the Key</h2>
-          </div>
-          <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm leading-relaxed text-lg text-gray-700">
-            <p className="mb-6">A 'spare key' is a proactive insurance policy. If you lose your only working key, the vehicle's computer must be reset, and lock cylinders may need to be mechanically decoded. This turns a simple duplicate process into an emergency 'Key Origination', which is significantly more time-consuming and expensive.</p>
-            <p className="font-semibold text-brand-primary">We offer 'valet keys' as a cost-effective spare option. These keys will start the car and open the doors, but won't open the trunk or glovebox, providing security when leaving your car with a parking attendant.</p>
-          </div>
-        </div>
+      <ServiceSchema
+        name="Spare Car Key Copy in NYC"
+        description="Mobile duplication of basic, transponder, remote and smart spare car keys at the customer's location across all five NYC boroughs."
+        path={PATH}
+        minPrice={75}
+        maxPrice={395}
+        serviceType="Spare car key duplication"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Spare Key Copy', path: PATH },
+        ]}
+      />
 
-        <div className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <Wrench className="w-8 h-8 text-brand-accent" />
-            <h2 className="text-3xl font-heading text-brand-primary font-bold m-0">Our Professional Mobile Lab Solution</h2>
-          </div>
-          <div className="bg-brand-light p-8 rounded-2xl border border-gray-200 shadow-sm leading-relaxed text-lg text-gray-700">
-            <p>By getting a spare key duplicated while you still have a working original, we can simply clone the existing transponder data or quickly add a secondary key to the ECU. It takes less than 30 minutes and saves you hundreds of dollars compared to a complete key loss emergency.</p>
-          </div>
-        </div>
+      <ServiceHero
+        eyebrow="Spare keys made at your door"
+        title="Spare Car Key Copy in NYC — Same Day, We Come to You"
+        subtitle="Basic keys, chip keys, remote fobs and smart keys duplicated at your home, office or curb anywhere in the five boroughs. Flat price before dispatch."
+        primaryCta={{ label: 'Get a Spare Key Quote', href: '/request-a-quote' }}
+        secondaryCta={{ label: 'Book Mobile Service', href: '/book-now' }}
+        callLabel="Call"
+        breadcrumbs={[
+          { name: 'Home', href: '/' },
+          { name: 'Services', href: '/#services' },
+          { name: 'Spare Key Copy', href: PATH },
+        ]}
+      />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-xl flex flex-col items-center text-center">
-            <Zap className="w-12 h-12 text-brand-accent mb-4" />
-            <h3 className="font-bold text-xl mb-3">Why You Need a Professional</h3>
-            <p className="text-sm text-gray-600">DIY programming tools found online can often 'brick' your car's security module, leading to thousands in repairs. We use licensed software that preserves your car's existing data.</p>
-          </div>
-          <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-xl flex flex-col items-center text-center">
-            <Lock className="w-12 h-12 text-brand-accent mb-4" />
-            <h3 className="font-bold text-xl mb-3">Security & Compliance</h3>
-            <p className="text-sm text-gray-600">Every key we duplicate is officially registered with your vehicle's ECU. We also offer to erase old, lost keys from the memory to prevent unauthorized access.</p>
-          </div>
-        </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <QuickAnswer label="Quick answer">
+          <p>
+            <strong>A spare car key in NYC costs $75-$395 depending on the key type</strong>, and {SITE.name} makes it at your
+            location in <strong>15-30 minutes</strong>. Copying a spare while you still have a working key is about half the
+            price of replacing a lost key, and avoids a tow to the dealership. Bring photo ID and your registration.
+          </p>
+        </QuickAnswer>
 
-        <div className="mb-16">
-          <h2 className="text-3xl font-heading text-brand-primary font-bold mb-10 text-center">Fast 3-Step On-Site Process</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 text-center relative pt-10">
-              <span className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold text-xl border-4 border-white">1</span>
-              <h4 className="font-bold text-lg mb-2">Request Quote</h4>
-              <p className="text-xs text-gray-600">Provide your VIN and location for an instant, guaranteed price.</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 text-center relative pt-10">
-              <span className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold text-xl border-4 border-white">2</span>
-              <h4 className="font-bold text-lg mb-2">Mobile Dispatch</h4>
-              <p className="text-xs text-gray-600">A technician arrives in a mobile workshop within 60 minutes.</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 text-center relative pt-10">
-              <span className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold text-xl border-4 border-white">3</span>
-              <h4 className="font-bold text-lg mb-2">Sync & Verify</h4>
-              <p className="text-xs text-gray-600">Key is cut, programmed, and tested for all lock/start functions.</p>
-            </div>
-          </div>
-        </div>
+        <Section id="types" title="Spare key types we copy" icon={KeyRound}>
+          <ul>
+            <li><strong>Basic metal keys</strong> for pre-1998 cars and many work vans — cut on the spot.</li>
+            <li><strong>Transponder (chip) keys</strong> — cloned from your original or programmed to the car; see <Link href="/transponder-key-duplicate">transponder key duplication</Link>.</li>
+            <li><strong>Remote-head and flip key fobs</strong> with lock/unlock/trunk buttons — see <Link href="/key-fob-duplicate">key fob copy and programming</Link>.</li>
+            <li><strong>Smart keys and push-to-start fobs</strong> — proximity keys for keyless entry and start; see <Link href="/smart-key-duplicate">smart key duplication</Link>.</li>
+            <li><strong>Laser-cut (sidewinder) keys</strong> — high-security blades milled on our mobile machine; see <Link href="/laser-cut-key-duplicate">laser-cut key duplication</Link>.</li>
+            <li><strong>Valet keys</strong> — start the car and open the doors but not the trunk or glove box; a cheaper, safer spare.</li>
+          </ul>
+        </Section>
 
-        <div className="mt-12 pt-12 border-t border-gray-200">
-          <h2 className="text-2xl font-bold text-brand-primary mb-6">Service Available in All NYC Boroughs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Link href="/brooklyn" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Spare Key Copy in Brooklyn</Link>
-            <Link href="/queens" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Spare Key Copy in Queens</Link>
-            <Link href="/manhattan" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Spare Key Copy in Manhattan</Link>
-            <Link href="/bronx" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Spare Key Copy in The Bronx</Link>
-            <Link href="/staten-island" className="flex items-center gap-2 text-gray-700 hover:text-brand-accent transition-colors"><MapPin className="w-4 h-4 text-brand-accent" /> Spare Key Copy in Staten Island</Link>
-          </div>
-        </div>
+        <Section id="pricing" title="Spare car key cost in NYC (2026)" icon={DollarSign}>
+          <PriceTable
+            caption="Spare car key copy prices in New York City by key type"
+            columns={['Spare key type', 'Our mobile price', 'Dealer (typical)', 'Hardware store / kiosk']}
+            rows={[
+              ['Basic metal key (no chip)', '$75 incl. visit', '$40 - $80 + trip to dealer', '$5 - $15 (blade only)'],
+              ['Transponder chip key', '$95 - $180', '$200 - $350', '$50 - $90, older chips only'],
+              ['Laser-cut transponder key', '$150 - $220', '$250 - $400', 'Not available'],
+              ['Remote key fob / flip key', '$120 - $220', '$250 - $450', 'Not available'],
+              ['Smart / push-to-start key', '$175 - $395', '$350 - $600+', 'Not available'],
+              ['Valet key', '$75 - $140', '$120 - $250', 'Not available'],
+              ['Each additional spare in the same visit', '15% off', 'Full price', 'n/a'],
+            ]}
+            note="Prices include travel within the five boroughs, cutting, programming and testing. Full breakdown by make in our car key duplication cost guide."
+          />
+        </Section>
 
-        <CTABanner />
+        <Section id="why-now" title="Why one key is a risk, and why a spare is cheap insurance" icon={Lightbulb}>
+          <p>
+            When you lose your only key, the job changes from a <strong>duplicate</strong> to an <strong>origination</strong>:
+            the locksmith must decode the lock or pull the key code by VIN, generate a blade from scratch and program a chip
+            into an immobilizer with no reference key. That takes longer, costs roughly twice as much, and if it happens at
+            night or far from home may also mean a tow. A spare made today while your key still works is cloned or added
+            in minutes, and it also protects you if a fob gets damaged, a battery dies at the worst moment, or a family
+            member needs their own key. Read{' '}
+            <Link href="/blog/what-happens-with-only-one-car-key">what happens when you only have one car key</Link>.
+          </p>
+        </Section>
+
+        <Section id="compare" title="Dealer vs. kiosk vs. hardware store vs. mobile locksmith" icon={Scale}>
+          <PriceTable
+            caption="Comparison of places to get a spare car key in NYC"
+            columns={['', 'Mobile locksmith (us)', 'Dealership', 'Key kiosk / hardware store']}
+            rows={[
+              ['Key types', 'All: basic, chip, remote, smart, laser-cut', 'All, for its own brand', 'Basic + some older chips'],
+              ['Where', 'Your location, any borough', 'Dealer lot (car must be present)', 'Store or kiosk (car not needed, chip clone only)'],
+              ['Wait', 'Same day, 30-60 min arrival', '2-5 business days for the key to arrive', 'Minutes, if compatible'],
+              ['Programming', 'Included, on-site', 'Included', 'Not available for remotes/smart keys'],
+              ['Ownership check', 'Yes (NYC licensed)', 'Yes', 'Varies'],
+              ['Typical cost', '$75 - $395', '$150 - $600+', '$5 - $90'],
+            ]}
+          />
+          <p>
+            For an honest side-by-side, read <Link href="/blog/dealer-vs-locksmith-key-duplicate-nyc">dealer vs. locksmith for car keys in NYC</Link>.
+          </p>
+        </Section>
+
+        <Section id="process" title="How it works" icon={Wrench}>
+          <StepList
+            steps={[
+              { title: 'Quote', text: 'Year, make, model and key type. We give you a flat price for the spare, and a discount for extra copies.' },
+              { title: 'We come to you', text: 'A licensed technician arrives at your home, office or garage in 30-60 minutes with blanks for your make.' },
+              { title: 'Cut and clone or program', text: 'We decode your working key, cut the blade and clone the chip or add the new key through the OBD-II port.' },
+              { title: 'Test both keys', text: 'Spare and original are tested in the ignition, doors and remote functions before you pay.' },
+            ]}
+          />
+        </Section>
+
+        <Section id="what-to-bring" title="What to have ready" icon={ClipboardCheck}>
+          <ul>
+            <li>Photo ID and registration, title or insurance card (NYC locksmith law requires an ownership check).</li>
+            <li>Your working key, so we can clone or decode it.</li>
+            <li>The vehicle, if the key has a chip or remote that must be programmed.</li>
+          </ul>
+        </Section>
+
+        <LinkGrid
+          title="Spare keys by make"
+          links={CAR_MAKES.map((m) => ({ label: `${m.name} spare key`, href: `/${m.slug}` }))}
+        />
+
+        <LinkGrid
+          title="Spare key copy near you"
+          links={BOROUGHS.map((b) => ({ label: `Spare car key copy in ${b.name}`, href: `/${b.slug}` }))}
+        />
+
+        <FAQSection title="Spare car key FAQs" items={faqItems} />
+
+        <Section id="related" title="Related services and guides">
+          <ul>
+            <li><Link href="/same-day-car-key-duplicate-nyc">Same-day car key duplication</Link></li>
+            <li><Link href="/mobile-car-key-duplicate-nyc">Mobile car key duplication — how it works</Link></li>
+            <li><Link href="/lost-car-key-replacement-nyc">Lost all your keys? Lost car key replacement</Link></li>
+            <li><Link href="/blog/car-key-duplicate-cost-nyc">Car key duplication cost in NYC</Link></li>
+            <li><Link href="/es/copia-de-llave-de-repuesto-nyc" hrefLang="es-US">Esta página en español: copia de llave de repuesto en NYC</Link></li>
+          </ul>
+        </Section>
+
+        <CTABanner
+          title="Down to one key? Get a spare made today."
+          subtitle="Mobile across all five boroughs. Flat-rate pricing, licensed technicians, both keys tested before you pay."
+        />
       </div>
     </div>
   )

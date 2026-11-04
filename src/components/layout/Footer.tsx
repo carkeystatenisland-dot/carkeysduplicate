@@ -1,135 +1,108 @@
+'use client'
 import Link from 'next/link'
-import { SITE, BOROUGHS, SERVICE_TYPES } from '@/lib/constants'
+import { usePathname } from 'next/navigation'
+import { SITE } from '@/lib/constants'
+import { getAlternates, getLocaleFromPath, getNav, localizePath } from '@/lib/i18n'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const pathname = usePathname() || '/'
+  const locale = getLocaleFromPath(pathname)
+  const es = locale === 'es'
+  const nav = getNav(locale)
+  const l = (p: string) => localizePath(p, locale)
+  const alternates = getAlternates(pathname)
+  const otherHref = es ? (alternates?.en ?? '/') : (alternates?.es ?? '/es')
+
+  const t = es
+    ? {
+        blurb: 'Cerrajero automotriz móvil que atiende los 5 condados de Nueva York. Vamos a su ubicación para copiar y programar llaves de carro en el momento.',
+        call: 'Teléfono:', hours: 'Horario:', area: 'Base:',
+        licensed: '✓ Con licencia y seguro', service247: '✓ Emergencias 24/7', spanish: '✓ Hablamos español',
+        areas: 'Zonas de servicio', services: 'Nuestros servicios', quick: 'Enlaces rápidos',
+        blog: 'Blog y guías', quote: 'Pedir cotización', book: 'Reservar servicio', about: 'Sobre nosotros',
+        sameDay: 'Servicio el mismo día', emergency: 'Emergencias 24 horas', mobile: 'Cerrajero automotriz móvil',
+        rights: 'Todos los derechos reservados.', privacy: 'Política de privacidad', terms: 'Términos de servicio',
+        hoursText: 'Lun–Dom 9AM–5PM (emergencias 24/7)', other: 'This page in English',
+      }
+    : {
+        blurb: 'Mobile car key duplication serving all 5 NYC boroughs. We come to your location for fast, on-site cutting and programming.',
+        call: 'Call:', hours: 'Hours:', area: 'Base:',
+        licensed: '✓ Licensed & Insured', service247: '✓ 24/7 Emergency Dispatch', spanish: '✓ Se habla español',
+        areas: 'Service Areas', services: 'Our Services', quick: 'Quick Links',
+        blog: 'Blog & Guides', quote: 'Request a Quote', book: 'Book Service Now', about: 'About Us',
+        sameDay: 'Same-Day Duplication', emergency: '24-Hour Emergency Copy', mobile: 'Mobile Roadside Dispatch',
+        rights: 'All rights reserved.', privacy: 'Privacy Policy', terms: 'Terms of Service',
+        hoursText: SITE.hours, other: 'Esta página en español',
+      }
 
   return (
     <footer className="bg-brand-primary text-white pt-16 pb-24 md:pb-8 border-t-[6px] border-brand-accent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
-          
-          {/* Column 1: Business Info */}
+          {/* Column 1: Business Info (NAP kept identical to structured data) */}
           <div className="space-y-6">
-            <Link href="/" className="inline-block">
+            <Link href={l('/')} className="inline-block">
               <span className="font-heading font-bold text-xl tracking-tight text-white leading-tight">
-                Car Key<span className="text-brand-accent"> duplicate</span>
+                Car Key<span className="text-brand-accent"> Duplicate</span>
               </span>
             </Link>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Mobile car key duplicate serving all 5 NYC boroughs. We come to your location for fast, on-site service.
-            </p>
-            <div className="space-y-2 text-sm text-gray-300">
-              <p className="flex items-center gap-2">
-                <span className="font-bold text-white">Call:</span>
-                <a href={`tel:${SITE.phone}`} className="hover:text-brand-accent transition-colors">
-                  {SITE.phoneDisplay}
-                </a>
-              </p>
-              <p className="flex items-center gap-2">
-                <span className="font-bold text-white">Hours:</span>
-                {SITE.hours}
-              </p>
-              <p className="flex items-center gap-2">
-                <span className="font-bold text-white">Area:</span>
-                {SITE.address}
-              </p>
-            </div>
-            {/* Trust Signals */}
+            <p className="text-gray-300 text-sm leading-relaxed">{t.blurb}</p>
+            <address className="not-italic space-y-2 text-sm text-gray-300">
+              <p className="flex items-center gap-2"><span className="font-bold text-white">{t.call}</span><a href={`tel:${SITE.phone}`} className="hover:text-brand-accent transition-colors">{SITE.phoneDisplay}</a></p>
+              <p className="flex items-center gap-2"><span className="font-bold text-white">{t.hours}</span>{t.hoursText}</p>
+              <p className="flex items-center gap-2"><span className="font-bold text-white">{t.area}</span>{SITE.address}</p>
+            </address>
             <div className="pt-2 flex flex-wrap gap-2 text-xs font-medium text-brand-accent">
-              <span className="bg-white/10 px-2 py-1 rounded">✓ Licensed & Insured</span>
-              <span className="bg-white/10 px-2 py-1 rounded">✓ 24/7 Service</span>
+              <span className="bg-white/10 px-2 py-1 rounded">{t.licensed}</span>
+              <span className="bg-white/10 px-2 py-1 rounded">{t.service247}</span>
+              <span className="bg-white/10 px-2 py-1 rounded">{t.spanish}</span>
             </div>
           </div>
 
           {/* Column 2: Boroughs */}
           <div>
-            <h3 className="font-heading font-bold text-lg mb-6 text-white">Service Areas</h3>
+            <h3 className="font-heading font-bold text-lg mb-6 text-white">{t.areas}</h3>
             <ul className="space-y-3">
-              {BOROUGHS.map((borough) => (
-                <li key={borough.slug}>
-                  <Link 
-                    href={`/${borough.slug}`}
-                    className="text-gray-300 hover:text-brand-accent transition-colors text-sm"
-                  >
-                    {borough.name}
-                  </Link>
-                </li>
+              {nav.boroughs.map((b) => (
+                <li key={b.href}><Link href={b.href} className="text-gray-300 hover:text-brand-accent transition-colors text-sm">{b.name}</Link></li>
               ))}
             </ul>
           </div>
 
           {/* Column 3: Services */}
           <div>
-            <h3 className="font-heading font-bold text-lg mb-6 text-white">Our Services</h3>
+            <h3 className="font-heading font-bold text-lg mb-6 text-white">{t.services}</h3>
             <ul className="space-y-3">
-              {SERVICE_TYPES.map((service) => (
-                <li key={service.slug}>
-                  <Link 
-                    href={`/${service.slug}`}
-                    className="text-gray-300 hover:text-brand-accent transition-colors text-sm"
-                  >
-                    {service.name}
-                  </Link>
-                </li>
+              {nav.services.map((s) => (
+                <li key={s.href}><Link href={s.href} className="text-gray-300 hover:text-brand-accent transition-colors text-sm">{s.name}</Link></li>
               ))}
             </ul>
           </div>
 
           {/* Column 4: Quick Links */}
           <div>
-            <h3 className="font-heading font-bold text-lg mb-6 text-white">Quick Links</h3>
+            <h3 className="font-heading font-bold text-lg mb-6 text-white">{t.quick}</h3>
             <ul className="space-y-3">
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
-                  Blog & Guides
-                </Link>
-              </li>
-              <li>
-                <Link href="/request-a-quote" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
-                  Request a Quote
-                </Link>
-              </li>
-              <li>
-                <Link href="/book-now" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
-                  Book Service Now
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
-                  About Us
-                </Link>
-              </li>
+              <li><Link href={l('/blog')} className="text-gray-300 hover:text-brand-accent transition-colors text-sm">{t.blog}</Link></li>
+              <li><Link href={l('/request-a-quote')} className="text-gray-300 hover:text-brand-accent transition-colors text-sm">{t.quote}</Link></li>
+              <li><Link href={l('/book-now')} className="text-gray-300 hover:text-brand-accent transition-colors text-sm">{t.book}</Link></li>
+              <li><Link href={l('/about')} className="text-gray-300 hover:text-brand-accent transition-colors text-sm">{t.about}</Link></li>
+              <li className="pt-2 border-t border-white/10"><Link href={l('/same-day-car-key-duplicate-nyc')} className="text-gray-300 hover:text-brand-accent transition-colors text-sm">{t.sameDay}</Link></li>
+              <li><Link href={l('/24-hour-car-key-duplicate-nyc')} className="text-gray-300 hover:text-brand-accent transition-colors text-sm">{t.emergency}</Link></li>
+              <li><Link href={l('/mobile-car-key-duplicate-nyc')} className="text-gray-300 hover:text-brand-accent transition-colors text-sm">{t.mobile}</Link></li>
               <li className="pt-2 border-t border-white/10">
-                <Link href="/same-day-car-key-duplicate-nyc" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
-                  Same-Day duplicate
-                </Link>
-              </li>
-              <li>
-                <Link href="/24-hour-car-key-duplicate-nyc" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
-                  24-Hour Emergency Copy
-                </Link>
-              </li>
-              <li>
-                <Link href="/mobile-car-key-duplicate-nyc" className="text-gray-300 hover:text-brand-accent transition-colors text-sm">
-                  Mobile Roadside Dispatch
-                </Link>
+                <Link href={otherHref} hrefLang={es ? 'en-US' : 'es-US'} lang={es ? 'en' : 'es'} className="text-gray-300 hover:text-brand-accent transition-colors text-sm">{t.other}</Link>
               </li>
             </ul>
-            
-
           </div>
-
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm text-center md:text-left">
-            &copy; {currentYear} {SITE.name}. All rights reserved.
-          </p>
+          <p className="text-gray-400 text-sm text-center md:text-left">&copy; {currentYear} {SITE.name}. {t.rights}</p>
           <div className="flex gap-6 text-sm text-gray-400">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href={l('/privacy-policy')} className="hover:text-white transition-colors">{t.privacy}</Link>
+            <Link href={l('/terms')} className="hover:text-white transition-colors">{t.terms}</Link>
           </div>
         </div>
       </div>

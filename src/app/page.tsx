@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Clock, CheckCircle2, ShieldCheck, MapPin, Phone } from 'lucide-react'
+import { ArrowRight, CheckCircle2, MapPin, Phone, ShieldCheck, Clock, DollarSign, ClipboardCheck, Cpu } from 'lucide-react'
 import { SITE, BOROUGHS, SERVICE_TYPES, CAR_MAKES } from '@/lib/constants'
 import { generatePageMetadata } from '@/lib/metadata'
 import TrustBadges from '@/components/ui/TrustBadges'
@@ -8,92 +8,190 @@ import ServiceCard from '@/components/ui/ServiceCard'
 import MakeCard from '@/components/ui/MakeCard'
 import CTABanner from '@/components/ui/CTABanner'
 import FAQAccordion from '@/components/ui/FAQAccordion'
+import PriceTable from '@/components/content/PriceTable'
 
 export const metadata = generatePageMetadata({
-  title: 'Mobile Car Key duplicate NYC | All 5 Boroughs — We Come To You',
-  description: 'Mobile car key duplicate across Brooklyn, Queens, Manhattan, Bronx & Staten Island. We copy transponder keys, fobs & smart keys on-site. Same-day service.',
-  slug: '/'
+  title: 'Car Key Duplication NYC | Mobile Locksmith, We Come to You',
+  description:
+    'Car key duplication in NYC at your location: transponder keys, key fobs, smart keys and lost keys programmed on-site in 15-45 min. 5 boroughs, same day.',
+  slug: '/',
+  keywords: ['car key duplication nyc', 'car key copy nyc', 'duplicate car key nyc', 'car key duplicate', 'mobile car key maker', 'car locksmith nyc'],
 })
 
-export default function Home() {
-  const faqItems = [
-    {
-      question: "How much does car key duplicate cost in NYC?",
-      answer: "Car key duplicate typically starts at $95 for basic transponder keys and can go up to $175+ for smart keys or push-to-start fobs. The exact price depends on your vehicle's make, model, year, and the type of key technology it uses. We always provide a clear, upfront quote before starting any work."
-    },
-    {
-      question: "Can you duplicate a key without the original?",
-      answer: "Yes! While having an original key makes the process faster (key cloning), our mobile locksmiths can generate a completely new key from scratch using your vehicle's VIN and specialized programming equipment. This is known as key origination."
-    },
-    {
-      question: "What's the difference between key duplicate and key replacement?",
-      answer: "duplicate means you have at least one working key, and we make a copy of it. This is usually faster and cheaper. Replacement means you have lost all working keys, and we must cut and program a brand new key from scratch, which requires more advanced programming steps."
-    },
-    {
-      question: "Do you come to my location or do I need to go somewhere?",
-      answer: "We are a 100% mobile service. We come directly to your location anywhere in the 5 boroughs of NYC. Whether you're at home, at work, or stranded in a parking garage, our fully equipped vans arrive ready to cut and program your key on-site."
-    },
-    {
-      question: "How long does mobile car key duplicate take?",
-      answer: "Once our technician arrives, the actual key cutting and programming process typically takes 15 to 30 minutes, depending on the complexity of your vehicle's security system. Same-day service is our standard."
-    },
-    {
-      question: "Do you service all car makes and models?",
-      answer: "We service over 95% of vehicles on the road today, including major brands like Toyota, Honda, Ford, Nissan, BMW, Mercedes, and many more. We handle standard transponders, laser-cut keys, and advanced smart fobs."
-    },
-    {
-      question: "Is your service available 24/7?",
-      answer: "Yes, our mobile dispatch operates 24 hours a day, 7 days a week. Car key emergencies don't happen on a schedule, so we're always ready to respond across all NYC boroughs."
-    }
-  ]
+const faqItems = [
+  {
+    question: 'How much does car key duplication cost in NYC?',
+    answer:
+      'With our mobile service a basic spare key costs $75, a transponder chip key $95-$180, a remote key fob $120-$220, a laser-cut key $150-$220 and a smart or push-to-start key $175-$395, travel included. Replacing a key when every key is lost costs $150-$450 depending on the key type. Dealers in NYC typically charge 40-60% more and require the car at the dealership. We quote a flat price by year, make and model before dispatching.',
+  },
+  {
+    question: 'Can you duplicate a car key without the original?',
+    answer:
+      'Yes. If you have no working key we generate a new one from your VIN or by decoding the door lock, cut it, program it to the vehicle and erase the lost key. This is called key origination and we do it at your location. You will need photo ID and your registration, title or insurance card.',
+  },
+  {
+    question: 'What is the difference between key duplication and key replacement?',
+    answer:
+      'Duplication means you still have a working key and we make a copy of it, which is faster and cheaper because the chip can be cloned or added in minutes. Replacement (all keys lost) means we must create a key from nothing: decode the lock or pull the key code by VIN, cut the blade and program a new chip or fob with no reference key.',
+  },
+  {
+    question: 'Do you come to my location or do I need to bring the car somewhere?',
+    answer:
+      'We are 100% mobile. A licensed technician drives to your home, workplace, parking garage or the street anywhere in Brooklyn, Queens, Manhattan, The Bronx and Staten Island, and cuts and programs the key beside the car. There is no shop to visit and no towing.',
+  },
+  {
+    question: 'How long does mobile car key duplication take?',
+    answer:
+      'Arrival is typically 30-60 minutes. Once on-site, a basic key takes 5-10 minutes, a transponder key 15-30 minutes, a remote fob 20-30 minutes and a smart key 30-45 minutes. All-keys-lost jobs take 45-90 minutes.',
+  },
+  {
+    question: 'Which car makes can you make keys for?',
+    answer:
+      'We program keys for over 95% of vehicles on NYC roads, including Toyota, Honda, Nissan, Hyundai, Kia, Ford, Chevrolet, Jeep, Chrysler, Dodge, Subaru, Mazda, Volkswagen, Audi, BMW, Mercedes-Benz, Lexus, Acura and Infiniti. We handle standard transponders, laser-cut keys, remote fobs, smart keys and Chrysler Fobiks.',
+  },
+  {
+    question: 'What do I need to show to get a car key made?',
+    answer:
+      'A government-issued photo ID and proof of ownership: registration, title or an insurance card in your name. New York City requires licensed locksmiths to verify ownership before cutting or programming any vehicle key, and we record each job as the Department of Consumer and Worker Protection rules require.',
+  },
+  {
+    question: 'Is your mobile car key service available 24/7?',
+    answer:
+      'Yes. Scheduled and same-day service runs daily, and emergency dispatch for lost keys and lockouts is available 24 hours a day, 7 days a week across all five boroughs. After-hours emergency calls carry a fee we state before dispatch.',
+  },
+  {
+    question: 'Is a mobile locksmith cheaper than the dealer for a car key?',
+    answer:
+      'For most mainstream makes, yes, by 40-60%. The dealer orders the key, needs the car on its lot (often by tow if no key works) and takes 2-5 business days. A mobile locksmith programs an OEM or FCC-approved key on-site the same day. Only a few brand-new or exotic models remain dealer-only, and we will tell you if yours is one.',
+  },
+  {
+    question: 'Can you copy an apartment or building key fob?',
+    answer:
+      'No. We work exclusively on automotive keys and fobs. Building RFID fobs are cloned at key kiosks or hardware stores; car fobs must be programmed to the vehicle through its diagnostic port, which is our specialty.',
+  },
+  {
+    question: '¿Hablan español?',
+    answer:
+      'Sí. Atendemos en español e inglés en los cinco condados. Visite nuestra página en español para copia de llaves de carro con chip, controles y llaves inteligentes en Nueva York.',
+  },
+]
 
+export default function Home() {
   return (
     <>
-      {/* 1. HERO SECTION */}
-      <section className="relative bg-brand-primary py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
+      {/* 1. HERO */}
+      <section className="relative bg-brand-primary text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-10" aria-hidden="true">
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-accent rounded-full blur-3xl"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-brand-accent/20 text-brand-accent font-semibold text-sm mb-6 border border-brand-accent/30">
-            24/7 Mobile Locksmith Service
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
+          <span className="inline-block bg-brand-accent/15 text-brand-accent text-xs md:text-sm font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-6">
+            Licensed mobile automotive locksmith · All 5 boroughs · Se habla español
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold text-white tracking-tight mb-6 max-w-4xl mx-auto">
-            Mobile Car Key duplicate — We Come To You, Anywhere in NYC
+          <h1 className="text-4xl md:text-6xl font-heading font-extrabold leading-tight mb-6 max-w-5xl mx-auto">
+            Car Key Duplication in NYC — We Come to You and Program It On-Site
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-medium">
-            Serving all 5 boroughs. Transponder keys, smart keys, key fobs — duplicated on-site.
+          <p className="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+            Transponder keys, key fobs, smart keys, laser-cut keys and lost-key replacement, cut and programmed at your
+            location in Brooklyn, Queens, Manhattan, The Bronx and Staten Island. Same day, flat price, no towing.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
-            <Link 
-              href="/book-now"
-              className="w-full sm:w-auto bg-brand-accent text-brand-primary font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition-colors shadow-lg text-lg flex items-center justify-center gap-2"
-            >
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Link href="/book-now" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-accent text-brand-primary font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition-colors shadow-lg text-lg">
               Book Now <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link 
-              href="/request-a-quote"
-              className="w-full sm:w-auto bg-white/10 text-white border border-white/20 font-bold px-8 py-4 rounded-lg hover:bg-white/20 transition-colors shadow-lg text-lg"
-            >
+            <Link href="/request-a-quote" className="w-full sm:w-auto bg-white/10 text-white border border-white/20 font-bold px-8 py-4 rounded-lg hover:bg-white/20 transition-colors shadow-lg text-lg">
               Get a Free Quote
             </Link>
+            <a href={`tel:${SITE.phone}`} className="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-bold px-6 py-4 text-lg hover:text-brand-accent transition-colors">
+              <Phone className="w-5 h-5 text-brand-accent" /> {SITE.phoneDisplay}
+            </a>
           </div>
-          <div className="pt-4 border-t border-white/10 max-w-3xl mx-auto">
+          <div className="mt-12 pt-6 border-t border-white/10">
             <TrustBadges />
           </div>
         </div>
       </section>
 
-      {/* 2. BOROUGH GRID */}
-      <section className="py-20 bg-brand-light">
+      {/* 2. QUICK ANSWER */}
+      <section className="bg-white py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <aside className="bg-brand-light border-l-4 border-brand-accent rounded-r-2xl p-6 md:p-8 shadow-sm" aria-label="Quick answer">
+            <p className="text-xs font-bold uppercase tracking-wider text-brand-primary mb-3">Quick answer</p>
+            <p className="text-lg leading-relaxed text-gray-800">
+              <strong>{SITE.name} is a licensed mobile locksmith that duplicates and programs car keys at your location anywhere in New York City.</strong>{' '}
+              A spare transponder key costs <strong>$95-$180</strong>, a remote key fob <strong>$120-$220</strong> and a smart key{' '}
+              <strong>$175-$395</strong>, travel included. Typical arrival is <strong>30-60 minutes</strong> and most keys are finished in
+              15-45 minutes. We also replace keys when every key is lost, starting at <strong>$150</strong>. Bring photo ID and your registration.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      {/* 3. SERVICES */}
+      <section id="services" className="bg-gray-50 py-16 md:py-20 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">We Serve All 5 NYC Boroughs</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our mobile units are stationed across the city for rapid response. Select your borough to see coverage.
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">Car Key Duplication Services in NYC</h2>
+            <p className="text-lg text-gray-600">
+              From a basic spare to an encrypted European smart key, every service below is performed on-site from a fully equipped van.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SERVICE_TYPES.map((service) => (
+              <ServiceCard key={service.slug} service={service} />
+            ))}
+            <ServiceCard service={{ name: 'Lost Car Key Replacement', slug: 'lost-car-key-replacement-nyc', description: 'All keys lost? New key generated from your VIN, programmed at the car, lost key erased.', price: 'From $150' }} />
+          </div>
+          <p className="text-center text-gray-600 mt-10">
+            Need it fast? We offer{' '}
+            <Link href="/same-day-car-key-duplicate-nyc" className="text-brand-primary font-semibold underline decoration-brand-accent underline-offset-2 hover:text-brand-accent">same-day service</Link>,{' '}
+            <Link href="/24-hour-car-key-duplicate-nyc" className="text-brand-primary font-semibold underline decoration-brand-accent underline-offset-2 hover:text-brand-accent">24-hour emergency dispatch</Link>{' '}
+            and fully{' '}
+            <Link href="/mobile-car-key-duplicate-nyc" className="text-brand-primary font-semibold underline decoration-brand-accent underline-offset-2 hover:text-brand-accent">mobile car key duplication</Link>{' '}
+            anywhere in NYC.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. PRICING */}
+      <section id="pricing" className="bg-white py-16 md:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-4">
+            <DollarSign className="w-7 h-7 text-brand-accent" aria-hidden="true" />
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary">How much does car key duplication cost in NYC?</h2>
+          </div>
+          <p className="text-lg text-gray-600 mb-4">
+            Transparent 2026 prices with travel inside the five boroughs included. Your exact quote depends on year, make, model and whether you still have a working key.
+          </p>
+          <PriceTable
+            caption="Car key duplication prices in New York City by key type"
+            columns={['Key type', 'Copy (you have a key)', 'All keys lost', 'Typical NYC dealer']}
+            rows={[
+              ['Basic metal key', '$75', '$95 - $150', '$40 - $80 + trip'],
+              ['Transponder (chip) key', '$95 - $180', '$150 - $260', '$200 - $400 + tow'],
+              ['Laser-cut (sidewinder) key', '$150 - $220', '$200 - $300', '$250 - $450 + tow'],
+              ['Remote key fob / flip key', '$120 - $220', '$220 - $350', '$250 - $450 + tow'],
+              ['Smart / push-to-start key', '$175 - $395', '$260 - $450', '$350 - $600 + tow'],
+              ['European luxury smart key', '$250 - $450', '$350 - $650', '$600 - $1,500 + tow'],
+            ]}
+            note="Flat quote before dispatch. No travel fee within NYC. After-hours emergency dispatch fee is disclosed up front."
+          />
+          <p className="text-gray-600">
+            Full breakdown by make and situation in our guide: <Link href="/blog/car-key-duplicate-cost-nyc" className="text-brand-primary font-semibold underline decoration-brand-accent underline-offset-2 hover:text-brand-accent">car key duplication cost in NYC</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* 5. BOROUGHS */}
+      <section className="bg-gray-50 py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">Mobile Car Key Service in All 5 NYC Boroughs</h2>
+            <p className="text-lg text-gray-600">
+              Based in East Elmhurst, Queens, minutes from LaGuardia and JFK, with vans routing through every borough daily. Select yours for neighborhoods and response times.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {BOROUGHS.map((borough) => (
               <BoroughCard key={borough.slug} borough={borough} />
             ))}
@@ -101,105 +199,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. SERVICES SECTION */}
-      <section className="py-20 bg-white">
+      {/* 6. HOW IT WORKS */}
+      <section className="bg-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">Car Key duplicate Services</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From basic transponder chips to advanced proximity smart keys, we have the technology to program them all.
-            </p>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">How Mobile Car Key Duplication Works</h2>
+            <p className="text-lg text-gray-600">No towing, no dealership waiting room. Four steps, usually under two hours door to door.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {SERVICE_TYPES.map((service) => (
-              <ServiceCard key={service.slug} service={service} />
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              { icon: Phone, title: '1. Quote in minutes', text: 'Tell us the year, make, model, key type and where the car is. You get a flat price by phone or text.' },
+              { icon: MapPin, title: '2. We drive to you', text: 'A licensed technician arrives in 30-60 minutes with blanks, cutters and OBD-II programmers for your make.' },
+              { icon: ClipboardCheck, title: '3. ID and ownership check', text: 'We verify your photo ID and registration, as NYC locksmith rules require, before any key is cut.' },
+              { icon: CheckCircle2, title: '4. Cut, program, test', text: 'Blade cut, chip or fob programmed, every function tested with your existing keys. Pay when it works.' },
+            ].map((s) => (
+              <div key={s.title} className="text-center">
+                <div className="w-16 h-16 mx-auto rounded-full bg-brand-light flex items-center justify-center mb-4">
+                  <s.icon className="w-8 h-8 text-brand-accent" aria-hidden="true" />
+                </div>
+                <h3 className="font-heading font-bold text-xl text-brand-primary mb-2">{s.title}</h3>
+                <p className="text-gray-600">{s.text}</p>
+              </div>
             ))}
           </div>
-          
-          {/* Internal links to resolve orphan pages (0 href inlinks) */}
-          <div className="mt-12 text-center border-t border-gray-100 pt-8">
-            <p className="text-sm md:text-base font-medium text-gray-500">
-              Need specialized response? We offer rapid{' '}
-              <Link href="/same-day-car-key-duplicate-nyc" className="text-brand-primary hover:text-brand-accent font-bold underline transition-colors">
-                Same-Day Service
-              </Link>
-              ,{' '}
-              <Link href="/24-hour-car-key-duplicate-nyc" className="text-brand-primary hover:text-brand-accent font-bold underline transition-colors">
-                24-Hour Emergency Dispatches
-              </Link>
-              , and full{' '}
-              <Link href="/mobile-car-key-duplicate-nyc" className="text-brand-primary hover:text-brand-accent font-bold underline transition-colors">
-                Mobile Car Key duplicate
-              </Link>{' '}
-              anywhere in NYC.
-            </p>
+        </div>
+      </section>
+
+      {/* 7. KEY TYPES EXPLAINED */}
+      <section className="bg-gray-50 py-16 md:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-4">
+            <Cpu className="w-7 h-7 text-brand-accent" aria-hidden="true" />
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary">Which car key do you have?</h2>
+          </div>
+          <p className="text-lg text-gray-600 mb-8">Knowing the key type explains the price and the method. All of these are duplicated on-site.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { title: 'Transponder (chip) key', text: 'A metal key with a chip in the plastic head. The immobilizer must recognize the chip or the engine will not run. Cloned from your original or programmed via OBD-II.', href: '/transponder-key-duplicate', link: 'Transponder key duplication' },
+              { title: 'Remote key fob / flip key', text: 'A transponder key plus lock, unlock, trunk and panic buttons using a rolling code. Must be programmed to the car; cannot be cloned at a kiosk.', href: '/key-fob-duplicate', link: 'Key fob copy & programming' },
+              { title: 'Smart / push-to-start key', text: 'Proximity fob that unlocks when you touch the handle and starts the car with a button. Encrypted; programmed on-site, including European systems.', href: '/smart-key-duplicate', link: 'Smart key duplication' },
+              { title: 'Laser-cut (sidewinder) key', text: 'A thick blade with a winding groove milled down the center. Requires a laser-cut machine, which we carry on the van.', href: '/laser-cut-key-duplicate', link: 'Laser-cut key duplication' },
+            ].map((k) => (
+              <div key={k.title} className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+                <h3 className="font-heading font-bold text-xl text-brand-primary mb-2">{k.title}</h3>
+                <p className="text-gray-600 mb-4">{k.text}</p>
+                <Link href={k.href} className="text-brand-primary font-semibold underline decoration-brand-accent underline-offset-2 hover:text-brand-accent">{k.link} →</Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 4. HOW IT WORKS */}
-      <section className="py-20 bg-brand-primary text-white">
+      {/* 8. MAKES */}
+      <section className="bg-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">How Our Mobile Service Works</h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              We've completely eliminated the need for towing or waiting at a dealership.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-            {/* Connecting line for desktop */}
-            <div className="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-brand-accent/30 z-0"></div>
-            
-            <div className="relative z-10 text-center space-y-6">
-              <div className="w-24 h-24 mx-auto bg-brand-accent rounded-full flex items-center justify-center shadow-lg border-4 border-brand-primary">
-                <Phone className="w-10 h-10 text-brand-primary" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">1. Call or Book Online</h3>
-                <p className="text-gray-300">Tell us your car's year, make, and model, and your exact location in NYC.</p>
-              </div>
-            </div>
-            
-            <div className="relative z-10 text-center space-y-6">
-              <div className="w-24 h-24 mx-auto bg-brand-accent rounded-full flex items-center justify-center shadow-lg border-4 border-brand-primary">
-                <MapPin className="w-10 h-10 text-brand-primary" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">2. We Drive to You</h3>
-                <p className="text-gray-300">Our fully-equipped mobile van arrives at your location, whether you're at home or stranded.</p>
-              </div>
-            </div>
-            
-            <div className="relative z-10 text-center space-y-6">
-              <div className="w-24 h-24 mx-auto bg-brand-accent rounded-full flex items-center justify-center shadow-lg border-4 border-brand-primary">
-                <CheckCircle2 className="w-10 h-10 text-brand-primary" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">3. Key Duplicated On-Site</h3>
-                <p className="text-gray-300">We cut the blade and program the chip to your vehicle's computer in minutes. You're done!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. CAR MAKES SECTION */}
-      <section className="py-20 bg-brand-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">We Duplicate Keys For All Makes</h2>
-              <p className="text-lg text-gray-600 max-w-2xl">
-                Our technicians carry specialized programming equipment for domestic, Asian, and European vehicles.
-              </p>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-3">We Duplicate Keys for All Makes</h2>
+              <p className="text-lg text-gray-600 max-w-2xl">Programming software and OEM-compatible blanks for domestic, Asian and European vehicles, including encrypted BMW, Mercedes-Benz and Volkswagen systems.</p>
             </div>
-            <Link href="/request-a-quote" className="text-brand-accent font-bold hover:text-yellow-600 transition-colors whitespace-nowrap">
-              Don't see your make? Contact us →
+            <Link href="/request-a-quote" className="text-brand-primary font-semibold underline decoration-brand-accent underline-offset-2 hover:text-brand-accent whitespace-nowrap">
+              Don't see your make? Ask us →
             </Link>
           </div>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {CAR_MAKES.map((make) => (
               <MakeCard key={make.slug} make={make} />
             ))}
@@ -207,142 +270,96 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. WHY CHOOSE US vs DEALER */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">Why NYC Drivers Choose Us Over the Dealer</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Save time, money, and a huge headache. Here is the honest comparison.
-            </p>
+      {/* 9. DEALER COMPARISON */}
+      <section className="bg-gray-50 py-16 md:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">Why NYC Drivers Choose a Mobile Locksmith Over the Dealer</h2>
+            <p className="text-lg text-gray-600">An honest comparison. For a few brand-new or exotic models the dealer is still the only option, and we will tell you so.</p>
           </div>
+          <PriceTable
+            caption="Dealership versus mobile locksmith for car key duplication in NYC"
+            columns={['Factor', 'The dealership', `${SITE.name}`]}
+            rows={[
+              ['Transponder key cost', '$200 - $400', 'From $95'],
+              ['Smart key cost', '$350 - $600+', 'From $175'],
+              ['Wait time', '2-5 business days for the key', 'Same day, often under 2 hours'],
+              ['Towing if all keys are lost', 'Usually required ($100-$250)', 'Never, we come to the car'],
+              ['Where', 'Dealer lot, business hours', 'Your location, 24/7 emergency'],
+              ['Ownership verification', 'Yes', 'Yes (NYC licensed)'],
+            ]}
+          />
+          <p className="text-gray-600 text-center">
+            Read the full comparison: <Link href="/blog/dealer-vs-locksmith-key-duplicate-nyc" className="text-brand-primary font-semibold underline decoration-brand-accent underline-offset-2 hover:text-brand-accent">dealer vs. locksmith for car keys in NYC</Link>.
+          </p>
+        </div>
+      </section>
 
-          <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm max-w-4xl mx-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="bg-gray-50 border-b border-gray-200">
-                  <th className="py-4 px-6 font-bold text-gray-600">Factor</th>
-                  <th className="py-4 px-6 font-bold text-gray-600 bg-red-50 text-red-800">The Dealership</th>
-                  <th className="py-4 px-6 font-bold text-brand-primary bg-brand-accent/20">NYC Keys (Us)</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="py-4 px-6 font-medium text-gray-800">Transponder Key Cost</td>
-                  <td className="py-4 px-6 text-gray-600 bg-red-50/50">$250 – $400+</td>
-                  <td className="py-4 px-6 font-bold text-brand-primary bg-brand-light">From $95</td>
-                </tr>
-                <tr>
-                  <td className="py-4 px-6 font-medium text-gray-800">Wait Time</td>
-                  <td className="py-4 px-6 text-gray-600 bg-red-50/50">2–5 business days</td>
-                  <td className="py-4 px-6 font-bold text-brand-primary bg-brand-light">Same day (often under 2 hrs)</td>
-                </tr>
-                <tr>
-                  <td className="py-4 px-6 font-medium text-gray-800">Towing Required?</td>
-                  <td className="py-4 px-6 text-gray-600 bg-red-50/50">Often Yes (if all keys lost)</td>
-                  <td className="py-4 px-6 font-bold text-brand-primary bg-brand-light">Never — We come to you</td>
-                </tr>
-                <tr>
-                  <td className="py-4 px-6 font-medium text-gray-800">Convenience</td>
-                  <td className="py-4 px-6 text-gray-600 bg-red-50/50">You take time off work</td>
-                  <td className="py-4 px-6 font-bold text-brand-primary bg-brand-light">We meet you anywhere</td>
-                </tr>
-              </tbody>
-            </table>
+      {/* 10. TRUST */}
+      <section className="bg-white py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { icon: ShieldCheck, title: 'Licensed, insured, verified', text: 'NYC-licensed locksmiths who check ID and ownership on every job and log each key as the Department of Consumer and Worker Protection requires. No "$15 locksmith" bait pricing.' },
+              { icon: Clock, title: 'Same day, 24/7 emergencies', text: 'Vans based in Queens and Brooklyn reach most of the city within the hour. Scheduled daytime work has no surcharge; emergency fees are stated before dispatch.' },
+              { icon: CheckCircle2, title: 'Tested before you pay', text: 'Engine start, every lock and every remote button are verified, and your existing keys are checked. OEM-level equipment that never bypasses the immobilizer.' },
+            ].map((t) => (
+              <div key={t.title} className="bg-brand-light rounded-2xl p-8 border border-gray-100">
+                <t.icon className="w-10 h-10 text-brand-accent mb-4" aria-hidden="true" />
+                <h3 className="font-heading font-bold text-xl text-brand-primary mb-2">{t.title}</h3>
+                <p className="text-gray-600">{t.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 7. FAQ SECTION */}
-      <section className="py-20 bg-brand-light border-y border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">Common Questions About Car Key duplicate</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Everything you need to know about our mobile service in NYC.
-            </p>
+      {/* 11. FAQ */}
+      <section className="bg-gray-50 py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">Car Key Duplication FAQs</h2>
+            <p className="text-lg text-gray-600">The questions NYC drivers ask us most, answered by the technicians who do the work.</p>
           </div>
-          
           <FAQAccordion items={faqItems} />
+          <p className="text-center text-gray-600 mt-8">
+            <Link href="/es" hrefLang="es-US" className="text-brand-primary font-semibold underline decoration-brand-accent underline-offset-2 hover:text-brand-accent">Ver esta página en español →</Link>
+          </p>
         </div>
       </section>
 
-      {/* 8. INLINE CTA BANNER */}
-      <section className="px-4 sm:px-6 lg:px-8">
+      {/* 12. CTA */}
+      <section className="bg-white px-4 sm:px-6 lg:px-8">
         <CTABanner />
       </section>
 
-      {/* 9. BLOG PREVIEW (Static for now, dynamic later) */}
-      <section className="py-20 bg-white">
+      {/* 13. BLOG */}
+      <section className="bg-gray-50 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-4">From Our Blog</h2>
-              <p className="text-lg text-gray-600 max-w-2xl">
-                Expert tips and guides from our NYC automotive locksmith specialists.
-              </p>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-primary mb-3">Guides From Our NYC Technicians</h2>
+              <p className="text-lg text-gray-600">Pricing, security and buying advice for New York drivers.</p>
             </div>
-            <Link href="/blog" className="text-brand-accent font-bold hover:text-yellow-600 transition-colors whitespace-nowrap">
-              View All Articles →
-            </Link>
+            <Link href="/blog" className="text-brand-primary font-semibold underline decoration-brand-accent underline-offset-2 hover:text-brand-accent whitespace-nowrap">View all articles →</Link>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Dummy Blog Cards based on briefs */}
-            <Link href="/blog/car-key-duplicate-cost-nyc" className="block group">
-              <div className="bg-brand-light rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all h-full flex flex-col">
-                <div className="h-48 bg-gray-200 w-full relative overflow-hidden">
-                  <div className="absolute inset-0 bg-brand-primary/10 group-hover:bg-transparent transition-colors"></div>
-                  {/* Placeholder image representation */}
-                  <div className="w-full h-full flex items-center justify-center text-gray-400 font-medium">Article Image</div>
+            {[
+              { slug: 'car-key-duplicate-cost-nyc', title: 'How Much Does Car Key Duplication Cost in NYC? (2026 Guide)', text: 'Real price ranges by key type and make, why NYC prices differ, and the red flags to avoid.' },
+              { slug: 'dealer-vs-locksmith-key-duplicate-nyc', title: 'Dealer vs. Mobile Locksmith for Car Keys', text: 'Speed, cost, quality and convenience compared honestly for New York drivers.' },
+              { slug: 'can-you-duplicate-transponder-key', title: 'Can You Duplicate a Transponder Key?', text: 'Chip keys explained: cloning vs. programming and when you need the original.' },
+            ].map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="block group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="aspect-video overflow-hidden">
+                  <img src={`/blog/${post.slug}.jpg`} alt="" width={640} height={360} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
-                <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
-                    How Much Does Car Key duplicate Cost in NYC? (2025 Guide)
-                  </h3>
-                  <p className="text-gray-600 text-sm flex-grow mb-4">
-                    Real price ranges by service type and make. Discover why NYC prices differ and what red flags to avoid.
-                  </p>
-                  <span className="text-brand-accent font-bold text-sm uppercase tracking-wider">Read Article</span>
+                <div className="p-6">
+                  <h3 className="font-heading font-bold text-lg text-brand-primary mb-2 group-hover:text-brand-accent transition-colors">{post.title}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{post.text}</p>
+                  <span className="text-sm font-semibold text-brand-accent">Read article →</span>
                 </div>
-              </div>
-            </Link>
-            
-            <Link href="/blog/dealer-vs-locksmith-key-duplicate-nyc" className="block group">
-              <div className="bg-brand-light rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all h-full flex flex-col">
-                <div className="h-48 bg-gray-200 w-full relative overflow-hidden">
-                  <div className="absolute inset-0 bg-brand-primary/10 group-hover:bg-transparent transition-colors"></div>
-                  <div className="w-full h-full flex items-center justify-center text-gray-400 font-medium">Article Image</div>
-                </div>
-                <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
-                    Dealer vs. Mobile Locksmith for Key duplicate
-                  </h3>
-                  <p className="text-gray-600 text-sm flex-grow mb-4">
-                    An honest comparison of speed, cost, quality, and convenience between NYC dealerships and mobile locksmiths.
-                  </p>
-                  <span className="text-brand-accent font-bold text-sm uppercase tracking-wider">Read Article</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/blog/can-you-duplicate-transponder-key" className="block group">
-              <div className="bg-brand-light rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all h-full flex flex-col">
-                <div className="h-48 bg-gray-200 w-full relative overflow-hidden">
-                  <div className="absolute inset-0 bg-brand-primary/10 group-hover:bg-transparent transition-colors"></div>
-                  <div className="w-full h-full flex items-center justify-center text-gray-400 font-medium">Article Image</div>
-                </div>
-                <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
-                    Can You Duplicate a Transponder Key?
-                  </h3>
-                  <p className="text-gray-600 text-sm flex-grow mb-4">
-                    What NYC drivers need to know about chip keys, cloning vs. programming, and when you need the original key.
-                  </p>
-                  <span className="text-brand-accent font-bold text-sm uppercase tracking-wider">Read Article</span>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

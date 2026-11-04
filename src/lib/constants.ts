@@ -1,5 +1,5 @@
 export const SITE = {
-  name: 'car key duplicate NYC',
+  name: 'Car Key Duplicate NYC',
   url: 'https://www.carkeyduplicate.com',
   phone: '+19298287009',
   phoneDisplay: '(929) 828-7009',
@@ -12,31 +12,31 @@ export const BOROUGHS = [
   {
     name: 'Brooklyn',
     slug: 'brooklyn',
-    description: 'Mobile car key duplicate serving all Brooklyn neighborhoods',
+    description: 'Mobile car key duplication serving all Brooklyn neighborhoods',
     neighborhoods: ['Park Slope', 'Williamsburg', 'Bay Ridge', 'Flatbush', 'Crown Heights', 'Bushwick', 'DUMBO', 'Bed-Stuy'],
   },
   {
     name: 'Queens',
     slug: 'queens',
-    description: 'Mobile car key duplicate serving all Queens neighborhoods',
+    description: 'Mobile car key duplication serving all Queens neighborhoods',
     neighborhoods: ['Flushing', 'Jamaica', 'Astoria', 'Jackson Heights', 'Forest Hills', 'Long Island City', 'Bayside', 'Jamaica'],
   },
   {
     name: 'Manhattan',
     slug: 'manhattan',
-    description: 'Mobile car key duplicate serving all Manhattan neighborhoods',
+    description: 'Mobile car key duplication serving all Manhattan neighborhoods',
     neighborhoods: ['Midtown', 'Upper East Side', 'Upper West Side', 'Harlem', 'Lower East Side', 'Financial District', 'Chelsea', 'Hell\'s Kitchen'],
   },
   {
     name: 'The Bronx',
     slug: 'bronx',
-    description: 'Mobile car key duplicate serving all Bronx neighborhoods',
+    description: 'Mobile car key duplication serving all Bronx neighborhoods',
     neighborhoods: ['Fordham', 'Riverdale', 'Pelham Bay', 'Hunts Point', 'Morris Park', 'Kingsbridge', 'Co-op City', 'Tremont'],
   },
   {
     name: 'Staten Island',
     slug: 'staten-island',
-    description: 'Mobile car key duplicate serving all Staten Island neighborhoods',
+    description: 'Mobile car key duplication serving all Staten Island neighborhoods',
     neighborhoods: ['St. George', 'New Springville', 'Tottenville', 'Great Kills', 'Stapleton', 'Annadale', 'Willowbrook', 'Eltingville'],
   },
 ]
@@ -58,31 +58,31 @@ export const CAR_MAKES = [
 
 export const SERVICE_TYPES = [
   {
-    name: 'Transponder Key duplicate',
+    name: 'Transponder Key Duplication',
     slug: 'transponder-key-duplicate',
     description: 'Duplicate chip keys for any make and model, programmed on-site.',
     price: 'From $95',
   },
   {
-    name: 'Key Fob duplicate',
+    name: 'Key Fob Duplication',
     slug: 'key-fob-duplicate',
     description: 'Copy and program remote key fobs with full button functionality.',
     price: 'From $120',
   },
   {
-    name: 'Smart Key duplicate',
+    name: 'Smart Key Duplication',
     slug: 'smart-key-duplicate',
     description: 'Proximity smart keys duplicated and programmed to your vehicle.',
     price: 'From $175',
   },
   {
-    name: 'Push-to-Start Key duplicate',
+    name: 'Push-to-Start Key Duplication',
     slug: 'push-to-start-key-duplicate',
     description: 'Keyless ignition systems — new key fob cut, programmed, and tested.',
     price: 'From $175',
   },
   {
-    name: 'Laser-Cut Key duplicate',
+    name: 'Laser-Cut Key Duplication',
     slug: 'laser-cut-key-duplicate',
     description: 'High-security sidewinder keys duplicated with precision laser equipment.',
     price: 'From $150',
@@ -94,3 +94,22 @@ export const SERVICE_TYPES = [
     price: 'From $75',
   },
 ]
+
+/** Business facts reused by structured data and on-page trust blocks. */
+export const BUSINESS = {
+  legalName: 'Car Key Duplicate NYC',
+  description:
+    'Mobile automotive locksmith serving all five NYC boroughs. We duplicate and program transponder keys, remote key fobs, smart keys, push-to-start fobs and laser-cut keys on-site, and replace lost car keys when every key is gone.',
+  // 75-20 Astoria Blvd, East Elmhurst, Queens (approximate storefront coordinates)
+  geo: { latitude: 40.7656, longitude: -73.8830 },
+  priceRange: '$75 - $395',
+  foundingYear: '2024',
+  languages: ['English', 'Spanish'],
+  serviceAreas: [
+    { name: 'Brooklyn', sameAs: 'https://en.wikipedia.org/wiki/Brooklyn' },
+    { name: 'Queens', sameAs: 'https://en.wikipedia.org/wiki/Queens' },
+    { name: 'Manhattan', sameAs: 'https://en.wikipedia.org/wiki/Manhattan' },
+    { name: 'The Bronx', sameAs: 'https://en.wikipedia.org/wiki/The_Bronx' },
+    { name: 'Staten Island', sameAs: 'https://en.wikipedia.org/wiki/Staten_Island' },
+  ],
+}
