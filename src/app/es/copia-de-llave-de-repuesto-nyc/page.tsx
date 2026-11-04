@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/metadata'
 import { SITE, CAR_MAKES } from '@/lib/constants'
-import { ES_NAV } from '@/lib/i18n'
+import { ES_NAV, MAKE_SLUG_ES } from '@/lib/i18n'
 import ServiceSchema from '@/components/seo/ServiceSchema'
 import ServiceHero from '@/components/content/ServiceHero'
 import QuickAnswer from '@/components/content/QuickAnswer'
@@ -93,8 +93,8 @@ export default function LlaveRepuestoPage() {
         eyebrow="Llaves de repuesto hechas en su puerta"
         title="Copia de Llave de Repuesto para Carro en NYC — El Mismo Día, a Domicilio"
         subtitle="Llaves básicas, con chip, controles y llaves inteligentes copiadas en su casa, oficina o en la calle en cualquiera de los cinco condados. Precio fijo antes de salir."
-        primaryCta={{ label: 'Cotizar llave de repuesto', href: '/request-a-quote' }}
-        secondaryCta={{ label: 'Reservar servicio móvil', href: '/book-now' }}
+        primaryCta={{ label: 'Cotizar llave de repuesto', href: '/es/cotizacion' }}
+        secondaryCta={{ label: 'Reservar servicio móvil', href: '/es/reservar' }}
         callLabel="Llamar al"
         breadcrumbLabel="Ruta de navegación"
         breadcrumbs={[
@@ -118,8 +118,8 @@ export default function LlaveRepuestoPage() {
             <li><strong>Llaves básicas de metal</strong> para carros anteriores a 1998 y muchas camionetas de trabajo: se cortan en el momento.</li>
             <li><strong>Llaves con chip (transponder)</strong>: clonadas de su original o programadas al carro; vea <Link href="/es/copia-de-llave-con-chip-nyc">copia de llave con chip</Link>.</li>
             <li><strong>Controles remotos y llaves flip</strong> con botones de abrir, cerrar y cajuela; vea <Link href="/es/copia-de-control-de-carro-nyc">copia de control de carro</Link>.</li>
-            <li><strong>Llaves inteligentes y de botón de encendido</strong>: llaves de proximidad para entrada y arranque sin llave; vea <Link href="/smart-key-duplicate">llave inteligente (inglés)</Link>.</li>
-            <li><strong>Llaves de corte láser</strong>: hojas de alta seguridad fresadas en nuestra máquina móvil; vea <Link href="/laser-cut-key-duplicate">corte láser (inglés)</Link>.</li>
+            <li><strong>Llaves inteligentes y de botón de encendido</strong>: llaves de proximidad para entrada y arranque sin llave; vea <Link href="/es/copia-de-llave-inteligente-nyc">llave inteligente</Link>.</li>
+            <li><strong>Llaves de corte láser</strong>: hojas de alta seguridad fresadas en nuestra máquina móvil; vea <Link href="/es/copia-de-llave-de-corte-laser-nyc">corte láser</Link>.</li>
             <li><strong>Llaves de valet</strong>: encienden el carro y abren las puertas pero no la cajuela ni la guantera; un repuesto más barato y seguro.</li>
           </ul>
         </Section>
@@ -187,12 +187,12 @@ export default function LlaveRepuestoPage() {
 
         <LinkGrid
           title="Llaves de repuesto por marca (páginas en inglés)"
-          links={CAR_MAKES.map((m) => ({ label: `Llave de repuesto ${m.name}`, href: `/${m.slug}`, hrefLang: 'en-US' }))}
+          links={CAR_MAKES.map((m) => ({ label: `Llave de repuesto ${m.name}`, href: MAKE_SLUG_ES[m.slug] }))}
         />
 
         <LinkGrid
           title="Copia de llave de repuesto cerca de usted"
-          links={ES_NAV.boroughs.map((b) => ({ label: `Copia de llaves de carro en ${b.name}`, href: b.href, hrefLang: 'en-US' }))}
+          links={ES_NAV.boroughs.map((b) => ({ label: `Copia de llaves de carro en ${b.name}`, href: b.href }))}
         />
 
         <FAQSection title="Preguntas frecuentes sobre llaves de repuesto" items={faqItems} />
@@ -201,7 +201,7 @@ export default function LlaveRepuestoPage() {
           <ul>
             <li><Link href="/es/cerrajero-automotriz-movil-nyc">Cerrajero automotriz móvil: cómo funciona</Link></li>
             <li><Link href="/es/reemplazo-de-llaves-de-carro-perdidas-nyc">¿Perdió todas las llaves? Reemplazo de llaves perdidas</Link></li>
-            <li><Link href="/blog/car-key-duplicate-cost-nyc">Costo de copia de llaves de carro en NYC (inglés)</Link></li>
+            <li><Link href="/es/blog/cuanto-cuesta-copiar-llave-de-carro-nyc">Costo de copia de llaves de carro en NYC</Link></li>
             <li><Link href="/spare-key-copy" hrefLang="en-US">This page in English: spare car key copy in NYC</Link></li>
           </ul>
         </Section>

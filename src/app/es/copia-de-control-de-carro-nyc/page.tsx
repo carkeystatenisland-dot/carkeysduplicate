@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/metadata'
 import { SITE, CAR_MAKES } from '@/lib/constants'
-import { ES_NAV } from '@/lib/i18n'
+import { ES_NAV, MAKE_SLUG_ES } from '@/lib/i18n'
 import ServiceSchema from '@/components/seo/ServiceSchema'
 import ServiceHero from '@/components/content/ServiceHero'
 import QuickAnswer from '@/components/content/QuickAnswer'
@@ -98,8 +98,8 @@ export default function CopiaControlPage() {
         eyebrow="Cerrajero automotriz móvil · Los 5 condados"
         title="Copia de Control de Carro (Key Fob) en NYC — Vamos a Su Ubicación"
         subtitle="Controles remotos, llaves flip, llaves inteligentes y de botón de encendido copiados, reemplazados y programados donde está su carro en unos 30 minutos. Precio fijo antes de salir."
-        primaryCta={{ label: 'Cotización gratis', href: '/request-a-quote' }}
-        secondaryCta={{ label: 'Reservar servicio móvil', href: '/book-now' }}
+        primaryCta={{ label: 'Cotización gratis', href: '/es/cotizacion' }}
+        secondaryCta={{ label: 'Reservar servicio móvil', href: '/es/reservar' }}
         callLabel="Llamar al"
         breadcrumbLabel="Ruta de navegación"
         breadcrumbs={[
@@ -125,12 +125,12 @@ export default function CopiaControlPage() {
             <li><strong>Llave con botones (remote-head)</strong> — llave con chip y botones de abrir, cerrar y cajuela en la cabeza (común en Toyota, Honda, Nissan, Hyundai, Kia, Ford y GM).</li>
             <li><strong>Llaves flip (navaja)</strong> — la hoja se dobla dentro del control (Volkswagen, Audi, Chrysler, Dodge, Jeep, Mazda, Kia).</li>
             <li><strong>Llaves inteligentes / de proximidad</strong> — abren las puertas al tocar la manija y encienden el carro con un botón (Toyota, Lexus, Honda, Nissan, Hyundai, Kia, Subaru, Mercedes-Benz, BMW).</li>
-            <li><strong>Controles de botón de encendido (push-to-start)</strong> — la misma tecnología de proximidad en vehículos con botón de arranque; vea <Link href="/push-to-start-key-duplicate">copia de llave push-to-start (inglés)</Link>.</li>
+            <li><strong>Controles de botón de encendido (push-to-start)</strong> — la misma tecnología de proximidad en vehículos con botón de arranque; vea <Link href="/es/copia-de-llave-push-to-start-nyc">copia de llave push-to-start</Link>.</li>
             <li><strong>Fobik</strong> — controles de Chrysler, Dodge, Jeep y Ram que se insertan en el tablero (sin hoja visible).</li>
             <li><strong>Control separado + llave con chip</strong> — vehículos más antiguos donde el control es un aparato aparte y la llave tiene su propio chip. Trabajamos ambas partes.</li>
-            <li><strong>Hojas de corte láser dentro del control</strong> — hojas de alta seguridad fresadas en nuestra máquina móvil de <Link href="/laser-cut-key-duplicate">corte láser (inglés)</Link>.</li>
+            <li><strong>Hojas de corte láser dentro del control</strong> — hojas de alta seguridad fresadas en nuestra máquina móvil de <Link href="/es/copia-de-llave-de-corte-laser-nyc">corte láser</Link>.</li>
           </ul>
-          <p>¿No sabe cuál tiene? Envíe una foto de su llave por el <Link href="/request-a-quote">formulario de cotización</Link> y la identificamos y cotizamos en minutos.</p>
+          <p>¿No sabe cuál tiene? Envíe una foto de su llave por el <Link href="/es/cotizacion">formulario de cotización</Link> y la identificamos y cotizamos en minutos.</p>
         </Section>
 
         <Section id="precios" title="Precio de copia de control de carro en NYC (2026)" icon={DollarSign}
@@ -223,19 +223,19 @@ export default function CopiaControlPage() {
           <p>
             Todos los trabajos de controles que reservamos son el mismo día. Nuestras camionetas están ubicadas en Queens, Brooklyn y
             Manhattan, así que un técnico suele llegar en 30-60 minutos, incluso con el tráfico de Midtown o en Staten Island. Para un
-            control perdido de noche o en feriado, nuestro <Link href="/24-hour-car-key-duplicate-nyc">servicio de emergencia 24 horas (inglés)</Link> atiende
+            control perdido de noche o en feriado, nuestro <Link href="/es/copia-de-llaves-de-carro-24-horas-nyc">servicio de emergencia 24 horas</Link> atiende
             a toda hora. Conozca más sobre nuestro <Link href="/es/cerrajero-automotriz-movil-nyc">cerrajero automotriz móvil</Link>.
           </p>
         </Section>
 
         <LinkGrid
           title="Programación de controles por marca (páginas en inglés)"
-          links={CAR_MAKES.map((m) => ({ label: `Control ${m.name}`, href: `/${m.slug}`, hrefLang: 'en-US' }))}
+          links={CAR_MAKES.map((m) => ({ label: `Control ${m.name}`, href: MAKE_SLUG_ES[m.slug] }))}
         />
 
         <LinkGrid
           title="Copia de control de carro cerca de usted"
-          links={ES_NAV.boroughs.map((b) => ({ label: `Copia de control en ${b.name}`, href: b.href, hrefLang: 'en-US' }))}
+          links={ES_NAV.boroughs.map((b) => ({ label: `Copia de control en ${b.name}`, href: b.href }))}
         />
 
         <FAQSection
@@ -249,7 +249,7 @@ export default function CopiaControlPage() {
             <li><Link href="/es/copia-de-llave-con-chip-nyc">Copia de llave con chip (transponder) en NYC</Link></li>
             <li><Link href="/es/copia-de-llave-de-repuesto-nyc">Copia de llave de repuesto en NYC</Link></li>
             <li><Link href="/es/reemplazo-de-llaves-de-carro-perdidas-nyc">Reemplazo de llaves de carro perdidas</Link></li>
-            <li><Link href="/blog/avoid-locksmith-scams-nyc">Cómo evitar estafas de cerrajeros en NYC (inglés)</Link></li>
+            <li><Link href="/es/blog/como-evitar-estafas-de-cerrajeros-nyc">Cómo evitar estafas de cerrajeros en NYC</Link></li>
             <li><Link href="/key-fob-duplicate" hrefLang="en-US">This page in English: car key fob copy in NYC</Link></li>
           </ul>
         </Section>

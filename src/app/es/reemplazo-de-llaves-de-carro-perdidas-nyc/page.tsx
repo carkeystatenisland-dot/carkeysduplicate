@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/metadata'
 import { SITE, CAR_MAKES } from '@/lib/constants'
-import { ES_NAV } from '@/lib/i18n'
+import { ES_NAV, MAKE_SLUG_ES } from '@/lib/i18n'
 import ServiceSchema from '@/components/seo/ServiceSchema'
 import ServiceHero from '@/components/content/ServiceHero'
 import QuickAnswer from '@/components/content/QuickAnswer'
@@ -98,8 +98,8 @@ export default function LlavesPerdidasPage() {
         eyebrow="Todas las llaves perdidas · Despacho 24/7"
         title="Reemplazo de Llaves de Carro Perdidas en NYC — Llave Nueva Junto a Su Carro, Sin Grúa"
         subtitle="¿Perdió todas las llaves? Generamos una llave nueva con su VIN, la cortamos, la programamos y borramos la perdida, justo donde está estacionado el carro en Brooklyn, Queens, Manhattan, El Bronx o Staten Island."
-        primaryCta={{ label: 'Enviar un técnico', href: '/book-now' }}
-        secondaryCta={{ label: 'Cotización fija', href: '/request-a-quote' }}
+        primaryCta={{ label: 'Enviar un técnico', href: '/es/reservar' }}
+        secondaryCta={{ label: 'Cotización fija', href: '/es/cotizacion' }}
         callLabel="Llamar al"
         breadcrumbLabel="Ruta de navegación"
         breadcrumbs={[
@@ -188,7 +188,7 @@ export default function LlavesPerdidasPage() {
 
         <Section id="rapidez" title="Despacho de emergencia 24/7 en toda la ciudad" icon={Clock}>
           <p>
-            Las llaves rara vez se pierden en horario de oficina. Nuestro <Link href="/24-hour-car-key-duplicate-nyc">servicio de emergencia 24 horas (inglés)</Link> atiende
+            Las llaves rara vez se pierden en horario de oficina. Nuestro <Link href="/es/copia-de-llaves-de-carro-24-horas-nyc">servicio de emergencia 24 horas</Link> atiende
             a toda hora, y la respuesta de día en cualquier parte de los cinco condados suele ser de 30-60 minutos. Si todavía tiene una llave que
             funciona, lo que necesita es la mucho más económica <Link href="/es/copia-de-llave-de-repuesto-nyc">copia de llave de repuesto</Link> en vez de un reemplazo por llaves perdidas.
           </p>
@@ -196,12 +196,12 @@ export default function LlavesPerdidasPage() {
 
         <LinkGrid
           title="Reemplazo de llaves perdidas por marca (páginas en inglés)"
-          links={CAR_MAKES.map((m) => ({ label: `Llave perdida ${m.name}`, href: `/${m.slug}`, hrefLang: 'en-US' }))}
+          links={CAR_MAKES.map((m) => ({ label: `Llave perdida ${m.name}`, href: MAKE_SLUG_ES[m.slug] }))}
         />
 
         <LinkGrid
           title="Servicio de llaves perdidas cerca de usted"
-          links={ES_NAV.boroughs.map((b) => ({ label: `Reemplazo de llaves de carro en ${b.name}`, href: b.href, hrefLang: 'en-US' }))}
+          links={ES_NAV.boroughs.map((b) => ({ label: `Reemplazo de llaves de carro en ${b.name}`, href: b.href }))}
         />
 
         <FAQSection title="Preguntas frecuentes sobre llaves de carro perdidas" items={faqItems} />
@@ -211,7 +211,7 @@ export default function LlavesPerdidasPage() {
             <li><Link href="/es/copia-de-llave-con-chip-nyc">Copia y programación de llave con chip</Link></li>
             <li><Link href="/es/copia-de-control-de-carro-nyc">Copia y programación de control de carro</Link></li>
             <li><Link href="/es/cerrajero-automotriz-movil-nyc">Cómo funciona el servicio móvil</Link></li>
-            <li><Link href="/blog/avoid-locksmith-scams-nyc">Cómo evitar estafas de cerrajeros en NYC (inglés)</Link></li>
+            <li><Link href="/es/blog/como-evitar-estafas-de-cerrajeros-nyc">Cómo evitar estafas de cerrajeros en NYC</Link></li>
             <li><Link href="/lost-car-key-replacement-nyc" hrefLang="en-US">This page in English: lost car key replacement in NYC</Link></li>
           </ul>
         </Section>

@@ -88,8 +88,8 @@ export default function CerrajeroMovilPage() {
         eyebrow="El taller de llaves que va hasta usted"
         title="Cerrajero Automotriz Móvil en NYC — Llaves Cortadas y Programadas en Su Ubicación"
         subtitle="Sin grúa, sin sala de espera del dealer, sin cargo oculto por viaje. Un técnico con licencia llega en 30-60 minutos a cualquier parte de los cinco condados con todo lo necesario para hacer su llave en el momento."
-        primaryCta={{ label: 'Pedir servicio móvil', href: '/book-now' }}
-        secondaryCta={{ label: 'Cotización fija', href: '/request-a-quote' }}
+        primaryCta={{ label: 'Pedir servicio móvil', href: '/es/reservar' }}
+        secondaryCta={{ label: 'Cotización fija', href: '/es/cotizacion' }}
         callLabel="Llamar al"
         breadcrumbLabel="Ruta de navegación"
         breadcrumbs={[
@@ -180,7 +180,7 @@ export default function CerrajeroMovilPage() {
             Nuestros técnicos operan bajo la licencia de cerrajero de la ciudad de Nueva York, tienen seguro de responsabilidad y verifican la
             propiedad del vehículo en cada trabajo. Despachamos desde Queens, no desde un centro de llamadas nacional, así que la empresa que
             lo cotiza es la que llega. Si un "cerrajero" cotiza $15-$35 por internet y luego exige cientos de dólares en efectivo en el lugar,
-            es un patrón de estafa que explicamos en nuestra guía sobre <Link href="/blog/avoid-locksmith-scams-nyc">cómo evitar estafas de cerrajeros en NYC (inglés)</Link>.
+            es un patrón de estafa que explicamos en nuestra guía sobre <Link href="/es/blog/como-evitar-estafas-de-cerrajeros-nyc">cómo evitar estafas de cerrajeros en NYC</Link>.
           </p>
         </Section>
 
@@ -197,22 +197,22 @@ export default function CerrajeroMovilPage() {
           title="Servicios móviles que hacemos en el lugar"
           links={[
             ...ES_NAV.services.filter((s) => s.href !== PATH),
-            { name: 'Servicio el mismo día (inglés)', href: '/same-day-car-key-duplicate-nyc' },
-            { name: 'Emergencias 24 horas (inglés)', href: '/24-hour-car-key-duplicate-nyc' },
+            { name: 'Servicio el mismo día', href: '/same-day-car-key-duplicate-nyc' },
+            { name: 'Emergencias 24 horas', href: '/24-hour-car-key-duplicate-nyc' },
           ].map((s) => ({ label: s.name, href: s.href }))}
         />
 
         <LinkGrid
           title="Cerrajero automotriz por condado"
-          links={ES_NAV.boroughs.map((b) => ({ label: `Cerrajero automotriz móvil en ${b.name}`, href: b.href, hrefLang: 'en-US' }))}
+          links={ES_NAV.boroughs.map((b) => ({ label: `Cerrajero automotriz móvil en ${b.name}`, href: b.href }))}
         />
 
         <FAQSection title="Preguntas frecuentes sobre el servicio móvil" items={faqItems} />
 
         <Section id="relacionados" title="Guías relacionadas">
           <ul>
-            <li><Link href="/blog/dealer-vs-locksmith-key-duplicate-nyc">Dealer vs. cerrajero móvil en NYC (inglés)</Link></li>
-            <li><Link href="/blog/car-key-duplicate-cost-nyc">Costo de copia de llaves de carro en NYC (inglés)</Link></li>
+            <li><Link href="/es/blog/dealer-vs-cerrajero-llaves-de-carro-nyc">Dealer vs. cerrajero móvil en NYC</Link></li>
+            <li><Link href="/es/blog/cuanto-cuesta-copiar-llave-de-carro-nyc">Costo de copia de llaves de carro en NYC</Link></li>
             <li><Link href="/mobile-car-key-duplicate-nyc" hrefLang="en-US">This page in English: mobile car key maker in NYC</Link></li>
           </ul>
         </Section>

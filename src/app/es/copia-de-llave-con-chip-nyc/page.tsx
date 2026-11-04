@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/metadata'
 import { SITE, CAR_MAKES } from '@/lib/constants'
-import { ES_NAV } from '@/lib/i18n'
+import { ES_NAV, MAKE_SLUG_ES } from '@/lib/i18n'
 import ServiceSchema from '@/components/seo/ServiceSchema'
 import ServiceHero from '@/components/content/ServiceHero'
 import QuickAnswer from '@/components/content/QuickAnswer'
@@ -98,8 +98,8 @@ export default function LlaveConChipPage() {
         eyebrow="Llaves con chip · clonadas o programadas en el lugar"
         title="Copia y Programación de Llaves con Chip en NYC"
         subtitle="Copie, reemplace o repare su llave con chip donde está su carro en Brooklyn, Queens, Manhattan, El Bronx o Staten Island. Llaves perdidas, llaves rotas y problemas de 'luz de seguridad' resueltos en una sola visita."
-        primaryCta={{ label: 'Cotización gratis', href: '/request-a-quote' }}
-        secondaryCta={{ label: 'Reservar servicio móvil', href: '/book-now' }}
+        primaryCta={{ label: 'Cotización gratis', href: '/es/cotizacion' }}
+        secondaryCta={{ label: 'Reservar servicio móvil', href: '/es/reservar' }}
         callLabel="Llamar al"
         breadcrumbLabel="Ruta de navegación"
         breadcrumbs={[
@@ -147,7 +147,7 @@ export default function LlaveConChipPage() {
               ['Ford Tiris 4D-63 / 128 bits', 'Ford, Lincoln, Mazda', 'Sí (4D-63)', 'Sí'],
               ['GM Circle Plus / 46E', 'Chevrolet, GMC, Buick, Cadillac', 'Sí', 'Sí'],
             ]}
-            note="Nuestros técnicos llevan lectores de identificación de chip, así que usted nunca necesita saber el tipo de chip. Las páginas por marca (en inglés) tienen detalles por año y modelo."
+            note="Nuestros técnicos llevan lectores de identificación de chip, así que usted nunca necesita saber el tipo de chip. Las páginas por marca tienen detalles por año y modelo."
           />
         </Section>
 
@@ -206,18 +206,18 @@ export default function LlaveConChipPage() {
             Nunca anulamos ni desactivamos un inmovilizador. Cada llave que programamos se registra con el procedimiento oficial del fabricante,
             ofrecemos borrar llaves perdidas o robadas sin cargo extra y registramos cada transacción como exigen las reglas del Departamento de
             Protección al Consumidor y al Trabajador de NYC. Si alguien ofrece hacer una llave con chip para su carro sin verificar la propiedad,
-            es una señal de alerta; lea nuestra guía sobre <Link href="/blog/avoid-locksmith-scams-nyc">cómo evitar estafas de cerrajeros en NYC (inglés)</Link>.
+            es una señal de alerta; lea nuestra guía sobre <Link href="/es/blog/como-evitar-estafas-de-cerrajeros-nyc">cómo evitar estafas de cerrajeros en NYC</Link>.
           </p>
         </Section>
 
         <LinkGrid
           title="Programación de llaves con chip por marca (páginas en inglés)"
-          links={CAR_MAKES.map((m) => ({ label: `Llave con chip ${m.name}`, href: `/${m.slug}`, hrefLang: 'en-US' }))}
+          links={CAR_MAKES.map((m) => ({ label: `Llave con chip ${m.name}`, href: MAKE_SLUG_ES[m.slug] }))}
         />
 
         <LinkGrid
           title="Servicio de llaves con chip cerca de usted"
-          links={ES_NAV.boroughs.map((b) => ({ label: `Copia de llave con chip en ${b.name}`, href: b.href, hrefLang: 'en-US' }))}
+          links={ES_NAV.boroughs.map((b) => ({ label: `Copia de llave con chip en ${b.name}`, href: b.href }))}
         />
 
         <FAQSection
@@ -231,7 +231,7 @@ export default function LlaveConChipPage() {
             <li><Link href="/es/copia-de-control-de-carro-nyc">Copia y programación de control de carro (key fob)</Link></li>
             <li><Link href="/es/copia-de-llave-de-repuesto-nyc">Copia de llave de repuesto</Link></li>
             <li><Link href="/es/cerrajero-automotriz-movil-nyc">Cerrajero automotriz móvil</Link></li>
-            <li><Link href="/blog/can-you-duplicate-transponder-key">Guía completa: ¿se puede copiar una llave con chip? (inglés)</Link></li>
+            <li><Link href="/es/blog/se-puede-copiar-una-llave-con-chip">Guía completa: ¿se puede copiar una llave con chip?</Link></li>
             <li><Link href="/transponder-key-duplicate" hrefLang="en-US">This page in English: transponder key duplication in NYC</Link></li>
           </ul>
         </Section>
