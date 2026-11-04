@@ -56,7 +56,7 @@ const SPAM_KEYWORDS = [
   'le-grand', 'heart-of-vegas', 'world-cup', 'bookmaker', 'sportsbook',
 ]
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone()
   const hostname = request.headers.get('host') || ''
   const protocol = request.headers.get('x-forwarded-proto') || 'http'

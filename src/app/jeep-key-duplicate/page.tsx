@@ -5,8 +5,8 @@ import TrustBadges from '@/components/ui/TrustBadges'
 import { CheckCircle2, Car, ShieldAlert, Cpu, ListChecks, Info, Wrench, Clock, Zap, MapPin } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: `Jeep Car Key duplicate NYC | Mobile Locksmith Service`,
-  description: `Expert mobile Jeep car key duplicate across NYC. We cut and program OEM-grade transponders, smart keys, and fobs on-site.`,
+  title: `Jeep Car Key Duplication NYC | Mobile Locksmith Service`,
+  description: `Expert mobile Jeep car key duplication across NYC. We cut and program OEM-grade transponders, smart keys, and fobs on-site.`,
   slug: `jeep-key-duplicate`
 })
 
@@ -16,7 +16,7 @@ export default function MakePage() {
       {/* Hero Section */}
       <div className="bg-brand-primary text-white py-16 md:py-24 px-4 text-center border-b-4 border-brand-accent">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">Jeep Car Key duplicate NYC</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-6 leading-tight">Jeep Car Key Duplication NYC</h1>
           <p className="text-xl text-gray-300 font-medium mb-8">Specialized programming and cutting for Jeep vehicles. We bypass the dealership wait times by bringing the equipment directly to your location in all 5 boroughs.</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link href="/request-a-quote" className="w-full sm:w-auto bg-brand-accent text-brand-primary font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition-colors shadow-lg text-lg">Get an Exact Quote</Link>
@@ -34,7 +34,7 @@ export default function MakePage() {
             Losing a car key or needing a spare for your Jeep in New York City can be an incredibly stressful experience. 
             Between alternate side parking rules, expensive parking garages in Manhattan, and the fast-paced lifestyle of Brooklyn and Queens, 
             you do not have the time to tow your vehicle to a Jeep dealership and wait days for a replacement. That is exactly why our mobile 
-            automotive locksmith service exists. We provide on-site Jeep car key duplicate, transponder key programming, and smart key fob 
+            automotive locksmith service exists. We provide on-site Jeep car key duplication, transponder key programming, and smart key fob 
             replacements directly at your vehicle's location.
           </p>
           <p>

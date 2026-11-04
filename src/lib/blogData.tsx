@@ -5,13 +5,15 @@ export interface BlogPostData {
   title: string
   description: string
   readingTime: string
+  datePublished?: string
+  dateModified?: string
   content: React.ReactNode
 }
 
 export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
             'car-key-duplicate-cost-nyc': {
-    title: 'How Much Does Car Key duplicate Cost in NYC?',
-    description: 'Expert pricing guide for car key duplicate in NYC. Compare costs for transponders, fobs, high-security laser keys, and luxury makes.',
+    title: 'How Much Does Car Key Duplication Cost in NYC?',
+    description: 'Expert pricing guide for car key duplication in NYC. Compare costs for transponders, fobs, high-security laser keys, and luxury makes.',
     readingTime: '24 min read',
     content: (
       <div>
@@ -19,7 +21,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
         <div className="bg-brand-light p-6 rounded-2xl border border-gray-200 mb-10 shadow-sm">
           <h4 className="text-xl font-bold text-brand-primary mt-0 mb-4 font-heading">Table of Contents</h4>
           <ul className="space-y-2 text-sm pl-0 list-none">
-            <li><a href="#cost-factors" className="text-brand-primary hover:text-brand-accent font-semibold transition-colors">1. Core Factors That Determine Car Key duplicate Cost</a></li>
+            <li><a href="#cost-factors" className="text-brand-primary hover:text-brand-accent font-semibold transition-colors">1. Core Factors That Determine Car Key Duplication Cost</a></li>
             <li><a href="#basic-coverage" className="text-brand-primary hover:text-brand-accent font-semibold transition-colors">2. Basic Level: Traditional Metal Keys, Keyway Profiles & Wafer Assemblies</a></li>
             <li><a href="#standard-coverage" className="text-brand-primary hover:text-brand-accent font-semibold transition-colors">3. Standard Level: Transponder Chips, Laser Blades & Electronic Remote Fobs</a></li>
             <li><a href="#expert-coverage" className="text-brand-primary hover:text-brand-accent font-semibold transition-colors">4. Expert Level: Smart Keys, Proximity Fobs, and High-Security Encrypted Platforms</a></li>
@@ -31,9 +33,9 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
 
         {/* Section 1 */}
         <section id="cost-factors" className="scroll-mt-24 mb-12">
-          <h2 className="text-3xl font-heading text-brand-primary font-bold mb-4 font-heading">1. Core Factors That Determine Car Key duplicate Cost</h2>
+          <h2 className="text-3xl font-heading text-brand-primary font-bold mb-4 font-heading">1. Core Factors That Determine Car Key Duplication Cost</h2>
           <p>
-            When searching for car key duplicate in New York City, you will quickly notice a wide range of pricing. A basic traditional key might cost as little as $50, while a high-security proximity smart key for a luxury vehicle can easily exceed $350. Understanding the exact mechanical and electronic components of your key is crucial to understanding what you will pay.
+            When searching for car key duplication in New York City, you will quickly notice a wide range of pricing. A basic traditional key might cost as little as $50, while a high-security proximity smart key for a luxury vehicle can easily exceed $350. Understanding the exact mechanical and electronic components of your key is crucial to understanding what you will pay.
           </p>
           <p>
             The final cost of duplicating a vehicle key in NYC is not arbitrarily decided by the locksmith. It is dictated by the complexity of the security technology integrated into your vehicle. Modern cars are essentially rolling networks of computers, and keys act as the secure hardware tokens used to authorize engine startup. Every generation of keys introduces more sophisticated layers of security, which require highly specialized cutting machinery and advanced diagnostic programming computers to execute correctly.
@@ -168,7 +170,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
                 <tr>
                   <th className="px-6 py-4 text-left font-bold text-brand-primary">Cost Factor</th>
                   <th className="px-6 py-4 text-left font-bold text-brand-primary">Car Dealership</th>
-                  <th className="px-6 py-4 text-left font-bold text-brand-primary">car key duplicate</th>
+                  <th className="px-6 py-4 text-left font-bold text-brand-primary">car key duplication</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 text-gray-700">
@@ -265,7 +267,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
             <div>
               <h4 className="font-bold text-lg text-brand-primary mt-0 mb-2 font-heading">Q: Why does key origination (all keys lost) cost so much more than basic duplicate?</h4>
               <p className="text-gray-600 mb-0 font-sans">
-                Key duplicate copies a working reference. Key origination requires a technician to physically decode your door cylinder wafer positions from scratch using Lishi tools, generate a new mechanical key cut profile, establish an OBD-II interface, perform a full security gateway bypass, purge old keys, and enroll the new key into the BCM. This requires significantly more time, skill, and specialized diagnostic software licensing.
+                Key Duplication copies a working reference. Key origination requires a technician to physically decode your door cylinder wafer positions from scratch using Lishi tools, generate a new mechanical key cut profile, establish an OBD-II interface, perform a full security gateway bypass, purge old keys, and enroll the new key into the BCM. This requires significantly more time, skill, and specialized diagnostic software licensing.
               </p>
             </div>
           </div>
@@ -276,7 +278,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
 
   'dealer-vs-locksmith-key-duplicate-nyc': {
     title: 'Dealer vs. Locksmith for Car Key Duplicate in NYC',
-    description: 'Dealer vs. mobile locksmith for car key duplicate in NYC: compare costs, security protocols, software, and your consumer rights.',
+    description: 'Dealer vs. mobile locksmith for car key duplication in NYC: compare costs, security protocols, software, and your consumer rights.',
     readingTime: '22 min read',
     content: (
       <div>
@@ -322,7 +324,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
             Once your vehicle is towed to the dealership, the waiting game begins. Dealerships rarely support same-day walk-in service for key programming. You must fit your vehicle into their scheduled service pipeline, which frequently takes anywhere from 3 to 7 business days depending on their current backlog. During this entire period, you are left without a vehicle, accumulating transport expenses or car rental fees.
           </p>
           <p>
-            Choosing a dedicated <Link href="/mobile-car-key-duplicate-nyc" className="font-bold underline text-brand-primary hover:text-brand-accent">mobile car key duplicate</Link> service completely removes these logistical hurdles:
+            Choosing a dedicated <Link href="/mobile-car-key-duplicate-nyc" className="font-bold underline text-brand-primary hover:text-brand-accent">mobile car key duplication</Link> service completely removes these logistical hurdles:
           </p>
           <ul>
             <li><strong>Zero Towing Required:</strong> The locksmith van travels to your vehicle\'s exact GPS coordinates, eliminating towing fees and the risk of vehicle damage during transport.</li>
@@ -501,7 +503,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
           
           <div className="space-y-6">
             <div>
-              <h4 className="font-bold text-lg text-brand-primary mt-0 mb-2">Q: Why is car key duplicate so much more expensive than duplicating a standard house key?</h4>
+              <h4 className="font-bold text-lg text-brand-primary mt-0 mb-2">Q: Why is car key duplication so much more expensive than duplicating a standard house key?</h4>
               <p className="text-gray-600 mb-0">
                 A standard house key is a purely mechanical piece of cut brass. It contains no electronic components and relies entirely on physical notches to slide internal pins. Conversely, modern automotive keys are complex electronic security nodes. They contain a microchip (transponder) that must emit a cryptographically secure, encrypted radio frequency code to the vehicle\'s immobilizer system. To duplicate a car key, a locksmith must utilize specialized computer diagnostic terminals to access the vehicle\'s central Engine Control Unit (ECU) and officially register the new transponder chip\'s serial number into the vehicle\'s secure memory slots. This highly technical process requires specialized, expensive software licensing and diagnostic machinery.
               </p>
@@ -531,7 +533,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
             <div>
               <h4 className="font-bold text-lg text-brand-primary mt-0 mb-2">Q: What happens if I have lost all of my keys? Is the process and cost the same?</h4>
               <p className="text-gray-600 mb-0">
-                No, the process and cost are different. If you have at least one working key, we perform a standard "Key duplicate." This is a straightforward process where we decode your working key and clone or program a secondary chip. If all keys are lost, it requires a "Key Origination" service. This is a highly technical process where we must use specialized Lishi decoders to probe your door lock cylinder, decode the original mechanical cut depths, cut a key blade from scratch, connect our diagnostic tablets to bypass your vehicle\'s active security gateway, perform a full immobilizer memory reset, and register a brand-new electronic key into your car\'s ECU. Because this requires much more time and highly advanced diagnostic software, key origination is more expensive than simple duplicate.
+                No, the process and cost are different. If you have at least one working key, we perform a standard "Key Duplication." This is a straightforward process where we decode your working key and clone or program a secondary chip. If all keys are lost, it requires a "Key Origination" service. This is a highly technical process where we must use specialized Lishi decoders to probe your door lock cylinder, decode the original mechanical cut depths, cut a key blade from scratch, connect our diagnostic tablets to bypass your vehicle\'s active security gateway, perform a full immobilizer memory reset, and register a brand-new electronic key into your car\'s ECU. Because this requires much more time and highly advanced diagnostic software, key origination is more expensive than simple duplicate.
               </p>
             </div>
 
@@ -743,7 +745,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
             </li>
             <li>
               <strong>Alternate Side Parking Stress in <Link href="/brooklyn" className="font-bold underline text-brand-primary hover:text-brand-accent">Brooklyn</Link>:</strong> 
-              If you lose your only transponder key right before street cleaning hours in Brooklyn, you face a major issue. Waiting days for a dealership appointment means accumulating expensive parking tickets or having your car towed to a municipal impound lot. Calling our <Link href="/same-day-car-key-duplicate-nyc" className="font-bold underline text-brand-primary hover:text-brand-accent">same day car key duplicate</Link> service ensures a mobile technician arrives within the hour to program a fresh key, getting your vehicle moved before the city tow trucks arrive.
+              If you lose your only transponder key right before street cleaning hours in Brooklyn, you face a major issue. Waiting days for a dealership appointment means accumulating expensive parking tickets or having your car towed to a municipal impound lot. Calling our <Link href="/same-day-car-key-duplicate-nyc" className="font-bold underline text-brand-primary hover:text-brand-accent">same day car key duplication</Link> service ensures a mobile technician arrives within the hour to program a fresh key, getting your vehicle moved before the city tow trucks arrive.
             </li>
             <li>
               <strong>Airport Traveler Emergencies in <Link href="/queens" className="font-bold underline text-brand-primary hover:text-brand-accent">Queens</Link>:</strong> 
@@ -873,7 +875,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
             </li>
             <li>
               <strong>Vague and Generic Phone Answering:</strong> 
-              When you call a certified locksmith company, they will answer the phone with their official, registered business name (e.g., "car key duplicate"). A scam operator will answer with a generic phrase like "Locksmith Service" or "Car Key Services." This is because the central call center operates hundreds of different fake Google Maps listings under different names from a single room and cannot track which name you are calling.
+              When you call a certified locksmith company, they will answer the phone with their official, registered business name (e.g., "car key duplication"). A scam operator will answer with a generic phrase like "Locksmith Service" or "Car Key Services." This is because the central call center operates hundreds of different fake Google Maps listings under different names from a single room and cannot track which name you are calling.
             </li>
             <li>
               <strong>Unmarked Vehicles and Out-of-State Plates:</strong> 
@@ -1033,7 +1035,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
         <section id="our-commitment" className="scroll-mt-24 mb-12">
           <h2 className="text-3xl font-heading text-brand-primary font-bold mb-4 font-heading">7. Our Standards: Absolute Integrity, Flat-Rate Pricing & Safe Operations</h2>
           <p>
-            At <Link href="/about" className="font-bold underline text-brand-primary hover:text-brand-accent">car key duplicate</Link>, our entire mobile operations were structured to provide an honest, premium, and highly secure alternative to predatory operators. We believe in complete transparency and maintain the highest professional security standards:
+            At <Link href="/about" className="font-bold underline text-brand-primary hover:text-brand-accent">car key duplication</Link>, our entire mobile operations were structured to provide an honest, premium, and highly secure alternative to predatory operators. We believe in complete transparency and maintain the highest professional security standards:
           </p>
           <ul>
             <li><strong>100% Guaranteed Flat-Rate Quotes:</strong> When you contact our office, we analyze your vehicle's exact Year, Make, and Model. We provide an all-inclusive, guaranteed flat price. The rate we quote is the exact price you will pay once the job is completed—we have zero hidden dispatch or toll fees.</li>
@@ -1120,7 +1122,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
           <ul className="space-y-2 text-sm pl-0 list-none">
             <li><a href="#introduction" className="text-brand-primary hover:text-brand-accent font-semibold transition-colors">1. The High-Risk "Single Key" Lifestyle: A Costly Gamble and Psychological Strain</a></li>
             <li><a href="#basic-risks" className="text-brand-primary hover:text-brand-accent font-semibold transition-colors">2. Basic Level: Physical and Financial Vulnerabilities of Having No Backup</a></li>
-            <li><a href="#standard-differences" className="text-brand-primary hover:text-brand-accent font-semibold transition-colors">3. Standard Level: Key duplicate vs. Key Origination (The Real Cost Comparison)</a></li>
+            <li><a href="#standard-differences" className="text-brand-primary hover:text-brand-accent font-semibold transition-colors">3. Standard Level: Key Duplication vs. Key Origination (The Real Cost Comparison)</a></li>
             <li><a href="#expert-electronics" className="text-brand-primary hover:text-brand-accent font-semibold transition-colors">4. Expert Level: Transponder Degradation, Microcontroller Desync, & Memory Slots</a></li>
             <li><a href="#logistical-nightmare" className="text-brand-primary hover:text-brand-accent font-semibold transition-colors">5. The Logistical Nightmare of an "All Keys Lost" Emergency in NYC</a></li>
             <li><a href="#borough-realities" className="text-brand-primary hover:text-brand-accent font-semibold transition-colors">6. Borough-Specific NYC Scenarios: How a Single Key Failure Disrupts Your Life</a></li>
@@ -1177,12 +1179,12 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
 
         {/* Section 3 */}
         <section id="standard-differences" className="scroll-mt-24 mb-12">
-          <h2 className="text-3xl font-heading text-brand-primary font-bold mb-4 font-heading">3. Standard Level: Key duplicate vs. Key Origination (The Real Cost Comparison)</h2>
+          <h2 className="text-3xl font-heading text-brand-primary font-bold mb-4 font-heading">3. Standard Level: Key Duplication vs. Key Origination (The Real Cost Comparison)</h2>
           <p>
-            At the standard tier of automotive security, you must understand the two fundamentally different services offered by locksmiths: <strong>Key duplicate</strong> and <strong>Key Origination</strong>. The difference in price, labor, and time between these two services is massive.
+            At the standard tier of automotive security, you must understand the two fundamentally different services offered by locksmiths: <strong>Key Duplication</strong> and <strong>Key Origination</strong>. The difference in price, labor, and time between these two services is massive.
           </p>
           <div className="bg-brand-light p-8 rounded-3xl border border-gray-200 my-8 shadow-sm">
-            <h4 className="text-xl font-bold text-brand-primary mt-0 mb-3 font-heading">Service 1: Key duplicate (Working Key Present)</h4>
+            <h4 className="text-xl font-bold text-brand-primary mt-0 mb-3 font-heading">Service 1: Key Duplication (Working Key Present)</h4>
             <p className="text-gray-700 text-sm leading-relaxed mb-4">
               When you possess at least one working key, duplicating it is a straightforward process. The locksmith uses your working key as a reference to decode the mechanical cut depths on our automated CNC key cutters, reads the existing transponder chip ID, connects our diagnostic tablet to the OBD-II port, and registers the duplicate key in an open slot.
             </p>
@@ -1305,7 +1307,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
             The conclusion is clear: driving with a single key is a costly, unnecessary financial risk. Taking proactive action to secure a spare key today is the single best investment you can make for your vehicle's security and your peace of mind.
           </p>
           <p>
-            At <Link href="/about" className="font-bold underline text-brand-primary hover:text-brand-accent">car key duplicate</Link>, we make duplicating a key incredibly simple:
+            At <Link href="/about" className="font-bold underline text-brand-primary hover:text-brand-accent">car key duplication</Link>, we make duplicating a key incredibly simple:
           </p>
           <ul>
             <li>Call our dispatcher or request a quote online. We provide guaranteed, flat-rate pricing based on your vehicle's parameters.</li>
@@ -1323,7 +1325,7 @@ export const BLOG_POSTS_DATA: Record<string, BlogPostData> = {
             <div>
               <h4 className="font-bold text-lg text-brand-primary mt-0 mb-2">Q: Why is key origination so much more expensive than basic duplicate?</h4>
               <p className="text-gray-600 mb-0">
-                Key duplicate uses your working key to decode physical cuts and read transponder codes instantly. Key origination requires physically picking and decoding your door lock cylinder using specialized decoders, cutting a blade from scratch, and performing a full bypass reset of your vehicle's central security system.
+                Key Duplication uses your working key to decode physical cuts and read transponder codes instantly. Key origination requires physically picking and decoding your door lock cylinder using specialized decoders, cutting a blade from scratch, and performing a full bypass reset of your vehicle's central security system.
               </p>
             </div>
             
