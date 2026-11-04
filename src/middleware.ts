@@ -1,6 +1,13 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
+// NOTE ON FILE NAME: Next.js 16 renamed this convention to `proxy.ts`, but a
+// proxy file runs only on the Node.js runtime. This site is deployed with
+// @cloudflare/next-on-pages, which requires the Edge runtime for every
+// non-static route, so we intentionally keep the deprecated `middleware.ts`
+// convention (which still runs on Edge). Do not rename to proxy.ts unless the
+// deployment moves to the OpenNext Cloudflare adapter.
+//
 // ─────────────────────────────────────────────────────────────────────────────
 // 301 REDIRECT MAP: old indexed URLs → new canonical URLs
 // These are PERMANENT redirects that preserve Google's index authority.
@@ -56,7 +63,7 @@ const SPAM_KEYWORDS = [
   'le-grand', 'heart-of-vegas', 'world-cup', 'bookmaker', 'sportsbook',
 ]
 
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone()
   const hostname = request.headers.get('host') || ''
   const protocol = request.headers.get('x-forwarded-proto') || 'http'
